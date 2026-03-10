@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container text-center">
+      <h1><span class="text-primary">Join</span> Our Community</h1>
+      <p>Fundraisers, adoption fairs, and volunteer meetups.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="events-list">
+        <!-- Event 1 -->
+        <div class="card card--horizontal animate-fade-up">
+          <div class="event-date">
+            <span class="event-date__day">15</span>
+            <span class="event-date__month">MARCH</span>
+          </div>
+          <div class="card__content">
+            <h3 class="mb-xs">Spring Adoption Fair</h3>
+            <p class="text-muted fs-sm mb-sm">
+              <span class="iconify" data-icon="ph:map-pin-fill"></span> Downtown Park, Silver Spring • 10:00 AM - 4:00
+              PM
+            </p>
+            <p class="mb-md">Come meet our adoptable residents and talk to our foster volunteers. On-site applications
+              accepted!</p>
+            <a href="event-detail.html" class="btn btn-outline btn-sm">Event Details</a>
+          </div>
+          <div class="event-image">
+            <img src="../assets/images/img_029.jpg"
+              alt="Event">
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="card card--horizontal animate-fade-up">
+          <div class="event-date event-date--secondary">
+            <span class="event-date__day">22</span>
+            <span class="event-date__month">MARCH</span>
+          </div>
+          <div class="card__content">
+            <h3 class="mb-xs">Foster Training Workshop</h3>
+            <p class="text-muted fs-sm mb-sm">
+              <span class="iconify" data-icon="ph:video-camera-fill"></span> Online Webinar • 6:30 PM - 8:00 PM
+            </p>
+            <p class="mb-md">Learn the basics of elderly animal care and medical logging. Mandatory for new foster
+              volunteers.</p>
+            <a href="event-detail.html" class="btn btn-outline btn-sm">Register Now</a>
+          </div>
+          <div class="event-image">
+            <img src="../assets/images/img_030.jpg"
+              alt="Event">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

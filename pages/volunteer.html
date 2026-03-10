@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer With Us | RescueHope Animal Rescue</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <header class="relative py-24 md:py-32 overflow-hidden bg-neutral-900">
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/img_046.jpg"
+        class="w-full h-full object-cover opacity-40 scale-105" alt="Volunteer Hero">
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/20 via-transparent to-neutral-950/80"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10 text-center animate-fade-up">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-none italic">Be the <span
+          class="text-primary italic opacity-90">Change</span></h1>
+      <p class="mx-auto max-w-2xl text-white/60 text-lg md:text-xl font-normal">Join our family of dedicated volunteers
+        and help us provide love and care to animals in transition. Your time is their second chance.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Roles Section -->
+    <section class="py-24 md:py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-20 animate-on-scroll">
+          <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Our Opportunities</span>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 italic leading-none">Volunteer <span
+              class="font-normal opacity-30 not-italic">Opportunities</span></h2>
+          <p class="text-neutral-500 max-w-xl mx-auto text-lg font-normal">There are many ways to lend a hand,
+            regardless of your skill level or background.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-neutral-50 p-12 rounded-[2.5rem] border border-neutral-100 animate-on-scroll group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+            <span class="iconify text-primary mb-8" data-icon="ph:dog-fill" data-width="56"></span>
+            <h3 class="text-2xl font-bold mb-4 italic">Animal Care</h3>
+            <p class="text-neutral-500 leading-relaxed text-sm font-normal">Help with walking dogs, socializing cats,
+              cleaning kennels, and basic grooming. Direct interaction with our furry residents.</p>
+          </div>
+          <div
+            class="bg-neutral-50 p-12 rounded-[2.5rem] border border-neutral-100 animate-on-scroll group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+            style="transition-delay: 0.1s;">
+            <span class="iconify text-secondary mb-8" data-icon="ph:calendar-heart-fill" data-width="56"></span>
+            <h3 class="text-2xl font-bold mb-4 italic">Event Support</h3>
+            <p class="text-neutral-500 leading-relaxed text-sm font-normal">Assist at adoption fairs, fundraisers, and
+              community outreach programs. Help us spread the word about our mission.</p>
+          </div>
+          <div
+            class="bg-neutral-50 p-12 rounded-[2.5rem] border border-neutral-100 animate-on-scroll group hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+            style="transition-delay: 0.2s;">
+            <span class="iconify text-accent mb-8" data-icon="ph:desktop-fill" data-width="56"></span>
+            <h3 class="text-2xl font-bold mb-4 italic">Administrative</h3>
+            <p class="text-neutral-500 leading-relaxed text-sm font-normal">Lend your professional skills in social
+              media, data entry, photography, or grant writing from the comfort of home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 md:py-32 bg-neutral-50 overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+          <div class="relative group">
+            <div class="rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+              <img src="../assets/images/img_013.jpg"
+                alt="Volunteer" class="w-full grayscale group-hover:grayscale-0 transition-all duration-1000">
+            </div>
+            <div
+              class="absolute -top-10 -left-10 w-40 h-40 bg-primary opacity-10 blur-[80px] rounded-full group-hover:opacity-30 transition-opacity duration-1000">
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 leading-tight italic">Our <span
+                class="text-primary italic opacity-80">Simple Step</span> Process</h2>
+            <div class="space-y-12">
+              <div class="flex gap-8 group">
+                <div
+                  class="w-14 h-14 bg-white border border-neutral-100 shadow-lg rounded-2xl flex items-center justify-center shrink-0 font-bold font-heading text-xl group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  1</div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2 italic">Online Application</h4>
+                  <p class="text-neutral-500 leading-relaxed font-normal">Tell us about your interests and availability
+                    through our simple registration portal. It only takes 5 minutes.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <div
+                  class="w-14 h-14 bg-white border border-neutral-100 shadow-lg rounded-2xl flex items-center justify-center shrink-0 font-bold font-heading text-xl group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  2</div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2 italic">Orientation</h4>
+                  <p class="text-neutral-500 leading-relaxed font-normal">Attend a brief session (available online or
+                    in-person) to learn our safety protocols and organizational mission.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <div
+                  class="w-14 h-14 bg-white border border-neutral-100 shadow-lg rounded-2xl flex items-center justify-center shrink-0 font-bold font-heading text-xl group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  3</div>
+                <div>
+                  <h4 class="text-xl font-bold mb-2 italic">Hands-On Training</h4>
+                  <p class="text-neutral-500 leading-relaxed font-normal">Shadow an experienced volunteer for a few
+                    shifts to get comfortable with your chosen role and resident animals.</p>
+                </div>
+              </div>
+            </div>
+            <a href="../auth/register.html"
+              class="mt-16 inline-block bg-primary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-hover shadow-xl shadow-primary/20 transition-all hover:-translate-y-1">Start
+              Your Application</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Donation | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <header class="bg-neutral-900 py-16 text-white">
+    <div class="container mx-auto px-4 text-center animate-fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Support <span class="text-primary">Our Mission</span></h1>
+      <p class="mx-auto text-white/60 max-w-2xl text-lg">Every dollar goes directly to animal care and rescue
+        operations. Your generosity saves lives.</p>
+    </div>
+  </header>
+
+  <main class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Donation Form -->
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-neutral-100 animate-fade-up">
+          <h2 class="text-2xl font-bold mb-8 italic">Choose Your <span class="text-primary">Gift</span></h2>
+
+          <div class="mb-10">
+            <label
+              class="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4 ml-1">Frequency</label>
+            <div class="flex gap-2 p-1.5 bg-neutral-50 border border-neutral-100 rounded-2xl">
+              <button
+                class="flex-1 bg-primary text-white py-3 rounded-xl font-bold text-xs uppercase tracking-widest shadow-lg shadow-primary/20 transition-all">One-Time</button>
+              <button
+                class="flex-1 py-3 rounded-xl font-bold text-xs uppercase tracking-widest text-neutral-500 hover:text-primary transition-all">Monthly</button>
+            </div>
+          </div>
+
+          <div class="mb-10">
+            <label class="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4 ml-1">Select
+              Amount</label>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+              <button
+                class="amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all">$10</button>
+              <button
+                class="amount-btn border-2 border-primary bg-primary/5 py-4 rounded-xl font-bold text-sm text-primary transition-all">$25</button>
+              <button
+                class="amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all">$50</button>
+              <button
+                class="amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all">$100</button>
+              <button
+                class="amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all">$250</button>
+              <button
+                class="amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all">Other</button>
+            </div>
+          </div>
+
+          <div class="bg-primary/5 border border-primary/10 p-6 rounded-2xl mb-10">
+            <p class="text-sm leading-relaxed text-neutral-700">
+              <strong class="text-primary uppercase tracking-widest text-[10px] block mb-1">Your Impact:</strong>
+              <span id="impact-text" class="font-bold font-heading italic">$25 provides vaccinations and flea treatment
+                for one rescued animal.</span>
+            </p>
+          </div>
+
+          <button
+            class="w-full bg-secondary text-white py-5 rounded-2xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary-hover shadow-xl shadow-secondary/20 transition-all hover:-translate-y-0.5 mb-12">Proceed
+            to Payment</button>
+
+          <div
+            class="flex items-center justify-center gap-8 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+            <span class="iconify" data-icon="logos:stripe" data-width="50"></span>
+            <span class="iconify" data-icon="logos:paypal" data-width="50"></span>
+            <span class="iconify text-xl" data-icon="ph:lock-fill"></span>
+          </div>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="animate-on-scroll lg:pt-10">
+          <h3 class="text-3xl font-bold mb-8 italic">Your Impact <span class="text-secondary">Summary</span></h3>
+          <p class="text-neutral-500 mb-10 leading-relaxed text-lg">Since our founding, donor contributions have
+            directly funded essential care and second chances for thousands of innocent lives.</p>
+          <ul class="space-y-6 mb-12">
+            <li class="flex items-start gap-4">
+              <span
+                class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-1">
+                <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+              </span>
+              <p class="text-neutral-700 font-bold">5,000+ Emergency Surgeries</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <span
+                class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-1">
+                <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+              </span>
+              <p class="text-neutral-700 font-bold">12,000+ Spay/Neuter Procedures</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <span
+                class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-1">
+                <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+              </span>
+              <p class="text-neutral-700 font-bold">50,000+ Lbs of High-Quality Food</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <span
+                class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-1">
+                <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+              </span>
+              <p class="text-neutral-700 font-bold">24/7 Transport for Distressed Animals</p>
+            </li>
+          </ul>
+
+          <div class="bg-secondary/5 border border-secondary/10 p-8 rounded-3xl relative overflow-hidden group">
+            <div
+              class="absolute -right-4 -top-4 text-secondary/5 transform group-hover:-rotate-12 transition-transform duration-700">
+              <span class="iconify text-8xl" data-icon="ph:certificate-fill"></span>
+            </div>
+            <h4 class="text-secondary font-bold uppercase tracking-widest text-xs mb-3">Tax Deductible</h4>
+            <p class="text-sm text-neutral-600 leading-relaxed">RescueHope is a 501(c)(3) non-profit organization. All
+              donations are tax-deductible to the extent allowed by law.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Simple logic for amount selection
+    const buttons = document.querySelectorAll('.amount-btn');
+    const impactText = document.getElementById('impact-text');
+
+    const impacts = {
+      '$10': 'feeds a rescued cat for two weeks.',
+      '$25': 'provides vaccinations and flea treatment for one rescued animal.',
+      '$50': 'covers a comprehensive vet exam for a new intake.',
+      '$100': 'contributes toward emergency surgical costs.',
+      '$250': 'fully sponsors a specialized foster care case for one month.'
+    };
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.className = 'amount-btn border border-neutral-100 bg-neutral-50 py-4 rounded-xl font-bold text-sm text-neutral-600 hover:border-primary hover:text-primary transition-all';
+        });
+        btn.className = 'amount-btn border-2 border-primary bg-primary/5 py-4 rounded-xl font-bold text-sm text-primary transition-all';
+
+        if (impacts[btn.innerText]) {
+          impactText.innerText = btn.innerText + ' ' + impacts[btn.innerText];
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

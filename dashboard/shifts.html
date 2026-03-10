@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift Management | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="bg-neutral-100">
+
+  <div class="min-h-screen bg-neutral-100 flex flex-col lg:flex-row font-normal">
+    <div id="dashboard-sidebar-placeholder" class="lg:w-64 shrink-0 bg-neutral-900"></div>
+    <div class="flex-grow flex flex-col">
+      <div id="dashboard-header-placeholder"
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-200"></div>
+
+      <div class="layout-flex flex-col">
+        <main class="p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+            <div class="flex gap-4 p-1 bg-white rounded-2xl border border-neutral-100 shadow-sm">
+              <button
+                class="px-6 py-2.5 rounded-xl font-bold text-[10px] uppercase tracking-widest text-neutral-400 hover:text-neutral-900 transition-all">List
+                View</button>
+              <button
+                class="px-6 py-2.5 rounded-xl font-bold text-[10px] uppercase tracking-widest bg-primary text-white shadow-lg shadow-primary/20 italic">Calendar
+                View</button>
+            </div>
+            <div class="flex items-center gap-8 bg-white px-8 py-3 rounded-2xl border border-neutral-100 shadow-sm">
+              <button class="text-neutral-400 hover:text-primary transition-colors">
+                <span class="iconify" data-icon="ph:caret-left-bold"></span>
+              </button>
+              <h4 class="text-xl font-bold italic min-w-[120px] text-center">March 2026</h4>
+              <button class="text-neutral-400 hover:text-primary transition-colors">
+                <span class="iconify" data-icon="ph:caret-right-bold"></span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-[2.5rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 overflow-hidden mb-16">
+            <div class="grid grid-cols-7 border-b border-neutral-100">
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">SUN</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">MON</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">TUE</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">WED</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">THU</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400 border-r border-neutral-100">FRI</div>
+              <div class="py-4 text-center text-[10px] font-bold text-neutral-400">SAT</div>
+            </div>
+            <div class="grid grid-cols-7 bg-white">
+              <!-- Row 1 (Empty/Muted) -->
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">1</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">2</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">3</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">4</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">5</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-200 font-bold">6</div>
+              <div class="min-h-32 p-4 border-b border-neutral-50 text-neutral-200 font-bold">7</div>
+
+              <!-- Row 2 -->
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">8</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">9</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">10</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">11</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">12</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">13</div>
+              <div class="min-h-32 p-4 border-b border-neutral-50 text-neutral-400 font-bold">14</div>
+
+              <!-- Row 3 -->
+              <div class="min-h-32 p-4 border-r border-b border-neutral-100 bg-primary/5 text-primary font-bold">
+                15
+                <div
+                  class="mt-4 p-3 bg-primary text-white text-[9px] font-bold rounded-xl shadow-lg shadow-primary/20 italic">
+                  Cat Room Socialization (10am)
+                </div>
+              </div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">16</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">17</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">18</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">19</div>
+              <div class="min-h-32 p-4 border-r border-b border-neutral-50 text-neutral-400 font-bold">20</div>
+              <div class="min-h-32 p-4 border-b border-neutral-50 text-neutral-400 font-bold">21</div>
+
+              <!-- Row 4 -->
+              <div class="min-h-32 p-4 border-r border-neutral-100 bg-secondary/5 text-secondary font-bold">
+                22
+                <div
+                  class="mt-4 p-3 bg-secondary text-white text-[9px] font-bold rounded-xl shadow-lg shadow-secondary/20 italic">
+                  Adoption Day Event (9am)
+                </div>
+              </div>
+              <div class="min-h-32 p-4 border-r border-neutral-50 text-neutral-400 font-bold">23</div>
+              <div class="min-h-32 p-4 border-r border-neutral-50 text-neutral-400 font-bold">24</div>
+              <div class="min-h-32 p-4 border-r border-neutral-50 text-neutral-400 font-bold">25</div>
+              <div class="min-h-32 p-4 border-r border-neutral-50 text-neutral-400 font-bold">26</div>
+              <div class="min-h-32 p-4 border-r border-neutral-50 text-neutral-400 font-bold">27</div>
+              <div class="min-h-32 p-4 text-neutral-400 font-bold">28</div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold mb-8 italic">Your Upcoming <span
+                class="text-primary italic opacity-80 not-italic">Shifts</span></h4>
+            <div
+              class="bg-white rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                  <thead>
+                    <tr class="border-b border-neutral-100">
+                      <th class="px-8 py-6 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Date</th>
+                      <th class="px-8 py-6 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Role</th>
+                      <th class="px-8 py-6 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Location
+                      </th>
+                      <th class="px-8 py-6 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Status</th>
+                      <th class="px-8 py-6 text-[10px] font-bold text-neutral-400 uppercase tracking-widest text-right">
+                        Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-neutral-50">
+                    <tr class="group hover:bg-neutral-50/50 transition-colors">
+                      <td class="px-8 py-6 font-bold text-neutral-900">March 15, 2026</td>
+                      <td class="px-8 py-6 italic font-bold text-primary">Cat Room Socialization</td>
+                      <td class="px-8 py-6 text-neutral-500 font-normal">Main Shelter</td>
+                      <td class="px-8 py-6">
+                        <span
+                          class="inline-block bg-primary text-white text-[9px] font-bold px-4 py-1.5 rounded-full italic tracking-wider shadow-lg shadow-primary/10">CONFIRMED</span>
+                      </td>
+                      <td class="px-8 py-6 text-right">
+                        <a href="#"
+                          class="text-xs font-bold uppercase tracking-widest text-neutral-400 hover:text-red-500 transition-colors">Cancel</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

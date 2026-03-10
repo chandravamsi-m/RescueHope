@@ -1,0 +1,94 @@
+/* 
+ * RescueHope — Design System & Global Styles
+ * Version: 2.0.0 (Tailwind Optimized)
+ */
+
+:root {
+    /* Color Palette — Light Mode */
+    --primary: #f57c00;
+    --primary-hover: #e65100;
+    --primary-light: #fff3e0;
+    
+    --secondary: #2e7d32;
+    --secondary-hover: #1b5e20;
+    --secondary-light: #e8f5e9;
+    
+    --accent: #0288d1;
+    --accent-hover: #01579b;
+    
+    --neutral-50: #ffffff;
+    --neutral-100: #f8f9fa;
+    --neutral-200: #e9ecef;
+    --neutral-300: #dee2e6;
+    --neutral-400: #ced4da;
+    --neutral-500: #adb5bd;
+    --neutral-600: #6c757d;
+    --neutral-700: #495057;
+    --neutral-800: #343a40;
+    --neutral-900: #212529;
+
+    /* Semantic Colors */
+    --bg-body: var(--neutral-50);
+    --bg-card: var(--neutral-50);
+    --text-main: var(--neutral-800);
+    --text-muted: var(--neutral-600);
+    --text-inverse: var(--neutral-50);
+    --border-color: var(--neutral-200);
+
+    /* Typography */
+    --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    
+    /* Spacing Scale (8px base) */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-body: #0a0a0a;
+    --bg-card: #151515;
+    --text-main: var(--neutral-200);
+    --text-muted: var(--neutral-500);
+    --text-inverse: var(--neutral-900);
+    --border-color: #2a2a2a;
+    
+    --neutral-100: #1a1a1a;
+    --neutral-200: #2a2a2a;
+    --neutral-300: #3a3a3a;
+}
+
+/* Global Resets for Integration */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Theme Toggle Helper */
+.theme-toggle .ph-sun-bold { display: none; }
+[data-theme="dark"] .theme-toggle .ph-moon-stars-bold { display: none; }
+[data-theme="dark"] .theme-toggle .ph-sun-bold { display: block; }

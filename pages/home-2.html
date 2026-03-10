@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rescue Chronicles | Home 2 | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <!-- Icons -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar Placeholder (Over dark hero) -->
+  <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
+
+  <main id="main-content">
+
+    <!-- Hero: Editorial Split -->
+    <section
+      class="relative min-h-screen lg:h-screen flex flex-col lg:flex-row overflow-hidden bg-neutral-900 items-center">
+      <!-- Left Content -->
+      <div class="w-full lg:w-1/2 flex items-center justify-center px-6 py-20 lg:p-16 relative z-10">
+        <div class="max-w-xl">
+          <h1
+            class="text-6xl md:text-8xl lg:text-[7rem] font-bold text-white mb-10 leading-[0.85] tracking-tighter animate-fade-up"
+            style="animation-delay: 0.2s;">
+            Love <br>
+            <span class="text-primary italic font-serif">Rewrites</span> <br>
+            Fate.
+          </h1>
+          <p class="text-white/60 text-lg md:text-xl mb-12 max-w-lg leading-relaxed animate-fade-up"
+            style="animation-delay: 0.3s;">
+            Experience a curated approach to animal rescue. Where medical precision meets the architecture of healing.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-6 animate-fade-up" style="animation-delay: 0.4s;">
+            <a href="adopt.html"
+              class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-hover shadow-2xl shadow-primary/20 transition-all hover:-translate-y-1 text-center">
+              Meet the Residents
+            </a>
+            <a href="#manifesto"
+              class="w-full sm:w-auto border border-white/20 text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-neutral-900 transition-all text-center">
+              View Manifesto
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual -->
+      <div class="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
+        <img src="../assets/images/img_032.jpg" class="w-full h-full object-cover scale-105" alt="Hero Background Dog">
+        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-transparent to-transparent lg:block hidden">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent lg:hidden block">
+        </div>
+      </div>
+
+      <!-- Vertical Label (Desktop Only) -->
+      <div
+        class="absolute right-10 bottom-1/2 translate-y-1/2 rotate-90 origin-right hidden lg:block pointer-events-none">
+        <span class="text-white/5 text-9xl font-black uppercase tracking-tighter select-none">
+          RESCUEHOPE
+        </span>
+      </div>
+    </section>
+
+    <!-- Section 1: The Manifesto (Staggered Layout) -->
+    <section id="manifesto" class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+          <!-- Visual Side (Left Staggered) -->
+          <div class="w-full lg:w-1/2 relative animate-on-scroll">
+            <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl group">
+              <img src="../assets/images/img_033.jpg"
+                class="w-full grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Process image">
+            </div>
+            <!-- Floating Meta Information -->
+            <div
+              class="absolute -top-8 -right-4 bg-neutral-900 text-white p-4 md:p-5 rounded-2xl shadow-xl z-20 hidden md:block animate-on-scroll border border-white/5"
+              style="transition-delay: 0.2s;">
+              <h4 class="text-xl md:text-2xl font-bold mb-0.5">14.2k</h4>
+              <p class="text-white/40 text-[8px] font-bold uppercase tracking-[0.2em]">Hearts Restored</p>
+            </div>
+            <div class="absolute -bottom-12 -left-8 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+          </div>
+
+          <!-- Text Side -->
+          <div class="w-full lg:w-1/2 animate-on-scroll" style="transition-delay: 0.1s;">
+            <div class="max-w-xl">
+              <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-6">Our
+                DNA</span>
+              <h2 class="text-4xl md:text-6xl font-bold leading-[1.05] mb-10 tracking-tight text-neutral-900">
+                The Architecture <br> of <span class="text-primary italic font-serif opacity-80">Mercy</span>.
+              </h2>
+              <div class="space-y-8">
+                <p
+                  class="text-neutral-500 text-lg md:text-xl leading-relaxed italic border-l-4 border-primary/20 pl-8 py-2">
+                  "We believe every life is a masterpiece, even those that have been torn at the edges."
+                </p>
+                <p class="text-neutral-500 text-lg leading-relaxed font-light">
+                  At RescueHope, we don't just rescue animals; we curate second beginnings. Each ward in our care
+                  receives more than just medicine—they receive the architecture of a new life.
+                </p>
+                <div class="flex items-center gap-8 pt-6">
+                  <div class="flex -space-x-3">
+                    <img src="../assets/images/img_037.png"
+                      class="w-12 h-12 rounded-full border-2 border-white object-cover" alt="Team Member">
+                    <div
+                      class="w-12 h-12 rounded-full border-2 border-white bg-neutral-100 flex items-center justify-center text-[10px] font-bold text-neutral-900">
+                      +12</div>
+                  </div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-neutral-400">Join our medical circle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Registry (Grid Layout) -->
+    <section class="py-16 bg-neutral-50 relative overflow-hidden">
+      <!-- Background pattern -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%">
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-16 px-4">
+          <div class="max-w-2xl">
+            <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">The Dossier</span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 italic">The <span
+                class="font-normal opacity-40 not-italic">Registry</span> of Rebirth</h2>
+            <p class="text-neutral-500 text-lg leading-relaxed">A curated directory of souls currently undergoing their
+              final restoration before transition.</p>
+          </div>
+          <a href="adopt.html"
+            class="bg-neutral-900 text-white px-8 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] shadow-xl hover:bg-neutral-800 transition-all shrink-0">Full
+            Collection →</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Item 1: Large Featured (Atlas) -->
+          <div class="lg:col-span-2 group animate-on-scroll">
+            <div class="relative h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-neutral-900">
+              <img src="../assets/images/img_034.jpg"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                alt="Atlas - Golden Retriever">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-900/20 to-transparent"></div>
+
+              <!-- Content Overlay -->
+              <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-end text-white z-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                  <div>
+                    <h3 class="text-5xl md:text-6xl font-bold mb-2 leading-none">Atlas</h3>
+                    <p class="text-xl opacity-60 italic font-normal">Golden Retriever • Senior</p>
+                  </div>
+                  <a href="adopt.html"
+                    class="bg-white text-neutral-900 px-10 py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl">Full
+                    Bio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vertical Stack (Luna & Pocket) -->
+          <div class="flex flex-col gap-8">
+            <!-- Item 2: Luna -->
+            <div class="grow group animate-on-scroll" style="transition-delay: 0.1s;">
+              <div class="relative h-full min-h-[300px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-neutral-900">
+                <img src="../assets/images/img_010.jpg"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                  alt="Luna - Cat">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
+                <div class="absolute inset-0 p-10 flex flex-col justify-end text-white z-10">
+                  <span class="text-[10px] font-bold uppercase tracking-widest opacity-60 mb-2">Rescue Date:
+                    12/23</span>
+                  <h3 class="text-3xl font-bold mb-4">Luna</h3>
+                  <a href="adopt.html"
+                    class="text-[10px] font-bold uppercase tracking-[0.2em] border-b border-primary/40 hover:border-primary pb-1 transition-all inline-flex items-center gap-2 text-primary">
+                    View Progress <span class="iconify" data-icon="ph:arrow-right-bold"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: Pocket -->
+            <div class="grow group animate-on-scroll" style="transition-delay: 0.2s;">
+              <div class="relative h-full min-h-[300px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-neutral-900">
+                <img src="../assets/images/img_035.jpg"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                  alt="Pocket - Small Dog">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
+                <div class="absolute inset-0 p-10 flex flex-col justify-end text-white z-10">
+                  <h3 class="text-3xl font-bold mb-2 leading-none">Pocket</h3>
+                  <p class="text-[10px] opacity-60 uppercase tracking-widest font-bold">Small Breed Specialist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Wide Bonded Pairs -->
+          <div class="lg:col-span-3 group animate-on-scroll" style="transition-delay: 0.3s;">
+            <div
+              class="flex flex-col md:flex-row rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-100 bg-white">
+              <div class="w-full md:w-3/5 h-[400px] md:h-[600px] overflow-hidden relative bg-neutral-900">
+                <img src="../assets/images/img_036.png"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                  alt="Bonded pairs">
+              </div>
+              <div class="w-full md:w-2/5 p-12 md:p-16 lg:p-20 flex flex-col justify-center">
+                <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-6 block">Special
+                  Handling
+                  Required</span>
+                <h3 class="text-4xl lg:text-5xl font-bold mb-8 leading-[1.1] italic">The <span
+                    class="font-normal opacity-40 not-italic">Bonded</span> Collection
+                </h3>
+                <p class="text-lg text-neutral-500 mb-10 leading-relaxed max-w-sm">
+                  Some journeys are better shared. Our Bonded Collection features pairs who have survived adversity
+                  together and require one single, compassionate home.
+                </p>
+                <a href="adopt.html"
+                  class="bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover shadow-xl shadow-primary/20 transition-all hover:-translate-y-1 w-max">Inquire
+                  Joint Application</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The Operations (Data-Heavy Dashboard) -->
+    <section class="py-16 bg-neutral-900 text-white relative overflow-hidden">
+      <!-- Background Data Grid -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 50H1000M500 0V1000" stroke="white" stroke-width="0.5" />
+        </svg>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-12 xl:gap-24 items-center">
+          <!-- Data Column -->
+          <div class="w-full lg:w-1/2 order-2 lg:order-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 animate-on-scroll">
+              <!-- Stat 1 -->
+              <div class="group border-t border-white/5 pt-6">
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Funding Allocation</span>
+                  <span class="text-xs font-mono text-white/20">001</span>
+                </div>
+                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">$2.4M</h4>
+                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Resilience target reached for Q1 2024
+                  operations.</p>
+              </div>
+              <!-- Stat 2 -->
+              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.1s;">
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Response Latency</span>
+                  <span class="text-xs font-mono text-white/20">002</span>
+                </div>
+                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">48<span
+                    class="text-xl font-normal opacity-20 ml-1 italic">h</span></h4>
+                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Mean critical intervention time across
+                  all sectors.</p>
+              </div>
+              <!-- Stat 3 -->
+              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.2s;">
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Network Saturation</span>
+                  <span class="text-xs font-mono text-white/20">003</span>
+                </div>
+                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">98<span
+                    class="text-xl font-normal opacity-20 ml-1 italic">%</span></h4>
+                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Successful rehabilitation and social
+                  reintegration rate.</p>
+              </div>
+              <!-- Stat 4 -->
+              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.3s;">
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Human Capital</span>
+                  <span class="text-xs font-mono text-white/20">004</span>
+                </div>
+                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">1.2k</h4>
+                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Active medical and behavioral specialists
+                  in roster.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description Column -->
+          <div class="w-full lg:w-1/2 order-1 lg:order-2 animate-on-scroll" style="transition-delay: 0.2s;">
+            <div
+              class="bg-white/5 border border-white/10 p-10 lg:p-14 rounded-[2.5rem] backdrop-blur-2xl relative overflow-hidden group">
+              <div
+                class="absolute -top-24 -right-24 w-64 h-64 bg-primary opacity-20 blur-[100px] rounded-full group-hover:opacity-40 transition-opacity duration-1000">
+              </div>
+
+              <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-6">The
+                Operations</span>
+              <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-[1.05] tracking-tight">
+                Systems <br> of <span class="italic font-serif opacity-40">Absolute</span> <br> Compassion.
+              </h2>
+              <p class="text-white/60 text-base leading-relaxed mb-10 font-light">
+                We operate on a logic of zero-latency compassion. When a distress call enters our network, our pulse
+                accelerates, ensuring every resource is routed with medical precision and behavioral foresight.
+              </p>
+              <a href="impact.html"
+                class="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:text-primary transition-colors group">
+                <span
+                  class="w-8 h-px bg-white/20 group-hover:bg-primary group-hover:w-12 transition-all shadow-glow shadow-primary/20"></span>
+                Enter The Impact Audit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Journal (Editorial Edition) -->
+    <section class="pt-12 pb-0 bg-white">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col lg:flex-row items-baseline justify-between mb-4 pb-4 border-b border-neutral-100 gap-8 animate-on-scroll">
+          <div class="max-w-2xl">
+            <span class="text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Field Notes</span>
+            <h2 class="text-4xl md:text-7xl font-bold tracking-tight text-neutral-900 leading-none">
+              The <span class="italic font-serif opacity-20">Journal</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+          <!-- Feature Article -->
+          <article class="lg:col-span-7 animate-on-scroll">
+            <div class="group">
+              <div
+                class="relative rounded-[2.5rem] overflow-hidden mb-10 shadow-2xl aspect-[4/3] lg:aspect-square xl:aspect-[4/3]">
+                <img src="../assets/images/img_006.jpg"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
+                  alt="Feature Story">
+                <div class="absolute top-8 left-8">
+                  <span
+                    class="bg-white/90 backdrop-blur-md text-neutral-900 text-[10px] font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-xl">Feature
+                    Story</span>
+                </div>
+              </div>
+              <div class="max-w-xl">
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Behavioral Science</span>
+                  <span class="w-1 h-1 bg-neutral-200 rounded-full"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">12 Min Read</span>
+                </div>
+                <h3
+                  class="text-3xl md:text-5xl font-bold mb-8 leading-[1.1] group-hover:text-primary transition-colors cursor-pointer">
+                  Beyond the Kennel: The <br> <span class="italic font-serif">Psychology</span> of Freedom.
+                </h3>
+                <p class="text-neutral-500 text-lg leading-relaxed mb-10">
+                  How open spaces and social integration are redefining the way we rehabilitate trauma in large breeds.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sidebar Articles (Media Object List) -->
+          <div
+            class="lg:col-span-5 flex flex-col pt-8 border-t lg:border-t-0 lg:border-l border-neutral-100 lg:pl-16 xl:pl-24">
+            <div class="space-y-12 mb-16">
+              <!-- Article 1 -->
+              <article class="group animate-on-scroll flex gap-8 items-start" style="transition-delay: 0.1s;">
+                <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
+                  <img src="../assets/images/img_042.jpg"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Sidebar article 1">
+                </div>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Medical
+                    Insight</span>
+                  <h4
+                    class="text-xl font-bold mb-3 italic leading-tight group-hover:text-primary transition-colors cursor-pointer">
+                    The Architecture of a Second Chance
+                  </h4>
+                  <p class="text-neutral-500 text-xs leading-relaxed line-clamp-2">
+                    A look inside our state-of-the-art biological wing and the vets who run it with precision.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Article 2 -->
+              <article class="group animate-on-scroll flex gap-8 items-start" style="transition-delay: 0.2s;">
+                <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
+                  <img src="../assets/images/img_018.jpg"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Sidebar article 2">
+                </div>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Volunteer
+                    Voices</span>
+                  <h4
+                    class="text-xl font-bold mb-3 italic leading-tight group-hover:text-primary transition-colors cursor-pointer">
+                    Why I Chose to Stay After 5 Years
+                  </h4>
+                  <p class="text-neutral-500 text-xs leading-relaxed line-clamp-2">
+                    A personal essay by Sarah Miller on the emotional gravity of permanent rescue work.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Article 3 -->
+              <article class="group animate-on-scroll flex gap-8 items-start" style="transition-delay: 0.3s;">
+                <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
+                  <img src="../assets/images/img_019.jpg"
+                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Sidebar article 3">
+                </div>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block">Community
+                    Impact</span>
+                  <h4
+                    class="text-xl font-bold mb-3 italic leading-tight group-hover:text-primary transition-colors cursor-pointer">
+                    City Council: The New Bill
+                  </h4>
+                  <p class="text-neutral-500 text-xs leading-relaxed line-clamp-2">
+                    Advocating for legislative change at the heart of our rescue-first community.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <a href="stories.html"
+              class="inline-flex items-center justify-center w-full border border-neutral-100 bg-neutral-50 text-neutral-900 py-5 rounded-2xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-neutral-900 hover:text-white transition-all shadow-sm">View
+              Full Archives</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

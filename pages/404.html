@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <div id="navbar-placeholder"></div>
+
+  <main class="flex-grow flex items-center justify-center py-20 bg-neutral-50 overflow-hidden relative">
+    <!-- Background element -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full"></div>
+
+    <div class="container mx-auto px-4 text-center animate-fade-up relative z-10">
+      <div
+        class="w-32 h-32 bg-white border border-neutral-100 shadow-2xl rounded-[2.5rem] flex items-center justify-center mx-auto mb-12 group hover:rotate-12 transition-all duration-500">
+        <span class="iconify text-6xl text-primary group-hover:scale-110 transition-transform duration-500"
+          data-icon="ph:dog-fill"></span>
+      </div>
+      <h1 class="text-9xl font-bold text-neutral-900 mb-6 font-heading tracking-tighter opacity-10 leading-none">404
+      </h1>
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 italic leading-tight">Paws... This page is <span
+          class="text-primary opacity-80 not-italic">missing</span>!</h2>
+      <p class="text-neutral-500 max-w-xl mx-auto mb-16 text-lg leading-relaxed font-normal">It looks like the link you
+        followed has gone for a long walk or never existed. Don't worry, we can help you find your way back.</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="../index.html"
+          class="bg-primary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-hover shadow-xl shadow-primary/20 transition-all hover:-translate-y-1">Return
+          Home</a>
+        <a href="adopt.html"
+          class="bg-white border-2 border-neutral-200 text-neutral-900 px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all">Meet
+          Animals</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

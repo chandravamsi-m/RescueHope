@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Dashboard | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="bg-neutral-100">
+
+  <div class="min-h-screen bg-neutral-100 flex flex-col lg:flex-row">
+    <!-- Sidebar Placeholder -->
+    <div id="dashboard-sidebar-placeholder" class="lg:w-64 shrink-0 bg-neutral-900"></div>
+
+    <!-- Main Content Wrapper -->
+    <div class="flex-grow flex flex-col">
+      <!-- Header Placeholder -->
+      <div id="dashboard-header-placeholder"
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-200"></div>
+
+      <main class="p-6 md:p-8">
+        <!-- Page Title -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <h2 class="text-3xl font-bold mb-2 italic">Dashboard <span
+                class="text-primary italic opacity-80 not-italic">Overview</span></h2>
+            <p class="text-neutral-400 text-sm font-normal">Track your volunteer progress and foster animal status.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover shadow-lg shadow-primary/10 transition-all hover:-translate-y-1">Sign
+              Up for Shift</button>
+            <button
+              class="bg-white border-2 border-neutral-200 text-neutral-900 px-6 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all">Donate
+              Now</button>
+          </div>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div
+            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Next Shift In</p>
+                <h3 class="text-3xl font-bold mb-2 font-heading">2 Days</h3>
+                <p class="text-secondary text-[10px] font-bold uppercase italic">March 15, 10:00 AM</p>
+              </div>
+              <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <span class="iconify text-2xl text-primary" data-icon="ph:calendar-check-fill"></span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up"
+            style="transition-delay: 0.1s;">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Total Hours</p>
+                <h3 class="text-3xl font-bold mb-2 font-heading">142.5</h3>
+                <p class="text-primary text-[10px] font-bold uppercase italic">↑ 12h this month</p>
+              </div>
+              <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center">
+                <span class="iconify text-2xl text-secondary" data-icon="ph:clock-countdown-fill"></span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up"
+            style="transition-delay: 0.2s;">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Active Fosters</p>
+                <h3 class="text-3xl font-bold mb-2 font-heading">1</h3>
+                <p class="text-neutral-400 text-[10px] font-bold uppercase italic">Luna (since Jan 12)</p>
+              </div>
+              <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center">
+                <span class="iconify text-2xl text-accent" data-icon="ph:dog-fill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <!-- Shift Schedule Preview -->
+          <div
+            class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-on-scroll">
+            <div class="flex items-center gap-4 mb-10">
+              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                <span class="iconify text-primary" data-icon="ph:calendar-bold"></span>
+              </div>
+              <h4 class="text-xl font-bold italic">Upcoming Shifts</h4>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-center justify-between p-6 bg-neutral-50 rounded-2xl border border-neutral-100 group hover:border-primary/30 transition-all">
+                <div>
+                  <p class="font-bold text-neutral-900 mb-1">Cat Room Socialization</p>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 15, 2026 • 10:00
+                    AM - 1:00 PM</span>
+                </div>
+                <span
+                  class="bg-primary text-white text-[10px] font-bold px-4 py-2 rounded-full shadow-lg shadow-primary/10 italic">CONFIRMED</span>
+              </div>
+              <div
+                class="flex items-center justify-between p-6 bg-neutral-50 rounded-2xl border border-neutral-100 group hover:border-primary/30 transition-all">
+                <div>
+                  <p class="font-bold text-neutral-900 mb-1">Community Adoption Day</p>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 22, 2026 • 9:00
+                    AM - 3:00 PM</span>
+                </div>
+                <span
+                  class="bg-primary text-white text-[10px] font-bold px-4 py-2 rounded-full shadow-lg shadow-primary/10 italic">CONFIRMED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Feed -->
+          <div
+            class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-on-scroll">
+            <div class="flex items-center gap-4 mb-10">
+              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center">
+                <span class="iconify text-secondary" data-icon="ph:lightning-bold"></span>
+              </div>
+              <h4 class="text-xl font-bold italic">Recent Activity</h4>
+            </div>
+            <div class="flex flex-col gap-8">
+              <div class="flex gap-6">
+                <div class="w-10 h-10 shrink-0 bg-secondary/10 rounded-full flex items-center justify-center">
+                  <span class="iconify text-lg text-secondary" data-icon="ph:check-circle-fill"></span>
+                </div>
+                <div class="flex-grow pb-8 border-b border-neutral-50">
+                  <p class="text-neutral-600 font-normal leading-relaxed mb-2">Medical log updated for <strong
+                      class="text-neutral-900 italic">Luna</strong>.</p>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">2 hours ago</span>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div class="w-10 h-10 shrink-0 bg-accent/10 rounded-full flex items-center justify-center">
+                  <span class="iconify text-lg text-accent" data-icon="ph:info-fill"></span>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-neutral-600 font-normal leading-relaxed mb-2">New shift sign-up available for <strong
+                      class="text-neutral-900 italic">Adoption Event</strong>.</p>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">5 hours ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

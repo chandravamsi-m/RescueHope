@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <main class="min-h-screen flex items-center justify-center p-8 relative overflow-hidden bg-neutral-900">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+      <img src="../assets/images/img_014.jpg"
+        class="w-full h-full object-cover opacity-30 grayscale scale-105" alt="Background">
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/20 to-neutral-950/80"></div>
+    </div>
+
+    <div class="max-w-3xl w-full text-center relative z-10 animate-fade-up">
+      <a href="../index.html" class="inline-flex items-center gap-4 text-white font-bold text-2xl mb-16 group">
+        <span
+          class="w-12 h-12 bg-primary/20 rounded-2xl flex items-center justify-center group-hover:bg-primary transition-all duration-500">
+          <span class="iconify text-primary group-hover:text-white" data-icon="ph:paw-print-fill"></span>
+        </span>
+        RescueHope
+      </a>
+
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 italic leading-tight">Something <span
+          class="text-primary italic opacity-80 not-italic">Incredible</span> is Coming</h1>
+      <p class="text-white/40 text-lg md:text-xl font-normal leading-relaxed mb-16 max-w-2xl mx-auto">Our new foster
+        management portal and community platform are currently under development. We're building a better way to save
+        lives.</p>
+
+      <div class="flex flex-col items-center">
+        <form class="w-full max-w-md flex flex-col sm:flex-row gap-4 mb-12">
+          <input type="email" placeholder="Get notified when we launch..."
+            class="flex-grow bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-all font-normal">
+          <button
+            class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary-hover shadow-2xl shadow-primary/20 transition-all hover:-translate-y-1">Notify
+            Me</button>
+        </form>
+
+        <div class="flex gap-10">
+          <a href="#" class="text-white/40 hover:text-white transition-all hover:scale-125 duration-500">
+            <span class="iconify text-2xl" data-icon="ph:facebook-logo"></span>
+          </a>
+          <a href="#" class="text-white/40 hover:text-white transition-all hover:scale-125 duration-500">
+            <span class="iconify text-2xl" data-icon="ph:instagram-logo"></span>
+          </a>
+          <a href="#" class="text-white/40 hover:text-white transition-all hover:scale-125 duration-500">
+            <span class="iconify text-2xl" data-icon="ph:twitter-logo"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

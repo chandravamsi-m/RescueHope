@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RescueHope | Local Animal Rescue & Non-Profit</title>
+  <meta name="description"
+    content="Empowering community rescue. Join RescueHope in saving lives, finding forever homes, and making a difference for local animals.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- Icons -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden bg-neutral-900 border-b border-white/5">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/img_008.jpg" alt="Rescue Dog"
+          class="w-full h-full object-cover opacity-50 scale-110 animate-[zoom_20s_infinite_alternate]">
+        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/60 to-transparent"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-2xl animate-on-scroll">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-light text-xs font-bold uppercase tracking-widest mb-6 border border-primary/30 backdrop-blur-sm shadow-[0_2px_10px_rgba(245,124,0,0.15)]">
+            Est. 2012 • Local Impact
+          </span>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
+            Small Steps, <span class="text-primary italic drop-shadow-[0_2px_4px_rgba(245,124,0,0.3)]">Big</span>
+            Change.
+          </h1>
+          <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-xl">
+            We are a dedicated local network providing medical care, fostering, and forever homes for animals in need.
+            Join our mission to transform lives.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="pages/adopt.html"
+              class="px-8 py-3 bg-primary text-white font-bold rounded-lg transition-all hover:bg-primary-hover hover:scale-105 shadow-lg shadow-primary/25 border border-primary/50">
+              Meet Our Residents
+            </a>
+            <a href="pages/volunteer.html"
+              class="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 transition-all hover:bg-white/20 hover:scale-105 backdrop-blur-md shadow-lg shadow-black/20">
+              Join as Volunteer
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Stats Widget -->
+      <div class="absolute bottom-12 right-4 md:right-12 hidden lg:block animate-on-scroll">
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl max-w-[280px] shadow-2xl">
+          <div class="flex justify-between items-end mb-4">
+            <span class="text-white/70 text-xs font-bold uppercase tracking-widest">Active Fosters</span>
+            <span class="text-primary font-bold text-3xl leading-none">42</span>
+          </div>
+          <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+            <div class="w-[75%] h-full bg-primary rounded-full shadow-[0_0_10px_rgba(245,124,0,0.6)]"></div>
+          </div>
+          <p class="text-white/50 text-[10px] font-medium leading-relaxed mt-4 tracking-wider uppercase">
+            Helping animals find safety across 12 counties since last month.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Bar -->
+    <section class="py-8 bg-neutral-50 border-b border-neutral-200">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center animate-on-scroll">
+            <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-2 tracking-tight">1.2k+</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-primary">Lives Saved</p>
+          </div>
+          <div class="text-center animate-on-scroll" style="transition-delay: 0.1s;">
+            <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-2 tracking-tight">350+</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-secondary">Active Fosters</p>
+          </div>
+          <div class="text-center animate-on-scroll" style="transition-delay: 0.2s;">
+            <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-2 tracking-tight">$85k</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-accent">Medical Fund</p>
+          </div>
+          <div class="text-center animate-on-scroll" style="transition-delay: 0.3s;">
+            <h3 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-2 tracking-tight">100%</h3>
+            <p class="text-xs font-bold uppercase tracking-widest text-neutral-500">Non-Profit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Animals -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block animate-on-scroll">Adoptable
+            Hearts</span>
+          <h2
+            class="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight mb-4 tracking-tight animate-on-scroll">
+            Meet Your <span class="text-primary italic">New Best Friend</span>
+          </h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-on-scroll">
+            These lovable residents are waiting for their forever homes. Each animal has been medically vetted and
+            emotionally prepared for transition.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Animal Card 1 -->
+          <article
+            class="group bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 animate-on-scroll flex flex-col">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img src="assets/images/img_009.jpg" alt="Cooper - Golden Retriever"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl font-bold text-neutral-900 tracking-tight">Cooper</h3>
+                <span
+                  class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded border border-green-100 shadow-sm">Available</span>
+              </div>
+              <p class="text-neutral-500 text-sm mb-6 flex-grow">Golden Retriever • 2 Years • Male</p>
+              <a href="pages/animal-detail.html"
+                class="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 mt-auto">Meet
+                Cooper</a>
+            </div>
+          </article>
+
+          <!-- Animal Card 2 -->
+          <article
+            class="group bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 animate-on-scroll flex flex-col"
+            style="transition-delay: 0.1s;">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img src="assets/images/img_010.jpg" alt="Luna - Siamese Cat"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl font-bold text-neutral-900 tracking-tight">Luna</h3>
+                <span
+                  class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded border border-green-100 shadow-sm">Available</span>
+              </div>
+              <p class="text-neutral-500 text-sm mb-6 flex-grow">Siamese • 1 Year • Female</p>
+              <a href="pages/animal-detail.html"
+                class="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 mt-auto">Meet
+                Luna</a>
+            </div>
+          </article>
+
+          <!-- Animal Card 3 -->
+          <article
+            class="group bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 animate-on-scroll flex flex-col"
+            style="transition-delay: 0.2s;">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img src="assets/images/img_011.jpg" alt="Bella - Beagle"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl font-bold text-neutral-900 tracking-tight">Bella</h3>
+                <span
+                  class="px-3 py-1 bg-green-50 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded border border-green-100 shadow-sm">Available</span>
+              </div>
+              <p class="text-neutral-500 text-sm mb-6 flex-grow">Beagle • 4 Years • Female</p>
+              <a href="pages/animal-detail.html"
+                class="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 mt-auto">Meet
+                Bella</a>
+            </div>
+          </article>
+
+          <!-- Animal Card 4 -->
+          <article
+            class="group bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 animate-on-scroll flex flex-col"
+            style="transition-delay: 0.3s;">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img src="assets/images/img_012.jpg" alt="Oliver - French Bulldog"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-xl font-bold text-neutral-900 tracking-tight">Oliver</h3>
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-[10px] font-bold uppercase tracking-widest rounded border border-neutral-200 shadow-sm">Rehomed</span>
+              </div>
+              <p class="text-neutral-500 text-sm mb-6 flex-grow">French Bulldog • 3 Years • Male</p>
+              <a href="pages/animal-detail.html"
+                class="block w-full py-3 bg-primary text-white text-center font-bold rounded-lg hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 mt-auto">Meet
+                Oliver</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12 animate-on-scroll">
+          <a href="pages/adopt.html"
+            class="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-lg shadow-primary/10 hover:-translate-y-0.5">
+            Browse All Adoptable Animals <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center animate-on-scroll">
+          <div class="space-y-10">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Our North Star</span>
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight tracking-tight">
+                "We believe every paws-print matters. Our mission is to bridge the gap between <span
+                  class="text-primary italic">abandoned souls</span> and <span
+                  class="italic text-secondary font-medium">forever families</span>."
+              </h2>
+            </div>
+            <p class="text-lg text-neutral-600 leading-relaxed border-l-4 border-primary/20 pl-6">
+              At RescueHope, we provide more than just shelter; we provide a sanctuary for healing, growth, and second
+              chances. Our dedicated team of experts ensures every animal receives tailored medical care and behavioral
+              support.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-neutral-100">
+              <div class="flex gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="iconify text-primary text-2xl" data-icon="ph:heart-bold"></span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-neutral-900 mb-2">100% Non-Profit</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Every cent goes to our animals. We operate with
+                    radical transparency and focused compassion.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 sm:border-l sm:border-neutral-100 sm:pl-8">
+                <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span class="iconify text-secondary text-2xl" data-icon="ph:clock-bold"></span>
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-neutral-900 mb-2">24/7 Care</h4>
+                  <p class="text-sm text-neutral-500 leading-relaxed">Round-the-clock medical monitoring and emotional
+                    support for recovering rescues.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative px-4 lg:px-0">
+            <div
+              class="aspect-square rounded-[2rem] overflow-hidden rotate-3 scale-95 bg-neutral-100 border border-neutral-200">
+            </div>
+            <img src="assets/images/img_013.jpg" alt="Mission Image"
+              class="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-2xl -rotate-3 z-10 transition-transform duration-700 hover:rotate-0">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How You Can Help -->
+    <section class="py-16 bg-neutral-50 border-y border-neutral-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Be the Change</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-neutral-900 tracking-tight leading-tight">How You Can <span
+              class="text-primary italic">Make an Impact</span></h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto mt-4 leading-relaxed">There are many ways to support our
+            mission. Whether
+            it's through your
+            time, your home, or your resources, you are a hero.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Adopt -->
+          <article
+            class="group bg-white p-8 rounded-[2rem] border border-neutral-200 shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-500 animate-on-scroll flex flex-col items-start hover:-translate-y-2">
+            <div class="flex items-center gap-5 mb-5">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary/20 transition-all shadow-sm group-hover:shadow-md">
+                <span class="iconify text-primary text-2xl" data-icon="ph:house-line-bold"></span>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-900 tracking-tight m-0">Adopt</h3>
+            </div>
+            <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Open your heart and home to a soul in
+              need. Browse
+              our current residents
+              and find your companion.</p>
+            <a href="pages/adopt.html"
+              class="inline-flex items-center gap-2 font-bold text-sm text-primary hover:gap-3 transition-all uppercase tracking-widest mt-auto bg-primary/5 px-6 py-3 rounded-xl group-hover:bg-primary group-hover:text-white">
+              Start Adoption <span>&rarr;</span>
+            </a>
+          </article>
+          <!-- Donate -->
+          <article
+            class="group bg-white p-8 rounded-[2rem] border border-neutral-200 shadow-lg hover:shadow-2xl hover:border-secondary/30 transition-all duration-500 animate-on-scroll flex flex-col items-start hover:-translate-y-2"
+            style="transition-delay: 0.1s;">
+            <div class="flex items-center gap-5 mb-5">
+              <div
+                class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-secondary/20 transition-all shadow-sm group-hover:shadow-md">
+                <span class="iconify text-secondary text-2xl" data-icon="ph:hand-heart-bold"></span>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-900 tracking-tight m-0">Donate</h3>
+            </div>
+            <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Your financial support covers medical
+              bills, food,
+              and operations. Every
+              dollar saves a life.</p>
+            <a href="pages/donate.html"
+              class="inline-flex items-center gap-2 font-bold text-sm text-secondary hover:gap-3 transition-all uppercase tracking-widest mt-auto bg-secondary/5 px-6 py-3 rounded-xl group-hover:bg-secondary group-hover:text-white">
+              Give Today <span>&rarr;</span>
+            </a>
+          </article>
+          <!-- Volunteer -->
+          <article
+            class="group bg-white p-8 rounded-[2rem] border border-neutral-200 shadow-lg hover:shadow-2xl hover:border-accent/30 transition-all duration-500 animate-on-scroll flex flex-col items-start hover:-translate-y-2"
+            style="transition-delay: 0.2s;">
+            <div class="flex items-center gap-5 mb-5">
+              <div
+                class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-accent/20 transition-all shadow-sm group-hover:shadow-md">
+                <span class="iconify text-accent text-2xl" data-icon="ph:users-three-bold"></span>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-900 tracking-tight m-0">Volunteer</h3>
+            </div>
+            <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Join our dedicated team of
+              volunteers.
+              From event
+              support to animal care,
+              we need your skills.</p>
+            <a href="pages/volunteer.html"
+              class="inline-flex items-center gap-2 font-bold text-sm text-accent hover:gap-3 transition-all uppercase tracking-widest mt-auto bg-accent/5 px-6 py-3 rounded-xl group-hover:bg-accent group-hover:text-neutral-900">
+              Join the Team <span>&rarr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Success Story (Full-bleed) -->
+    <section class="relative py-24 md:py-32 flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/img_014.jpg" alt="Success Story" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-neutral-900/60 mix-blend-multiply"></div>
+        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-900/80 to-transparent"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center md:text-left">
+        <div class="max-w-3xl animate-on-scroll">
+          <span
+            class="inline-block px-4 py-1 rounded-full bg-secondary/80 text-white text-xs font-bold uppercase tracking-widest border border-secondary mb-6 shadow-sm">
+            Impact Highlight
+          </span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+            The <span class="italic text-primary drop-shadow-md">Unstoppable</span> Journey of Barnaby
+          </h2>
+          <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl font-medium">
+            Found alone in the industrial district, Barnaby was a shadow of a dog. Today, he's the king of a 20-acre
+            ranch, serving as a therapy companion for local seniors.
+          </p>
+          <a href="pages/story-detail.html"
+            class="inline-block px-10 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover shadow-xl shadow-primary/30 transition-all hover:-translate-y-1">
+            Read Barnaby's Story
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Donation CTA -->
+    <section class="py-16 bg-neutral-50 border-b border-neutral-200">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="bg-white p-8 md:p-14 rounded-[2.5rem] border border-neutral-100 shadow-xl max-w-4xl mx-auto animate-on-scroll">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Empower Change</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-neutral-900 mb-6 tracking-tight text-center">Every <span
+              class="text-primary italic">Dollar</span> Saves a Life</h2>
+          <p class="text-neutral-500 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">Your contributions directly fund
+            medical procedures, behavioral rehabilitation, and daily nutrition for animals in crisis.</p>
+
+          <div class="flex items-center justify-center gap-4 mb-8">
+            <button
+              class="px-8 py-2.5 rounded-full text-sm font-bold border border-neutral-200 text-neutral-600 transition-all hover:border-primary hover:text-primary hover:bg-primary/5">One-Time</button>
+            <button
+              class="px-8 py-2.5 rounded-full text-sm font-bold bg-primary text-white border border-primary shadow-[0_4px_12px_rgba(245,124,0,0.3)] transition-all hover:scale-105">Monthly</button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <button
+              class="py-4 border border-neutral-200 rounded-2xl font-bold text-neutral-900 hover:border-primary hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-sm">$10</button>
+            <button
+              class="py-4 border-2 border-primary bg-primary-light rounded-2xl font-bold text-primary shadow-lg shadow-primary/15 transition-all hover:-translate-y-0.5">$25</button>
+            <button
+              class="py-4 border border-neutral-200 rounded-2xl font-bold text-neutral-900 hover:border-primary hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-sm">$50</button>
+            <button
+              class="py-4 border border-neutral-200 rounded-2xl font-bold text-neutral-600 hover:border-primary hover:bg-primary-light transition-all hover:-translate-y-0.5 shadow-sm italic uppercase text-sm tracking-wide">Custom</button>
+          </div>
+
+          <p class="text-sm italic text-neutral-400 mb-10 leading-relaxed font-medium">"$25 provides a full week of
+            specialized
+            medical-grade food for a recovering senior."</p>
+
+          <a href="pages/donate.html"
+            class="inline-flex px-12 py-4 bg-primary text-white font-bold rounded-xl transition-all hover:bg-primary-hover hover:-translate-y-1 shadow-xl shadow-primary/30 uppercase tracking-wide text-sm">
+            Complete Donation Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events & Volunteer Spotlight -->
+    <section class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <!-- Events (Left 8 cols) -->
+          <div class="lg:col-span-8">
+            <div
+              class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4 animate-on-scroll">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Community
+                  Events</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight tracking-tight">Upcoming <span
+                    class="text-primary italic">Opportunities</span></h2>
+              </div>
+              <a href="pages/events.html"
+                class="text-xs font-bold uppercase tracking-widest text-primary hover:text-primary-hover transition-colors hidden sm:inline-flex items-center gap-2">View
+                Calendar <span>&rarr;</span></a>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Event 1 -->
+              <article
+                class="flex flex-col sm:flex-row bg-white rounded-[2rem] border border-neutral-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-500 animate-on-scroll group overflow-hidden">
+                <div class="sm:w-56 h-56 sm:h-auto overflow-hidden flex-shrink-0 relative">
+                  <img src="assets/images/img_015.jpg" alt="Event Image"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-center flex-grow">
+                  <span
+                    class="inline-block px-3 py-1 bg-primary/10 text-primary-dark text-xs font-bold uppercase tracking-widest rounded-lg mb-3 self-start border border-primary/20">MAR
+                    12</span>
+                  <h4
+                    class="text-2xl font-bold text-neutral-900 mb-2 tracking-tight group-hover:text-primary transition-colors">
+                    Spring Adoption Fair</h4>
+                  <p class="text-sm text-neutral-500 mb-6 flex items-center gap-2 font-medium">
+                    <span class="iconify text-primary/70" data-icon="ph:map-pin-fill"></span> Central Park Pavilion •
+                    10:00 AM
+                  </p>
+                  <a href="pages/event-detail.html"
+                    class="inline-flex px-8 py-3 bg-primary/5 border border-primary/10 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all self-start text-sm group-hover:px-10 mt-auto">Register
+                    Today</a>
+                </div>
+              </article>
+              <!-- Event 2 -->
+              <article
+                class="flex flex-col sm:flex-row bg-white rounded-[2rem] border border-neutral-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-500 animate-on-scroll group overflow-hidden"
+                style="transition-delay: 0.1s;">
+                <div class="sm:w-56 h-56 sm:h-auto overflow-hidden flex-shrink-0 relative">
+                  <img src="assets/images/img_016.jpg" alt="Event Image"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-center flex-grow">
+                  <span
+                    class="inline-block px-3 py-1 bg-primary/10 text-primary-dark text-xs font-bold uppercase tracking-widest rounded-lg mb-3 self-start border border-primary/20">MAR
+                    25</span>
+                  <h4
+                    class="text-2xl font-bold text-neutral-900 mb-2 tracking-tight group-hover:text-primary transition-colors">
+                    Vet-Care Fundraiser</h4>
+                  <p class="text-sm text-neutral-500 mb-6 flex items-center gap-2 font-medium">
+                    <span class="iconify text-primary/70" data-icon="ph:map-pin-fill"></span> The Grand Hall • 07:00 PM
+                  </p>
+                  <a href="pages/event-detail.html"
+                    class="inline-flex px-8 py-3 bg-primary/5 border border-primary/10 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all self-start text-sm group-hover:px-10 mt-auto">Get
+                    Tickets</a>
+                </div>
+              </article>
+              <a href="pages/events.html"
+                class="text-xs font-bold text-primary hover:text-primary-hover transition-colors sm:hidden text-center mt-4 uppercase tracking-widest inline-flex items-center gap-2 justify-center w-full">View
+                Calendar <span>&rarr;</span></a>
+            </div>
+          </div>
+
+          <!-- Volunteer Spotlight (Right 4 cols) -->
+          <div class="lg:col-span-4">
+            <div
+              class="bg-neutral-900 rounded-[2.5rem] p-10 lg:p-12 relative overflow-hidden animate-on-scroll shadow-2xl group flex flex-col h-full justify-between border border-neutral-800 hover:border-neutral-700 transition-colors">
+              <div class="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors duration-500">
+              </div>
+              <div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+              <div class="relative z-10">
+                <span class="iconify text-5xl text-primary mb-8 drop-shadow-md" data-icon="ph:quotes-fill"></span>
+                <h3 class="text-white text-3xl font-bold tracking-tight mb-8">Volunteer Spotlight</h3>
+                <p class="text-xl text-white/90 italic mb-10 leading-relaxed font-medium">
+                  "Fostering has changed my perspective on resilience. Seeing Luna go from scared to social in just 3
+                  weeks was a reward like no other."
+                </p>
+              </div>
+              <div class="flex items-center gap-4 relative z-10 border-t border-white/10 pt-8 mt-auto">
+                <div
+                  class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary relative shadow-lg shadow-primary/20 shrink-0">
+                  <img src="assets/images/img_017.png" alt="User Avatar" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <h4 class="text-white text-lg font-bold mb-1">Sarah Miller</h4>
+                  <span
+                    class="text-[10px] text-primary uppercase tracking-widest font-bold bg-primary/10 px-2 py-1 rounded-md border border-primary/20 inline-block">Foster
+                    Parent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section class="pt-16 pb-0 bg-neutral-50 border-y border-neutral-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Field Notes</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-neutral-900 tracking-tight leading-tight">Rescue <span
+              class="text-primary italic font-medium">Insights</span></h2>
+          <p class="text-lg text-neutral-600 max-w-2xl mx-auto mt-6 leading-relaxed">Stay informed about local animal
+            care and our
+            ongoing missions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Post 1 -->
+          <article
+            class="group animate-on-scroll bg-white rounded-[2rem] p-6 border border-neutral-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-500 flex flex-col items-start">
+            <div
+              class="aspect-video w-full rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-md transition-shadow">
+              <img src="assets/images/img_018.jpg" alt="Blog Post Thumbnail"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/20 shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Animal Care</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 flex flex-col flex-grow w-full">
+              <h3
+                class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight leading-tight group-hover:text-primary transition-colors">
+                5 Tips for First-Time Foster Parents</h3>
+              <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Everything you need to know before
+                bringing your
+                first rescue home...</p>
+              <a href="pages/blog-detail.html"
+                class="inline-flex items-center gap-2 font-bold text-sm text-neutral-900 uppercase tracking-widest mt-auto bg-neutral-100 px-6 py-3 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+                Read More <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+          <!-- Post 2 -->
+          <article
+            class="group animate-on-scroll bg-white rounded-[2rem] p-6 border border-neutral-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-500 flex flex-col items-start"
+            style="transition-delay: 0.1s;">
+            <div
+              class="aspect-video w-full rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-md transition-shadow">
+              <img src="assets/images/img_019.jpg" alt="Blog Post Thumbnail"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/20 shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Medical Care</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 flex flex-col flex-grow w-full">
+              <h3
+                class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight leading-tight group-hover:text-primary transition-colors">
+                The Importance of Senior Pet Checkups</h3>
+              <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Why older rescues need a different
+                level of
+                medical attention and care...</p>
+              <a href="pages/blog-detail.html"
+                class="inline-flex items-center gap-2 font-bold text-sm text-neutral-900 uppercase tracking-widest mt-auto bg-neutral-100 px-6 py-3 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+                Read More <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+          <!-- Post 3 -->
+          <article
+            class="group animate-on-scroll bg-white rounded-[2rem] p-6 border border-neutral-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-primary/30 transition-all duration-500 flex flex-col items-start"
+            style="transition-delay: 0.2s;">
+            <div
+              class="aspect-video w-full rounded-2xl overflow-hidden mb-6 relative shadow-sm group-hover:shadow-md transition-shadow">
+              <img src="assets/images/img_016.jpg" alt="Blog Post Thumbnail"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/20 shadow-sm">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-primary block">Community</span>
+              </div>
+            </div>
+            <div class="px-2 pb-2 flex flex-col flex-grow w-full">
+              <h3
+                class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight leading-tight group-hover:text-primary transition-colors">
+                Recap: Our Winter Fundraiser Success</h3>
+              <p class="text-neutral-500 text-[15px] leading-relaxed mb-6 flex-grow">Thanks to your generosity, we've
+                secured the fund
+                for our new medical wing...</p>
+              <a href="pages/blog-detail.html"
+                class="inline-flex items-center gap-2 font-bold text-sm text-neutral-900 uppercase tracking-widest mt-auto bg-neutral-100 px-6 py-3 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+                Read More <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Counter Animation Logic for Demo
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-target]');
+      const speed = 200;
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 1);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Trigger when impact section is in view
+      const firstCounter = document.querySelector('[data-target]');
+      if (firstCounter) {
+        const impactSection = firstCounter.closest('section');
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            observer.unobserve(impactSection);
+          }
+        }, { threshold: 0.5 });
+
+        observer.observe(impactSection);
+      }
+    });
+  </script>
+</body>
+
+</html>

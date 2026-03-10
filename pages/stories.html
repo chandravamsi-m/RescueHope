@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Stories | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <header class="bg-neutral-900 py-16 text-white text-center">
+    <div class="container mx-auto px-4 animate-fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Happy <span class="text-primary italic">Tail Endings</span></h1>
+      <p class="mx-auto max-w-2xl text-white/60 text-lg md:text-xl font-normal">The heart of RescueHope. Stories of
+        resilience, love, and the beautiful beginnings of forever homes.</p>
+    </div>
+  </header>
+
+  <main class="py-24 md:py-32 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+        <!-- Story Card 1 -->
+        <div
+          class="bg-neutral-50 rounded-[3rem] overflow-hidden border border-neutral-100 animate-fade-up group hover:bg-white hover:shadow-2xl transition-all duration-700">
+          <div class="grid grid-cols-2 h-64 md:h-80 overflow-hidden">
+            <img src="../assets/images/img_042.jpg"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+              alt="Before">
+            <img src="../assets/images/img_003.jpg"
+              class="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="After">
+          </div>
+          <div class="p-10 md:p-14">
+            <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Adoption Story</span>
+            <h3 class="text-3xl font-bold mb-6 italic leading-tight">Finding Home: The Story of <span
+                class="text-secondary opacity-70">Bella</span></h3>
+            <p class="text-neutral-500 leading-relaxed font-normal mb-10 text-lg">From a timid stray found in a parking
+              lot to a confident companion, Bella's journey is one of incredible resilience and the power of patience.
+            </p>
+            <a href="story-detail.html"
+              class="inline-flex items-center gap-3 text-secondary font-bold uppercase tracking-widest text-[10px] hover:gap-5 transition-all">Full
+              Narrative <span class="iconify" data-icon="ph:arrow-right-bold"></span></a>
+          </div>
+        </div>
+
+        <!-- Story Card 2 -->
+        <div
+          class="bg-neutral-50 rounded-[3rem] overflow-hidden border border-neutral-100 animate-fade-up group hover:bg-white hover:shadow-2xl transition-all duration-700"
+          style="transition-delay: 0.1s;">
+          <div class="grid grid-cols-2 h-64 md:h-80 overflow-hidden">
+            <img src="../assets/images/img_043.jpg"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+              alt="Before">
+            <img src="../assets/images/img_004.jpg"
+              class="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="After">
+          </div>
+          <div class="p-10 md:p-14">
+            <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4 block">Rescue Story</span>
+            <h3 class="text-3xl font-bold mb-6 italic leading-tight">A New Beginning for <span
+                class="text-secondary opacity-70">Max</span></h3>
+            <p class="text-neutral-500 leading-relaxed font-normal mb-10 text-lg">Max's story is proof that age is just
+              a number. At 8 years old, he found a family that appreciates his gentle spirit and quiet loyalty.</p>
+            <a href="story-detail.html"
+              class="inline-flex items-center gap-3 text-secondary font-bold uppercase tracking-widest text-[10px] hover:gap-5 transition-all">Full
+              Narrative <span class="iconify" data-icon="ph:arrow-right-bold"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

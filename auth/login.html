@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | RescueHope</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-neutral-100">
+
+  <div class="auth-grid">
+    <!-- Left Side: Image -->
+    <div class="auth-image"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_006.jpg');">
+      <div class="auth-image__content">
+        <h1 class="text-white fs-4xl mb-sm">Welcome Back!</h1>
+        <p class="opacity-90">Log in to manage your shifts, update foster records, and track your impact.</p>
+      </div>
+    </div>
+
+    <!-- Right Side: Form -->
+    <div class="auth-form-container">
+      <div class="auth-form-content">
+        <div class="text-center mb-lg">
+          <a href="../index.html" class="navbar__brand">
+            <span class="iconify" data-icon="ph:paw-print-fill"></span>
+            RescueHope
+          </a>
+          <p class="text-muted">Enter your credentials to access the portal.</p>
+        </div>
+
+        <form>
+          <div class="form-group mb-md">
+            <label class="form-label fs-sm">Email Address</label>
+            <input type="email" placeholder="name@example.com" class="form-input" required>
+          </div>
+          <div class="form-group mb-md">
+            <div class="flex justify-between items-center mb-xs">
+              <label class="form-label fs-sm mb-0">Password</label>
+              <a href="forgot-password.html" class="text-primary fs-xs">Forgot Password?</a>
+            </div>
+            <input type="password" placeholder="••••••••" class="form-input" required>
+          </div>
+          <div class="flex items-center gap-2 mb-md">
+            <input type="checkbox" id="remember">
+            <label for="remember" class="fs-sm text-muted">Remember me</label>
+          </div>
+          <a href="../dashboard/index.html" class="btn btn-primary w-full mb-md">Sign In</a>
+
+          <button class="btn btn-outline w-full" style="border-color: var(--border-color); color: var(--text-main);">
+            <span class="iconify" data-icon="logos:google-icon"></span> Sign in with Google
+          </button>
+        </form>
+
+        <p class="text-center text-muted mt-lg fs-sm">
+          Don't have an account? <a href="register.html" class="text-primary font-bold">Sign up as a Volunteer</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

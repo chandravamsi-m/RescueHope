@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foster Program | Provide a Temporary Sanctuary | RescueHope</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="py-20 md:py-32 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-up">
+          <span class="text-secondary font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Sanctuary & Care</span>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 font-heading italic">Become a <span
+              class="text-secondary">Foster Hero</span></h1>
+          <p class="text-neutral-500 text-xl leading-relaxed mb-12 max-w-xl">Fostering is the bridge between a rescue
+            and a forever home. By opening your doors, you save two lives: the animal you take in and the one that takes
+            its place at the shelter.</p>
+          <div class="flex flex-wrap gap-6">
+            <a href="contact.html?type=foster"
+              class="bg-secondary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-secondary-hover shadow-xl shadow-secondary/20 transition-all hover:-translate-y-1">Apply
+              to Foster</a>
+            <a href="#how-it-works"
+              class="border-2 border-secondary text-secondary px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-secondary hover:text-white transition-all">How
+              it Works</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <div class="rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+            <img src="../assets/images/img_031.jpg"
+              alt="Foster" class="w-full grayscale group-hover:grayscale-0 transition-all duration-1000">
+          </div>
+          <div
+            class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2rem] shadow-2xl border border-neutral-100 flex items-center gap-6 max-w-xs animate-fade-up"
+            style="animation-delay: 0.3s;">
+            <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center shrink-0">
+              <span class="iconify text-3xl" data-icon="ph:heart-pulse-fill"></span>
+            </div>
+            <div>
+              <h4 class="font-bold text-neutral-900 leading-tight">We Cover Everything</h4>
+              <p class="text-xs text-neutral-500 mt-1">Vet bills, food, and supplies provided.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="how-it-works">
+    <!-- FAQ/Info Grid -->
+    <!-- FAQ/Info Grid -->
+    <section class="py-24 md:py-32 bg-neutral-900 text-white relative overflow-hidden">
+      <!-- High-tech backdrop -->
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-20 animate-on-scroll">
+          <span class="text-secondary font-bold uppercase tracking-widest text-[10px] mb-4 block leading-none">The
+            Logistics</span>
+          <h2 class="text-4xl md:text-5xl font-bold italic leading-none">Foster Program <span
+              class="font-normal opacity-40 not-italic">Details</span></h2>
+          <p class="text-white/40 mt-6 text-lg max-w-xl mx-auto font-normal">Common questions about giving a temporary
+            home to our rescues.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-md animate-on-scroll hover:bg-white/10 transition-all duration-500">
+            <h4 class="text-secondary font-bold text-xl mb-6 italic">What are my responsibilities?</h4>
+            <p class="text-white/60 leading-relaxed font-normal">Provide a safe indoor environment, regular meals,
+              exercise, and basic training. Most importantly, you provide the love they need to heal.</p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-md animate-on-scroll hover:bg-white/10 transition-all duration-500"
+            style="transition-delay: 0.1s;">
+            <h4 class="text-secondary font-bold text-xl mb-6 italic">How long is the commitment?</h4>
+            <p class="text-white/60 leading-relaxed font-normal">Commitments vary from a few days (emergency foster) to
+              several months. You choose the cases that fit your lifestyle.</p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] backdrop-blur-md animate-on-scroll hover:bg-white/10 transition-all duration-500"
+            style="transition-delay: 0.2s;">
+            <h4 class="text-secondary font-bold text-xl mb-6 italic">What if I have other pets?</h4>
+            <p class="text-white/60 leading-relaxed font-normal">Many of our fosters have their own pets! We facilitate
+              safe introductions and provide guidance on house integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 md:py-32 bg-white text-center">
+      <div class="container mx-auto px-4 animate-on-scroll">
+        <h2 class="text-4xl md:text-6xl font-bold mb-8 italic">Ready to Open Your <span
+            class="text-secondary opacity-80">Heart & Home</span>?</h2>
+        <p class="text-neutral-500 mx-auto mb-16 max-w-2xl text-xl leading-relaxed">We provide all the support you need.
+          Join our
+          network of over 100 foster families today and start saving lives.</p>
+        <a href="contact.html?type=foster"
+          class="bg-secondary text-white px-12 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-secondary-hover shadow-2xl shadow-secondary/20 transition-all hover:-translate-y-1">Apply
+          Today</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

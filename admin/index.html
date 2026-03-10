@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | RescueHope</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body style="background: var(--neutral-100);">
+
+  <div class="dashboard-container">
+    <!-- Sidebar Placeholder -->
+    <div id="dashboard-sidebar-placeholder"></div>
+
+    <!-- Main Content Wrapper -->
+    <div class="dashboard-content">
+      <!-- Header Placeholder -->
+      <div id="dashboard-header-placeholder"></div>
+
+      <main class="dashboard-main">
+        <!-- KPI Bar -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <p class="text-muted fs-xs font-bold uppercase mb-xs">Total Animals</p>
+            <h2 class="m-0">1,542</h2>
+            <p class="text-secondary fs-xs">↑ 24 this week</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-muted fs-xs font-bold uppercase mb-xs">Active Volunteers</p>
+            <h2 class="m-0">310</h2>
+            <p class="text-primary fs-xs">8 pending approval</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-muted fs-xs font-bold uppercase mb-xs">Monthly Donations</p>
+            <h2 class="m-0">$12.4k</h2>
+            <p class="text-secondary fs-xs">92% of target</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-muted fs-xs font-bold uppercase mb-xs">Open Adoption Apps</p>
+            <h2 class="m-0">42</h2>
+            <p class="text-accent fs-xs">12 urgent review</p>
+          </div>
+        </div>
+
+        <!-- Recent Management Tasks -->
+        <div class="dashboard-grid-main">
+          <div class="admin-table-card">
+            <div class="layout-flex justify-between items-center mb-md">
+              <h4 class="m-0">Pending <span class="text-primary">Adoption Applications</span></h4>
+              <a href="adoptions.html" class="text-primary fs-xs font-bold">View All</a>
+            </div>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Applicant</th>
+                  <th>Animal</th>
+                  <th>Submitted</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John Henderson</td>
+                  <td><strong>Luna</strong></td>
+                  <td>2 hours ago</td>
+                  <td><button class="btn btn-primary btn-sm">Review</button></td>
+                </tr>
+                <tr>
+                  <td>Emily White</td>
+                  <td><strong>Cooper</strong></td>
+                  <td>Yesterday</td>
+                  <td><button class="btn btn-primary btn-sm">Review</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="admin-table-card">
+            <h4 class="mb-md">System <span class="text-primary">Health</span></h4>
+            <div class="layout-flex flex-col gap-md">
+              <div class="admin-progress-group">
+                <div class="admin-progress-label">
+                  <span>Shift Fill Rate</span>
+                  <span>84%</span>
+                </div>
+                <div class="admin-progress-bar">
+                  <div class="admin-progress-fill bg-secondary" style="width: 84%;"></div>
+                </div>
+              </div>
+              <div class="admin-progress-group">
+                <div class="admin-progress-label">
+                  <span>Adoption Target</span>
+                  <span>72%</span>
+                </div>
+                <div class="admin-progress-bar">
+                  <div class="admin-progress-fill bg-primary" style="width: 72%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

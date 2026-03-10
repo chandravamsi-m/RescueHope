@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | RescueHope</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-neutral-100">
+
+  <div class="auth-grid">
+    <!-- Right Side: Image -->
+    <div class="auth-image"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_007.jpg'); order: 2;">
+      <div class="auth-image__content">
+        <h1 class="text-white fs-4xl mb-sm">Start a <span class="text-primary">Journey</span></h1>
+        <p class="opacity-90">By joining our rescue network, you're becoming a vital part of a community that saves
+          lives every day.</p>
+      </div>
+    </div>
+
+    <!-- Left Side: Form -->
+    <div class="auth-form-container" style="order: 1;">
+      <div class="auth-form-content">
+        <div class="text-center mb-lg">
+          <a href="../index.html" class="navbar__brand">
+            <span class="iconify" data-icon="ph:paw-print-fill"></span>
+            RescueHope
+          </a>
+          <p class="text-muted">Create your volunteer account.</p>
+        </div>
+
+        <form>
+          <div class="layout-grid grid-2 gap-md mb-md">
+            <div class="form-group">
+              <label class="form-label fs-sm">First Name</label>
+              <input type="text" placeholder="Jane" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label fs-sm">Last Name</label>
+              <input type="text" placeholder="Doe" class="form-input">
+            </div>
+          </div>
+          <div class="form-group mb-md">
+            <label class="form-label fs-sm">Email Address</label>
+            <input type="email" placeholder="jane@example.com" class="form-input" required>
+          </div>
+          <div class="form-group mb-md">
+            <label class="form-label fs-sm">Password</label>
+            <input type="password" placeholder="••••••••" class="form-input" required>
+          </div>
+          <div class="form-group mb-lg">
+            <label class="form-label fs-sm">Primary Interest</label>
+            <select class="form-input fs-sm">
+              <option>General Volunteering</option>
+              <option>Foster Program</option>
+              <option>Event Help</option>
+              <option>Donation Management</option>
+            </select>
+          </div>
+          <button class="btn btn-primary w-full mb-md">Create Account</button>
+
+          <p class="fs-xs text-center opacity-70">By registering, you agree to our <a href="../pages/terms.html"
+              class="text-primary">Terms</a> and <a href="../pages/privacy.html" class="text-primary">Privacy
+              Policy</a>.</p>
+        </form>
+
+        <p class="text-center text-muted mt-lg fs-sm">
+          Already have an account? <a href="login.html" class="text-primary font-bold">Log in here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
