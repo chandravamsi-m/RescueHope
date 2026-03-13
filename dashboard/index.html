@@ -5,10 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Volunteer Dashboard | RescueHope</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Theme Initialization (Anti-Flicker) -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -43,24 +59,27 @@
             sans: ['Outfit', 'sans-serif'],
             heading: ['Outfit', 'sans-serif'],
           },
-          spacing: {
-            '18': '4.5rem',
-            '22': '5.5rem',
-          },
           borderRadius: {
             '2xl': '1rem',
             '3xl': '1.5rem',
+            '4xl': '2rem',
           }
         }
       }
     }
   </script>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
-<body class="bg-neutral-100">
+<body class="bg-neutral-100 font-sans">
 
   <div class="min-h-screen bg-neutral-100 flex flex-col lg:flex-row">
     <!-- Sidebar Placeholder -->

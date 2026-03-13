@@ -92,3 +92,61 @@ body {
 .theme-toggle .ph-sun-bold { display: none; }
 [data-theme="dark"] .theme-toggle .ph-moon-stars-bold { display: none; }
 [data-theme="dark"] .theme-toggle .ph-sun-bold { display: block; }
+
+/* 
+ * Global Dark Mode Bridge
+ * Overrides standard Tailwind utility classes to respect our dark theme 
+ * without requiring dark: classes on every single element.
+ */
+.dark body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+}
+
+.dark .bg-white, 
+.dark .bg-white\/80,
+.dark .bg-neutral-50,
+.dark .bg-neutral-100 {
+    background-color: var(--bg-card) !important;
+}
+
+.dark .text-neutral-900,
+.dark .text-neutral-800,
+.dark .text-neutral-700 {
+    color: var(--text-main) !important;
+}
+
+.dark .text-neutral-600,
+.dark .text-neutral-500 {
+    color: var(--text-muted) !important;
+}
+
+.dark .border-neutral-100,
+.dark .border-neutral-200,
+.dark .border-neutral-300 {
+    border-color: var(--border-color) !important;
+}
+
+/* Specific component overrides for the bridge */
+.dark .shadow-sm, 
+.dark .shadow-md, 
+.dark .shadow-lg {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/* 
+ * Hardware Acceleration & Clipping Fixes
+ * Resolves "sharp edges" flicker and blurriness during transforms
+ */
+.fix-clipping {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    isolation: isolate;
+}
+
+.animate-on-scroll {
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+}

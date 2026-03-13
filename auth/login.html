@@ -5,58 +5,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login | RescueHope</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Theme Initialization (Anti-Flicker) -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#f57c00',
+              hover: '#e65100',
+              light: '#fff3e0',
+            },
+            secondary: {
+              DEFAULT: '#2e7d32',
+              hover: '#1b5e20',
+              light: '#e8f5e9',
+            },
+            accent: {
+              DEFAULT: '#0288d1',
+              hover: '#01579b',
+            },
+            neutral: {
+              50: '#ffffff',
+              100: '#f8f9fa',
+              200: '#e9ecef',
+              300: '#dee2e6',
+              400: '#ced4da',
+              500: '#adb5bd',
+              600: '#6c757d',
+              700: '#495057',
+              800: '#343a40',
+              900: '#212529',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
-<body class="min-h-screen bg-neutral-100">
+<body class="min-h-screen bg-neutral-100 font-sans">
 
-  <div class="auth-grid">
+  <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
     <!-- Left Side: Image -->
-    <div class="auth-image"
-      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_006.jpg');">
-      <div class="auth-image__content">
-        <h1 class="text-white fs-4xl mb-sm">Welcome Back!</h1>
-        <p class="opacity-90">Log in to manage your shifts, update foster records, and track your impact.</p>
+    <div class="hidden lg:flex relative items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_006.jpg');"></div>
+      <div class="relative z-10 p-12 text-white max-w-xl">
+        <h1 class="text-5xl font-bold mb-6">Welcome Back!</h1>
+        <p class="text-xl text-white/80 leading-relaxed">Log in to manage your shifts, update foster records, and track your impact in our rescue community.</p>
       </div>
     </div>
 
     <!-- Right Side: Form -->
-    <div class="auth-form-container">
-      <div class="auth-form-content">
-        <div class="text-center mb-lg">
-          <a href="../index.html" class="navbar__brand">
-            <span class="iconify" data-icon="ph:paw-print-fill"></span>
+    <div class="flex items-center justify-center p-8 bg-neutral-100">
+      <div class="w-full max-w-md bg-white p-10 rounded-[2.5rem] shadow-2xl border border-neutral-200/50">
+        <div class="text-center mb-10">
+          <a href="../index.html" class="inline-flex items-center gap-2 text-2xl font-bold text-neutral-900 mb-2">
+            <span class="iconify text-primary" data-icon="ph:paw-print-fill"></span>
             RescueHope
           </a>
-          <p class="text-muted">Enter your credentials to access the portal.</p>
+          <p class="text-neutral-500 text-sm">Enter your credentials to access the portal.</p>
         </div>
 
         <form>
-          <div class="form-group mb-md">
-            <label class="form-label fs-sm">Email Address</label>
-            <input type="email" placeholder="name@example.com" class="form-input" required>
+          <div class="mb-6">
+            <label class="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 ml-1">Email Address</label>
+            <input type="email" placeholder="name@example.com" class="w-full px-6 py-4 bg-neutral-50 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" required>
           </div>
-          <div class="form-group mb-md">
-            <div class="flex justify-between items-center mb-xs">
-              <label class="form-label fs-sm mb-0">Password</label>
-              <a href="forgot-password.html" class="text-primary fs-xs">Forgot Password?</a>
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2 ml-1">
+              <label class="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-0">Password</label>
+              <a href="forgot-password.html" class="text-primary text-[10px] font-bold uppercase tracking-wider">Forgot?</a>
             </div>
-            <input type="password" placeholder="••••••••" class="form-input" required>
+            <input type="password" placeholder="••••••••" class="w-full px-6 py-4 bg-neutral-50 border border-neutral-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" required>
           </div>
-          <div class="flex items-center gap-2 mb-md">
-            <input type="checkbox" id="remember">
-            <label for="remember" class="fs-sm text-muted">Remember me</label>
+          <div class="flex items-center gap-3 mb-8 ml-1">
+            <input type="checkbox" id="remember" class="w-4 h-4 rounded border-neutral-300 text-primary focus:ring-primary">
+            <label for="remember" class="text-xs text-neutral-500 font-medium">Remember me for 30 days</label>
           </div>
-          <a href="../dashboard/index.html" class="btn btn-primary w-full mb-md">Sign In</a>
+          <a href="../dashboard/index.html" class="block w-full py-4 bg-primary text-white text-center text-xs font-bold uppercase tracking-widest rounded-2xl hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all mb-4">Sign In</a>
 
-          <button class="btn btn-outline w-full" style="border-color: var(--border-color); color: var(--text-main);">
-            <span class="iconify" data-icon="logos:google-icon"></span> Sign in with Google
+          <button class="w-full py-4 border-2 border-neutral-200 text-neutral-900 text-xs font-bold uppercase tracking-widest rounded-2xl hover:border-neutral-900 transition-all flex items-center justify-center gap-2">
+            <span class="iconify text-lg" data-icon="logos:google-icon"></span> Sign in with Google
           </button>
         </form>
 
-        <p class="text-center text-muted mt-lg fs-sm">
+        <p class="text-center text-neutral-500 mt-10 text-xs">
           Don't have an account? <a href="register.html" class="text-primary font-bold">Sign up as a Volunteer</a>
         </p>
       </div>

@@ -5,10 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | RescueHope</title>
+  
+  <!-- Theme Initialization (Anti-Flicker) -->
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -63,101 +74,164 @@
 
 <body>
   <!-- Navbar Placeholder -->
-  <div id="navbar-placeholder"></div>
+  <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
 
-  <!-- Page Header -->
-  <header class="bg-neutral-900 py-20 text-white">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-primary">Our Mission</span></h1>
-      <p class="text-sm opacity-60 uppercase tracking-widest font-bold">Home / About Us</p>
+  <!-- Page Header (Cinematic Hero) -->
+  <header class="relative pt-32 pb-20 overflow-hidden bg-neutral-900 text-white border-b border-white/5">
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <span
+        class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-light text-[10px] font-bold uppercase tracking-widest mb-6 border border-primary/30 backdrop-blur-md">
+        Our Journey • Since 2012
+      </span>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Building a <span class="text-primary italic">Better World</span> for Them</h1>
+      <p class="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+        RescueHope isn't just a shelter; it's a movement dedicated to rewriting the stories of thousands of animals through compassion and community action.
+      </p>
     </div>
   </header>
 
   <main>
+
     <!-- History Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="py-24 bg-white dark:bg-neutral-900 transition-colors">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div class="animate-on-scroll">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">Started to save <span class="text-primary">one
-              life</span> at a time.</h2>
-          <p class="mb-6 text-lg leading-relaxed">Founded in 2012, RescueHope began as a small group of friends in a
-            garage, worried about the rising number of stray animals in our neighborhood. What started as local advocacy
-            quickly grew into a full-scale rescue operation.</p>
-          <p class="text-neutral-500 leading-relaxed">Today, we operate a network of over 100 foster homes and have
-            rescued thousands of animals. Our goal remains the same: compassionate care and finding the perfect
-            'forever' for every animal.</p>
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Our Story</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight text-neutral-900 dark:text-white">Started to save <span class="text-primary italic">one life</span> at a time.</h2>
+          <p class="mb-8 text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">Founded in 2012, RescueHope began as a small group of friends in a garage, worried about the rising number of stray animals in our neighborhood. What started as local advocacy quickly grew into a full-scale rescue operation.</p>
+          <p class="text-neutral-500 dark:text-neutral-500 leading-relaxed">Today, we operate a network of over 100 foster homes and have rescued thousands of animals. Our goal remains the same: compassionate care and finding the perfect 'forever' for every animal.</p>
         </div>
-        <div class="animate-on-scroll" style="transition-delay: 0.2s;">
-          <img src="../assets/images/img_020.jpg"
-            alt="Old rescue photo" class="w-full rounded-2xl shadow-xl">
+        <div class="animate-on-scroll relative" style="transition-delay: 0.2s;">
+          <div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl -rotate-3 z-0"></div>
+          <img src="../assets/images/img_020.jpg" alt="Old rescue photo" class="w-full rounded-2xl shadow-2xl relative z-10 ring-1 ring-black/5 dark:ring-white/10">
         </div>
       </div>
     </section>
 
     <!-- Values Section -->
-    <section class="bg-primary-light/30 py-20">
+    <section class="bg-neutral-100 dark:bg-neutral-900/50 py-24 transition-colors">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-16">Our Core <span class="text-primary">Values</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center hover:shadow-md transition-shadow animate-on-scroll">
-            <span class="iconify text-primary mx-auto mb-6" data-icon="ph:heart-fill" data-width="48"></span>
+        <div class="text-center mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block animate-on-scroll">The Heart of Our Work</span>
+          <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll text-neutral-900 dark:text-white">Our Core <span class="text-primary">Values</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-neutral-900 dark:text-white">
+          <!-- Compassion Card -->
+          <div class="bg-white dark:bg-neutral-900 p-10 rounded-2xl shadow-xl border border-neutral-200 dark:border-white/5 text-center group hover:-translate-y-2 transition-all duration-300 animate-on-scroll">
+            <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform">
+              <span class="iconify text-primary" data-icon="ph:heart-fill" data-width="40"></span>
+            </div>
             <h3 class="text-xl font-bold mb-4">Compassion</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">We treat every animal with the dignity and love they
-              deserve.</p>
+            <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">We treat every animal with the dignity and love they deserve, ensuring no one is forgotten.</p>
           </div>
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center hover:shadow-md transition-shadow animate-on-scroll"
-            style="transition-delay: 0.1s;">
-            <span class="iconify text-primary mx-auto mb-6" data-icon="ph:shield-check-fill" data-width="48"></span>
+          <!-- Integrity Card -->
+          <div class="bg-white dark:bg-neutral-900 p-10 rounded-2xl shadow-xl border border-neutral-200 dark:border-white/5 text-center group hover:-translate-y-2 transition-all duration-300 animate-on-scroll" style="transition-delay: 0.1s;">
+            <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform">
+              <span class="iconify text-secondary" data-icon="ph:shield-check-fill" data-width="40"></span>
+            </div>
             <h3 class="text-xl font-bold mb-4">Integrity</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Transparent fund allocation and honest rescue reporting.
-            </p>
+            <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">Transparent fund allocation and honest rescue reporting at every step of our journey.</p>
           </div>
-          <div
-            class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center hover:shadow-md transition-shadow animate-on-scroll"
-            style="transition-delay: 0.2s;">
-            <span class="iconify text-primary mx-auto mb-6" data-icon="ph:users-fill" data-width="48"></span>
+          <!-- Community Card -->
+          <div class="bg-white dark:bg-neutral-900 p-10 rounded-2xl shadow-xl border border-neutral-200 dark:border-white/5 text-center group hover:-translate-y-2 transition-all duration-300 animate-on-scroll" style="transition-delay: 0.2s;">
+            <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform">
+              <span class="iconify text-accent" data-icon="ph:users-fill" data-width="40"></span>
+            </div>
             <h3 class="text-xl font-bold mb-4">Community</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Building a network of care that supports both pets and
-              people.</p>
+            <p class="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed">Building a network of care that supports both pets and the people who love them.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Leaders Section -->
-    <section class="py-20">
+    <section class="py-24 bg-neutral-50 dark:bg-neutral-800/30 transition-colors">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-16">Meet the <span class="text-primary">Leaders</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div class="text-center group animate-on-scroll">
-            <div
-              class="overflow-hidden rounded-2xl mb-6 shadow-lg transform group-hover:scale-[1.02] transition-transform duration-500">
-              <img src="../assets/images/img_021.jpg"
-                alt="Founder" class="w-full aspect-square object-cover">
+        <div class="text-center mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block animate-on-scroll">Passionate Minds</span>
+          <h2 class="text-3xl md:text-4xl font-bold dark:text-white animate-on-scroll">Meet the <span class="text-primary italic">Leaders</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Leader 1 -->
+          <div class="bg-white dark:bg-neutral-900 p-6 rounded-3xl shadow-lg border border-neutral-100 dark:border-white/5 animate-on-scroll group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative overflow-hidden rounded-2xl mb-6 shadow-md transition-all duration-500 group-hover:shadow-primary/20">
+              <img src="../assets/images/img_021.jpg" alt="Founder" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                <div class="flex gap-4">
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:linkedin-logo-bold"></span></a>
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:envelope-simple-bold"></span></a>
+                </div>
+              </div>
             </div>
-            <h4 class="text-xl font-bold mb-1">Jane Doe</h4>
-            <p class="text-primary font-bold uppercase tracking-widest text-xs">Founder & Director</p>
-          </div>
-          <div class="text-center group animate-on-scroll" style="transition-delay: 0.1s;">
-            <div
-              class="overflow-hidden rounded-2xl mb-6 shadow-lg transform group-hover:scale-[1.02] transition-transform duration-500">
-              <img src="../assets/images/img_022.jpg"
-                alt="Vet" class="w-full aspect-square object-cover">
+            <div class="text-center">
+              <h4 class="text-xl font-bold dark:text-white mb-1">Jane Doe</h4>
+              <p class="text-primary font-bold uppercase tracking-widest text-[10px]">Founder & Director</p>
             </div>
-            <h4 class="text-xl font-bold mb-1">Dr. John Smith</h4>
-            <p class="text-primary font-bold uppercase tracking-widest text-xs">Chief Medical Officer</p>
           </div>
-          <div class="text-center group animate-on-scroll" style="transition-delay: 0.2s;">
-            <div
-              class="overflow-hidden rounded-2xl mb-6 shadow-lg transform group-hover:scale-[1.02] transition-transform duration-500">
-              <img src="../assets/images/img_023.jpg"
-                alt="Volunteer Coordinator" class="w-full aspect-square object-cover">
+          <!-- Leader 2 -->
+          <div class="bg-white dark:bg-neutral-900 p-6 rounded-3xl shadow-lg border border-neutral-100 dark:border-white/5 animate-on-scroll group hover:-translate-y-2 transition-all duration-300" style="transition-delay: 0.1s;">
+            <div class="relative overflow-hidden rounded-2xl mb-6 shadow-md transition-all duration-500 group-hover:shadow-primary/20">
+              <img src="../assets/images/img_022.jpg" alt="Vet" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                <div class="flex gap-4">
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:linkedin-logo-bold"></span></a>
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:envelope-simple-bold"></span></a>
+                </div>
+              </div>
             </div>
-            <h4 class="text-xl font-bold mb-1">Sarah Wilson</h4>
-            <p class="text-primary font-bold uppercase tracking-widest text-xs">Volunteer Coordinator</p>
+            <div class="text-center">
+              <h4 class="text-xl font-bold dark:text-white mb-1">Dr. John Smith</h4>
+              <p class="text-primary font-bold uppercase tracking-widest text-[10px]">Chief Medical Officer</p>
+            </div>
           </div>
+          <!-- Leader 3 -->
+          <div class="bg-white dark:bg-neutral-900 p-6 rounded-3xl shadow-lg border border-neutral-100 dark:border-white/5 animate-on-scroll group hover:-translate-y-2 transition-all duration-300" style="transition-delay: 0.2s;">
+            <div class="relative overflow-hidden rounded-2xl mb-6 shadow-md transition-all duration-500 group-hover:shadow-primary/20">
+              <img src="../assets/images/img_023.jpg" alt="Volunteer Coordinator" class="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-6">
+                <div class="flex gap-4">
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:linkedin-logo-bold"></span></a>
+                  <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors"><span class="iconify" data-icon="ph:envelope-simple-bold"></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-xl font-bold dark:text-white mb-1">Sarah Wilson</h4>
+              <p class="text-primary font-bold uppercase tracking-widest text-[10px]">Volunteer Coordinator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <!-- <section class="py-16 bg-neutral-50 dark:bg-neutral-800/30 border-y border-neutral-100 dark:border-white/5 transition-colors">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-xs font-bold uppercase tracking-widest text-neutral-400 mb-10">Our Trusted Community Partners</p>
+        <div class="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+          <span class="iconify" data-icon="logos:google" data-width="80"></span>
+          <span class="iconify" data-icon="logos:microsoft" data-width="120"></span>
+          <span class="iconify" data-icon="logos:amazon" data-width="90"></span>
+          <span class="iconify" data-icon="logos:airbnb" data-width="100"></span>
+          <span class="iconify" data-icon="logos:slack-icon" data-width="40"></span>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Join the Mission CTA -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="../assets/images/img_024.jpg" alt="Join us" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-neutral-900/90 backdrop-blur-sm"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">Ready to <span class="text-primary italic">Make a Difference?</span></h2>
+        <p class="text-lg text-white/70 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Whether you have an hour to spare or a lifetime of commitment, there's a place for you in the RescueHope family. Every effort counts.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="volunteer.html" class="px-10 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover hover:scale-105 transition-all shadow-xl shadow-primary/20">Become a Volunteer</a>
+          <a href="donate.html" class="px-10 py-4 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all backdrop-blur-md">Make a Donation</a>
         </div>
       </div>
     </section>
@@ -168,5 +242,6 @@
 
   <script src="../assets/js/main.js"></script>
 </body>
+
 
 </html>

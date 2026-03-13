@@ -4,7 +4,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Determine path depth for components
+    // 1. Immediate Theme Sync
+    initTheme();
+
+    // 2. Determine path depth for components
     const path = window.location.pathname;
     const isRoot = path.endsWith('index.html') || path.endsWith('/');
     const isInsidePages = path.includes('/pages/') || path.includes('/auth/');
@@ -113,6 +116,39 @@ function initNavbar() {
             });
         });
     }
+
+    // Active Link Detection
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href === 'javascript:void(0)') return;
+
+        // Normalize paths for comparison
+        const normalizedHref = href.startsWith('/') ? href : '/' + href;
+        const normalizedPath = currentPath === '/' || currentPath === '' ? '/index.html' : currentPath;
+
+        // Check for exact match or index.html equivalence
+        if (normalizedPath === normalizedHref || 
+           (normalizedPath === '/index.html' && normalizedHref === '/') ||
+           (normalizedPath.endsWith('/') && normalizedHref.endsWith('index.html')) ||
+           (normalizedPath === normalizedHref.replace('.html', ''))) {
+            
+            link.classList.add('!text-primary');
+            link.classList.remove('text-neutral-700', 'text-neutral-600', 'text-white/90');
+            
+            // If it's in a dropdown, also highlight the parent
+            const parentDropdown = link.closest('.group');
+            if (parentDropdown) {
+                const parentLink = parentDropdown.querySelector('a');
+                if (parentLink && parentLink !== link) {
+                    parentLink.classList.add('!text-primary');
+                    parentLink.classList.remove('text-neutral-700', 'text-white/90');
+                }
+            }
+        }
+    });
 }
 
 /**
@@ -127,6 +163,11 @@ function initTheme() {
 
     const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
         localStorage.setItem('theme', theme);
     };
 
@@ -134,12 +175,14 @@ function initTheme() {
         setTheme(currentTheme);
     } else if (prefersDark.matches) {
         setTheme('dark');
+    } else {
+        setTheme('light');
     }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            setTheme(theme === 'dark' ? 'light' : 'dark');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            setTheme(isDark ? 'light' : 'dark');
         });
     }
 }

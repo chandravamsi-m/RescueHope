@@ -1,0 +1,38 @@
+/* 
+ * RescueHope — Custom Theme & Special Components (RTL Support Ready)
+ * This file contains shared styles that supplement the Tailwind design system.
+ */
+
+/* Theme Toggle Helper Improvements */
+.theme-toggle {
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.theme-toggle:active {
+    transform: scale(0.9);
+}
+
+/* Custom RTL-ready Alignment Utilities */
+[dir="rtl"] .text-left { text-align: right; }
+[dir="rtl"] .text-right { text-align: left; }
+[dir="rtl"] .ml-auto { margin-right: auto; margin-left: 0; }
+[dir="rtl"] .mr-auto { margin-left: auto; margin-right: 0; }
+
+/* Cinematic Grid Specifics */
+.auth-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+    .auth-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Scroll Offset Utilities */
+.scroll-mt-header {
+    scroll-margin-top: 5rem;
+}
