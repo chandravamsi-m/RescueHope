@@ -4,25 +4,18 @@
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Immediate Theme Sync
-    initTheme();
-
-    // 2. Determine path depth for components
+    // 1. Determine path depth for components
     const path = window.location.pathname;
     const isRoot = path.endsWith('index.html') || path.endsWith('/');
     const isInsidePages = path.includes('/pages/') || path.includes('/auth/');
-    const isInsideDashboard = path.includes('/dashboard/') || path.includes('/admin/');
 
     let componentPath = 'assets/components/';
     if (isInsidePages) componentPath = '../assets/components/';
-    if (isInsideDashboard) componentPath = '../assets/components/';
 
     // Load common components
     const loaders = [
         loadComponent('#navbar-placeholder', componentPath + 'navbar.html'),
-        loadComponent('#footer-placeholder', componentPath + 'footer.html'),
-        loadComponent('#dashboard-sidebar-placeholder', componentPath + 'dashboard-sidebar.html'),
-        loadComponent('#dashboard-header-placeholder', componentPath + 'dashboard-header.html')
+        loadComponent('#footer-placeholder', componentPath + 'footer.html')
     ];
 
     await Promise.all(loaders);
@@ -30,10 +23,50 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initializations
     initNavbar();
     initTheme();
+    initRTL();
     initScrollAnimations();
     initDashboardUI();
     initCardGlow();
 });
+
+/**
+ * LTR/RTL toggle logic
+ */
+function initRTL() {
+    const toggles = document.querySelectorAll('.rtl-toggle');
+    const currentDir = localStorage.getItem('dir') || 'ltr';
+
+    const setDir = (dir) => {
+        document.documentElement.setAttribute('dir', dir);
+        localStorage.setItem('dir', dir);
+        
+        // Update all toggle UIs
+        toggles.forEach(toggle => {
+            const labels = {
+                ltr: toggle.querySelector('.rtl-toggle__label.ltr'),
+                rtl: toggle.querySelector('.rtl-toggle__label.rtl')
+            };
+            if (labels.ltr && labels.rtl) {
+                if (dir === 'ltr') {
+                    labels.ltr.classList.add('bg-primary', 'text-white');
+                    labels.rtl.classList.remove('bg-primary', 'text-white');
+                } else {
+                    labels.rtl.classList.add('bg-primary', 'text-white');
+                    labels.ltr.classList.remove('bg-primary', 'text-white');
+                }
+            }
+        });
+    };
+
+    setDir(currentDir);
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            setDir(isRTL ? 'ltr' : 'rtl');
+        });
+    });
+}
 
 /**
  * Component Loader
@@ -179,10 +212,13 @@ function initTheme() {
         setTheme('light');
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            setTheme(isDark ? 'light' : 'dark');
+    const toggles = document.querySelectorAll('.theme-toggle');
+    if (toggles.length > 0) {
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                setTheme(isDark ? 'light' : 'dark');
+            });
         });
     }
 }

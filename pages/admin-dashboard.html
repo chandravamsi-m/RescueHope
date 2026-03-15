@@ -81,16 +81,128 @@
 
 <body class="bg-neutral-100 font-sans">
 
-  <div class="flex flex-col lg:grid lg:grid-cols-[auto_1fr] min-h-screen">
-    <!-- Sidebar Placeholder -->
-    <div id="dashboard-sidebar-placeholder" class="bg-neutral-900 lg:w-64"></div>
+  <div class="h-screen overflow-hidden flex flex-col lg:grid lg:grid-cols-[auto_1fr] bg-neutral-100">
+    <!-- Sidebar -->
+    <aside class="flex flex-col h-full bg-neutral-900 lg:w-64 shrink-0 dashboard-sidebar fixed lg:static inset-y-0 left-0 z-50 -translate-x-full lg:translate-x-0 transition-transform duration-300 shadow-2xl">
+      <div class="px-8 py-8 mb-6 border-b border-white/5">
+        <a href="../index.html" class="flex items-center gap-2 group">
+          <span class="iconify text-primary text-3xl group-hover:rotate-12 transition-transform"
+            data-icon="ph:paw-print-fill"></span>
+          <div class="flex flex-col">
+            <span class="text-white font-bold text-2xl tracking-tight leading-none">RescueHope</span>
+            <span class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mt-1 opacity-70">Admin Dashboard</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="flex-grow px-6 overflow-y-auto">
+        <ul class="flex flex-col gap-1.5">
+          <li>
+            <a href="admin-dashboard.html"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl bg-primary text-white font-bold text-xs uppercase tracking-widest italic shadow-lg shadow-primary/20">
+              <span class="iconify text-lg" data-icon="ph:chart-pie-slice-fill"></span>
+              Analytics
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:dog-fill"></span>
+              Animals
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:users-four-fill"></span>
+              <span class="flex-grow">Volunteers</span>
+              <span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-md italic font-bold">8</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:money-fill"></span>
+              Donations
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:file-heart-fill"></span>
+              <span class="flex-grow">Adoptions</span>
+              <span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-md italic font-bold">42</span>
+            </a>
+          </li>
+          <li class="my-4 border-b border-white/5"></li>
+          <p class="px-6 mb-3 text-[9px] font-bold text-neutral-600 uppercase tracking-widest leading-none">Administration</p>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:browsers-fill"></span>
+              Content CMS
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center gap-4 px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+              <span class="iconify text-lg" data-icon="ph:gear-six-fill"></span>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="px-6 py-8 mt-auto border-t border-white/5">
+        <a href="../auth/login.html"
+          class="flex items-center gap-4 px-6 py-4 rounded-2xl text-red-500/60 hover:text-red-500 hover:bg-red-500/5 font-bold text-xs uppercase tracking-widest transition-all">
+          <span class="iconify text-lg" data-icon="ph:power-bold"></span>
+          Logout System
+        </a>
+      </div>
+    </aside>
 
     <!-- Main Content Wrapper -->
-    <div class="flex-grow flex flex-col">
-      <!-- Header Placeholder -->
-      <div id="dashboard-header-placeholder" class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-100"></div>
+    <div class="flex-grow flex flex-col min-w-0 overflow-hidden">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-100 px-6 md:px-10 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <button
+            class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 sidebar-toggle">
+            <span class="iconify" data-icon="ph:list-bold"></span>
+          </button>
+          <h2 class="text-xl font-bold italic tracking-tight" id="dashboard-title">System Administration</h2>
+        </div>
 
-      <main class="p-6 md:p-8">
+        <div class="flex items-center gap-6">
+          <button
+            class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-1 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10"
+            aria-label="Toggle direction">
+            <span class="rtl-toggle__label ltr px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">LTR</span>
+            <span class="rtl-toggle__label rtl px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">RTL</span>
+          </button>
+
+          <button
+            class="theme-toggle w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all shadow-sm"
+            aria-label="Toggle theme">
+            <span class="iconify ph-moon-stars-bold" data-icon="ph:moon-stars-bold"></span>
+            <span class="iconify ph-sun-bold" data-icon="ph:sun-bold"></span>
+          </button>
+
+          <div class="flex items-center gap-4 pl-6 border-l border-neutral-100">
+            <div class="hidden md:block text-right">
+              <p class="text-xs font-bold text-neutral-900 leading-none mb-1">Super Admin</p>
+              <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest italic opacity-80">Root Access</span>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary overflow-hidden">
+              <img src="../assets/images/img_005.jpg" alt="Avatar" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-grow overflow-y-auto p-6 md:p-8">
         <!-- KPI Bar -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-neutral-100 hover:shadow-md transition-shadow">

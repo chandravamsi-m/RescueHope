@@ -66,112 +66,113 @@
 
 <body>
 
-  <div id="navbar-placeholder"></div>
+  <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
 
-  <header class="bg-neutral-900 py-16 text-white">
-    <div class="container mx-auto px-4 text-center animate-fade-up">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in <span class="text-primary">Touch</span></h1>
-      <p class="mx-auto text-white/60 max-w-2xl text-lg">Whether you're looking to adopt, volunteer, or just have a
-        question, our team is ready to help.</p>
+  <header class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('../assets/images/grid.svg')] opacity-10"></div>
+    <div class="container mx-auto px-4 text-center relative z-10 animate-fade-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Get in <span class="text-primary italic">Touch</span></h1>
+      <p class="mx-auto text-white/70 max-w-2xl text-lg md:text-xl leading-relaxed">Whether you're looking to adopt, volunteer, or just have a
+        question, our team is ready to help you save lives.</p>
     </div>
   </header>
 
   <main class="py-20">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
         <!-- Contact Info -->
-        <div class="animate-on-scroll">
+        <div class="animate-on-scroll flex flex-col">
           <h2 class="text-3xl font-bold mb-12 uppercase tracking-widest text-xs text-neutral-400">Contact <span
               class="text-secondary">Information</span></h2>
 
-          <div class="flex gap-6 mb-10">
-            <div
-              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 text-primary shadow-sm border border-primary/5">
-              <span class="iconify text-2xl" data-icon="ph:map-pin-fill"></span>
+          <div class="space-y-8">
+            <div class="flex gap-6 group hover:-translate-y-1 transition-transform duration-300">
+              <div
+                class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 text-primary shadow-sm border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <span class="iconify text-3xl" data-icon="ph:map-pin-fill"></span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-1 dark:text-white">Our Shelter</h4>
+                <p class="text-neutral-500 dark:text-neutral-400 leading-relaxed">123 Rescue Lane, Silver Spring, MD 20901</p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-lg font-bold mb-1">Our Shelter</h4>
-              <p class="text-neutral-500 leading-relaxed">123 Rescue Lane, Silver Spring, MD 20901</p>
-            </div>
-          </div>
 
-          <div class="flex gap-6 mb-10">
-            <div
-              class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary shadow-sm border border-secondary/5">
-              <span class="iconify text-2xl" data-icon="ph:phone-fill"></span>
+            <div class="flex gap-6 group hover:-translate-y-1 transition-transform duration-300">
+              <div
+                class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary shadow-sm border border-secondary/10 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                <span class="iconify text-3xl" data-icon="ph:phone-fill"></span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-1 dark:text-white">Phone Number</h4>
+                <p class="text-neutral-500 dark:text-neutral-400 leading-relaxed">+1 (555) 123-4567</p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-lg font-bold mb-1">Phone Number</h4>
-              <p class="text-neutral-500 leading-relaxed">+1 (555) 123-4567</p>
-            </div>
-          </div>
 
-          <div class="flex gap-6 mb-12">
-            <div
-              class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 text-accent shadow-sm border accent/5">
-              <span class="iconify text-2xl" data-icon="ph:envelope-simple-fill"></span>
-            </div>
-            <div>
-              <h4 class="text-lg font-bold mb-1">Email Support</h4>
-              <p class="text-neutral-500 leading-relaxed">hello@rescuehope.org</p>
+            <div class="flex gap-6 group hover:-translate-y-1 transition-transform duration-300">
+              <div
+                class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 text-accent shadow-sm border border-accent/10 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <span class="iconify text-3xl" data-icon="ph:envelope-simple-fill"></span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-1 dark:text-white">Email Support</h4>
+                <p class="text-neutral-500 dark:text-neutral-400 leading-relaxed">hello@rescuehope.org</p>
+              </div>
             </div>
           </div>
 
           <!-- Map -->
-          <div class="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group">
-            <img src="../assets/images/img_028.jpg"
-              alt="Map Placeholder"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div
-              class="absolute inset-0 bg-neutral-900/40 backdrop-blur-[2px] flex flex-col items-center justify-center text-white">
-              <span class="iconify text-4xl mb-3" data-icon="ph:map-trifold-fill"></span>
-              <p class="font-bold uppercase tracking-widest text-xs">Interactive Map View</p>
-            </div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl mt-12 flex-grow min-h-[400px] border border-neutral-100 dark:border-white/5">
+            <iframe 
+              src="https://maps.google.com/maps?q=123%20Rescue%20Lane,%20Silver%20Spring,%20MD%2020901&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full border-0 dark:invert-[0.9] dark:hue-rotate-180 transition-all duration-500" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-neutral-100 animate-on-scroll">
-          <h3 class="text-2xl font-bold mb-8 italic">Send us a <span class="text-primary">Message</span></h3>
+        <div class="bg-white dark:bg-neutral-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-neutral-100 dark:border-white/5 animate-on-scroll">
+          <h3 class="text-3xl font-bold mb-8 dark:text-white italic">Send us a <span class="text-primary">Message</span></h3>
           <form id="contact-form" class="space-y-6">
             <div class="space-y-2">
-              <label for="name" class="block text-xs font-bold uppercase tracking-widest text-neutral-400 ml-1">Full
+              <label for="name" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Full
                 Name</label>
               <input type="text" id="name" name="name"
-                class="w-full bg-neutral-50 border border-neutral-100 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-primary focus:bg-white transition-all"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                 placeholder="Enter your name" required>
             </div>
             <div class="space-y-2">
-              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-neutral-400 ml-1">Email
+              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Email
                 Address</label>
               <input type="email" id="email" name="email"
-                class="w-full bg-neutral-50 border border-neutral-100 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-primary focus:bg-white transition-all"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                 placeholder="Enter your email" required>
             </div>
             <div class="space-y-2">
               <label for="subject"
-                class="block text-xs font-bold uppercase tracking-widest text-neutral-400 ml-1">Subject</label>
+                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Subject</label>
               <div class="relative">
                 <select id="subject" name="subject"
-                  class="w-full bg-neutral-50 border border-neutral-100 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-primary focus:bg-white transition-all appearance-none cursor-pointer">
+                  class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer">
                   <option value="general">General Inquiry</option>
                   <option value="adoption">Adoption Question</option>
                   <option value="volunteer">Volunteering</option>
                   <option value="donation">Donation Support</option>
                 </select>
-                <span class="iconify absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400"
+                <span class="iconify absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400"
                   data-icon="ph:caret-down-bold"></span>
               </div>
             </div>
             <div class="space-y-2">
               <label for="message"
-                class="block text-xs font-bold uppercase tracking-widest text-neutral-400 ml-1">Message</label>
+                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Message</label>
               <textarea id="message" name="message"
-                class="w-full bg-neutral-50 border border-neutral-100 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-primary focus:bg-white transition-all resize-none"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
                 rows="5" placeholder="How can we help?" required></textarea>
             </div>
             <button type="submit"
-              class="w-full bg-secondary text-white py-5 rounded-2xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-secondary-hover shadow-xl shadow-secondary/20 transition-all hover:-translate-y-0.5 mt-4">Send
+              class="w-full bg-primary text-white py-5 rounded-2xl font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary-hover transition-all hover:-translate-y-0.5 mt-4">Send
               Message</button>
           </form>
           <p id="form-status" class="mt-8 text-center text-sm font-bold animate-pulse hidden"></p>
