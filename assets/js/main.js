@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initNavbar();
     initTheme();
     initRTL();
+    initMobileMenu();
     initScrollAnimations();
     initDashboardUI();
     initCardGlow();
@@ -87,15 +88,17 @@ async function loadComponent(selector, url) {
         // Create a temporary element to hold the html
         const temp = document.createElement('div');
         temp.innerHTML = html;
+        
+        // The primary component is the first significant child (e.g., the <nav> tag)
         const component = temp.firstElementChild;
         
-        // Transfer classes
+        // Transfer classes from the placeholder to the primary component
         if (component) {
             placeholderClasses.forEach(cls => component.classList.add(cls));
-            placeholder.outerHTML = component.outerHTML;
-        } else {
-            placeholder.outerHTML = html;
         }
+
+        // Replace placeholder with all the content from the fetched file
+        placeholder.replaceWith(...temp.childNodes);
     } catch (error) {
         console.error('Error loading component:', error);
     }
@@ -120,36 +123,6 @@ function initNavbar() {
         });
     }
 
-    if (mobileToggle && mobileMenu) {
-        mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('navbar__links--active');
-            mobileToggle.querySelector('.iconify').setAttribute('data-icon', 
-                mobileMenu.classList.contains('navbar__links--active') ? 'ph:x-bold' : 'ph:list-bold'
-            );
-        });
-
-        // Close menu when clicking a non-dropdown link
-        mobileMenu.querySelectorAll('.navbar__link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (!link.parentElement.classList.contains('navbar__dropdown')) {
-                    mobileMenu.classList.remove('navbar__links--active');
-                    mobileToggle.querySelector('.iconify').setAttribute('data-icon', 'ph:list-bold');
-                } else if (window.innerWidth < 1024) {
-                    e.preventDefault();
-                    link.parentElement.classList.toggle('navbar__dropdown--active');
-                }
-            });
-        });
-
-        // Dropdown menu links should close the menu
-        mobileMenu.querySelectorAll('.navbar__dropdown-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('navbar__links--active');
-                mobileToggle.querySelector('.iconify').setAttribute('data-icon', 'ph:list-bold');
-            });
-        });
-    }
-
     // Active Link Detection
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('nav a');
@@ -162,12 +135,11 @@ function initNavbar() {
         const normalizedHref = href.startsWith('/') ? href : '/' + href;
         const normalizedPath = currentPath === '/' || currentPath === '' ? '/index.html' : currentPath;
 
-        // Check for exact match or index.html equivalence
-        if (normalizedPath === normalizedHref || 
-           (normalizedPath === '/index.html' && normalizedHref === '/') ||
-           (normalizedPath.endsWith('/') && normalizedHref.endsWith('index.html')) ||
-           (normalizedPath === normalizedHref.replace('.html', ''))) {
-            
+        const isExactMatch = normalizedPath === normalizedHref;
+        const isIndexMatch = (normalizedPath === '/index.html' && normalizedHref === '/');
+        const isParentMatch = normalizedPath.startsWith(normalizedHref.replace('.html', ''));
+        
+        if (isExactMatch || isIndexMatch || isParentMatch) {
             link.classList.add('!text-primary');
             link.classList.remove('text-neutral-700', 'text-neutral-600', 'text-white/90');
             
@@ -227,11 +199,38 @@ function initTheme() {
  * Dashboard UI specific logic
  */
 function initDashboardUI() {
-    const toggle = document.querySelector('.sidebar-toggle');
+    const toggles = document.querySelectorAll('.sidebar-toggle');
     const sidebar = document.querySelector('.dashboard-sidebar');
-    if (toggle && sidebar) {
-        toggle.addEventListener('click', () => {
-            sidebar.classList.toggle('dashboard-sidebar--active');
+    const overlay = document.getElementById('sidebar-overlay');
+    
+    if (sidebar && toggles.length > 0) {
+        const toggleSidebar = (show) => {
+            if (show) {
+                sidebar.classList.remove('-translate-x-full');
+                overlay?.classList.remove('opacity-0', 'invisible');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                overlay?.classList.add('opacity-0', 'invisible');
+                document.body.style.overflow = '';
+            }
+        };
+
+        toggles.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = sidebar.classList.contains('-translate-x-full');
+                toggleSidebar(isHidden);
+            });
+        });
+
+        overlay?.addEventListener('click', () => toggleSidebar(false));
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !sidebar.classList.contains('-translate-x-full')) {
+                toggleSidebar(false);
+            }
         });
     }
 
@@ -239,11 +238,57 @@ function initDashboardUI() {
     const titleEl = document.getElementById('dashboard-title');
     if (titleEl) {
         const path = window.location.pathname;
-        if (path.includes('shifts')) titleEl.innerText = 'My Shifts';
-        if (path.includes('foster')) titleEl.innerText = 'Foster Animals';
-        if (path.includes('animals')) titleEl.innerText = 'Animal Management';
-        if (path.includes('content')) titleEl.innerText = 'Content Management';
+        if (path.includes('admin')) titleEl.innerText = 'System Administration';
+        if (path.includes('user')) titleEl.innerText = 'Volunteer Portal';
     }
+}
+
+/**
+ * Mobile Menu Toggle Logic
+ */
+function initMobileMenu() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const close = document.getElementById('mobile-menu-close');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const menuIcon = toggle?.querySelector('.menu-icon');
+    const closeIcon = toggle?.querySelector('.close-icon');
+
+    if (!toggle || !drawer || !overlay) return;
+
+    const toggleMenu = (show) => {
+        if (show) {
+            drawer.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'invisible');
+            document.body.style.overflow = 'hidden';
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+        } else {
+            drawer.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'invisible');
+            document.body.style.overflow = '';
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+    };
+
+    toggle.addEventListener('click', () => {
+        const isOpen = !drawer.classList.contains('translate-x-full');
+        toggleMenu(!isOpen);
+    });
+
+    close.addEventListener('click', () => toggleMenu(false));
+    overlay.addEventListener('click', () => toggleMenu(false));
+
+    // Close on link click
+    const links = drawer.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => toggleMenu(false));
+    });
 }
 
 /**

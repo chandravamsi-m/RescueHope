@@ -172,3 +172,66 @@ body {
     will-change: transform, opacity;
     transform-style: preserve-3d;
 }
+
+/* 
+ * Dashboard Layout Utilities
+ * Replaces core functionality from deleted dashboard.css
+ */
+.dashboard-sidebar {
+    height: 100vh;
+    height: 100dvh;
+    z-index: 50;
+}
+
+/* Sidebar mini-mode for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboard-sidebar {
+        width: 5rem !important; /* md:w-20 equivalent */
+    }
+    .dashboard-sidebar .md\:hidden {
+        display: none !important;
+    }
+}
+
+/* Ensure main content takes full height and scrolls internally */
+.dashboard-main-wrapper {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Table responsiveness within cards */
+.dashboard-card-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.dashboard-card-table th {
+    padding: 1rem 1.5rem;
+    background-color: var(--neutral-50);
+}
+
+.dark .dashboard-card-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dashboard Sidebar Active/Hover States */
+.sidebar-link-active {
+    background-color: var(--primary);
+    color: white !important;
+    box-shadow: 0 10px 15px -3px rgba(245, 124, 0, 0.2);
+}
+
+.sidebar-link-hover:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white !important;
+}
+
+/* Sidebar Overlay */
+#sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
