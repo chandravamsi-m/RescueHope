@@ -73,9 +73,10 @@
 
     <!-- Hero: Editorial Split -->
     <section
-      class="relative min-h-screen lg:h-screen flex flex-col lg:flex-row overflow-hidden bg-neutral-900 items-center">
+      class="relative lg:h-screen flex flex-col lg:flex-row overflow-hidden bg-neutral-900 items-center">
+      
       <!-- Left Content -->
-      <div class="w-full lg:w-1/2 flex items-center justify-center px-6 py-20 lg:p-16 relative z-10">
+      <div class="w-full lg:w-1/2 flex items-center justify-center px-6 py-24 lg:p-16 relative z-10 text-center lg:text-left">
         <div class="max-w-xl">
           <h1
             class="text-6xl md:text-8xl lg:text-[7rem] font-bold text-white mb-10 leading-[0.85] tracking-tighter animate-fade-up"
@@ -84,30 +85,32 @@
             <span class="text-primary italic font-serif">Rewrites</span> <br>
             Fate.
           </h1>
-          <p class="text-white/80 text-lg md:text-xl mb-12 max-w-lg leading-relaxed animate-fade-up"
+          <p class="text-white/80 text-lg md:text-xl mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed animate-fade-up"
             style="animation-delay: 0.3s;">
             Experience a curated approach to animal rescue. Where medical precision meets the architecture of healing.
           </p>
-          <div class="flex flex-col sm:flex-row items-center gap-6 animate-fade-up" style="animation-delay: 0.4s;">
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 animate-fade-up" style="animation-delay: 0.4s;">
             <a href="adopt.html"
-              class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1 text-center">
+              class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1 text-center font-sans">
               Meet the Residents
             </a>
             <a href="#manifesto"
-              class="w-full sm:w-auto border border-white/20 text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-neutral-900 transition-all text-center">
+              class="w-full sm:w-auto border border-white/20 text-white px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-neutral-900 transition-all text-center font-sans">
               View Manifesto
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Right Visual -->
-      <div class="w-full lg:w-1/2 h-[40vh] sm:h-[50vh] lg:h-full relative order-1 lg:order-2">
-        <img src="../assets/images/img_032.jpg" class="w-full h-full object-cover sm:scale-105" alt="Hero Background Dog">
-        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-transparent to-transparent lg:block hidden rtl:bg-gradient-to-l">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent lg:hidden block">
-        </div>
+      <div class="absolute inset-0 lg:relative lg:w-1/2 lg:h-full h-full w-full z-0 lg:z-10 order-1 lg:order-2">
+        <img src="../assets/images/img_032.jpg" class="w-full h-full object-cover opacity-60 lg:opacity-100 sm:scale-105 transition-opacity duration-1000" alt="Hero Background Dog">
+        
+        <!-- Desktop Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-r from-neutral-900 via-transparent to-transparent hidden lg:block rtl:bg-gradient-to-l"></div>
+        
+        <!-- Mobile Gradient (Lighter and centered) -->
+        <div class="absolute inset-0 bg-neutral-900/40 lg:hidden"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent lg:hidden"></div>
       </div>
     </section>
 
@@ -189,9 +192,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Item 1: Large Featured (Atlas) -->
           <div class="lg:col-span-2 group animate-on-scroll">
-            <div class="relative h-[500px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-neutral-900">
+            <div class="relative h-[400px] md:h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-neutral-900">
               <img src="../assets/images/img_034.jpg"
                 class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
                 alt="Atlas - Golden Retriever">
@@ -251,25 +253,24 @@
           <!-- Item 4: Wide Bonded Pairs -->
           <div class="lg:col-span-3 group animate-on-scroll" style="transition-delay: 0.3s;">
             <div
-              class="flex flex-col md:flex-row rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-100 bg-white">
-              <div class="w-full md:w-3/5 h-[400px] md:h-[600px] overflow-hidden relative bg-neutral-900">
+              class="flex flex-col md:flex-row rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-100 bg-white items-stretch md:h-[350px]">
+              <div class="w-full md:w-[45%] h-[160px] md:h-auto overflow-hidden relative bg-neutral-900">
                 <img src="../assets/images/img_036.png"
                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000"
                   alt="Bonded pairs">
               </div>
-              <div class="w-full md:w-2/5 p-12 md:p-16 lg:p-20 flex flex-col justify-center">
-                <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-6 block">Special
+              <div class="w-full md:w-[55%] p-6 md:p-12 lg:p-14 flex flex-col justify-center">
+                <span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-2 block">Special
                   Handling
                   Required</span>
-                <h3 class="text-4xl lg:text-5xl font-bold mb-8 leading-[1.1] italic">The <span
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-5 leading-[1.1] italic text-neutral-900">The <span
                     class="font-normal opacity-40 not-italic">Bonded</span> Collection
                 </h3>
-                <p class="text-lg text-neutral-500 mb-10 leading-relaxed max-w-sm">
-                  Some journeys are better shared. Our Bonded Collection features pairs who have survived adversity
-                  together and require one single, compassionate home.
+                <p class="text-sm md:text-base lg:text-lg text-neutral-500 mb-5 md:mb-8 leading-relaxed">
+                  Some journeys are better shared. Our Bonded Collection features survivors who require one single compassionate home.
                 </p>
                 <a href="adopt.html"
-                  class="bg-primary text-white px-10 py-5 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1 w-max">Inquire
+                  class="bg-primary text-white px-8 py-3.5 md:px-10 md:py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1 w-max font-sans">Inquire
                   Joint Application</a>
               </div>
             </div>
@@ -279,7 +280,7 @@
     </section>
 
     <!-- Section 3: The Operations (Data-Heavy Dashboard) -->
-    <section class="py-16 bg-neutral-900 text-white relative overflow-hidden">
+    <section class="py-10 lg:py-16 bg-neutral-900 text-white relative overflow-hidden">
       <!-- Background Data Grid -->
       <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,66 +292,63 @@
         <div class="flex flex-col lg:flex-row gap-12 xl:gap-24 items-center">
           <!-- Data Column -->
           <div class="w-full lg:w-1/2 order-2 lg:order-1">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 animate-on-scroll">
+            <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-on-scroll">
               <!-- Stat 1 -->
-              <div class="group border-t border-white/5 pt-6">
-                <div class="mb-4 flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Funding Allocation</span>
+              <div class="group border-t border-white/5 pt-4 md:pt-6">
+                <div class="mb-3 md:mb-4 flex items-center justify-between">
+                  <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary">Funding Allocation</span>
                   <span class="text-xs font-mono text-white/20">001</span>
                 </div>
-                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">$2.4M</h4>
-                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Resilience target reached for Q1 2024
-                  operations.</p>
+                <h4 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tighter">$2.4M</h4>
+                <p class="text-white/40 text-[10px] md:text-xs leading-relaxed max-w-[200px]">Resilience target reached for Q1 2024 operations.</p>
               </div>
               <!-- Stat 2 -->
-              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.1s;">
-                <div class="mb-4 flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Response Latency</span>
+              <div class="group border-t border-white/5 pt-4 md:pt-6" style="transition-delay: 0.1s;">
+                <div class="mb-3 md:mb-4 flex items-center justify-between">
+                  <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary">Response Latency</span>
                   <span class="text-xs font-mono text-white/20">002</span>
                 </div>
-                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">48<span
+                <h4 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tighter">48<span
                     class="text-xl font-normal opacity-20 ml-1 italic">h</span></h4>
-                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Mean critical intervention time across
+                <p class="text-white/40 text-[10px] md:text-xs leading-relaxed max-w-[200px]">Mean critical intervention time across
                   all sectors.</p>
               </div>
               <!-- Stat 3 -->
-              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.2s;">
-                <div class="mb-4 flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Network Saturation</span>
+              <div class="group border-t border-white/5 pt-4 md:pt-6" style="transition-delay: 0.2s;">
+                <div class="mb-3 md:mb-4 flex items-center justify-between">
+                  <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary">Network Saturation</span>
                   <span class="text-xs font-mono text-white/20">003</span>
                 </div>
-                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">98<span
+                <h4 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tighter">98<span
                     class="text-xl font-normal opacity-20 ml-1 italic">%</span></h4>
-                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Successful rehabilitation and social
+                <p class="text-white/40 text-[10px] md:text-xs leading-relaxed max-w-[200px]">Successful rehabilitation and social
                   reintegration rate.</p>
               </div>
               <!-- Stat 4 -->
-              <div class="group border-t border-white/5 pt-6" style="transition-delay: 0.3s;">
-                <div class="mb-4 flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Human Capital</span>
+              <div class="group border-t border-white/5 pt-4 md:pt-6" style="transition-delay: 0.3s;">
+                <div class="mb-3 md:mb-4 flex items-center justify-between">
+                  <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary">Human Capital</span>
                   <span class="text-xs font-mono text-white/20">004</span>
                 </div>
-                <h4 class="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">1.2k</h4>
-                <p class="text-white/40 text-xs leading-relaxed max-w-[200px]">Active medical and behavioral specialists
+                <h4 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 tracking-tighter">1.2k</h4>
+                <p class="text-white/40 text-[10px] md:text-xs leading-relaxed max-w-[200px]">Active medical and behavioral specialists
                   in roster.</p>
               </div>
             </div>
           </div>
 
-          <!-- Description Column -->
           <div class="w-full lg:w-1/2 order-1 lg:order-2 animate-on-scroll" style="transition-delay: 0.2s;">
             <div
-              class="bg-white/5 border border-white/10 p-10 lg:p-14 rounded-[2.5rem] backdrop-blur-2xl relative overflow-hidden group">
+              class="bg-white/5 border border-white/10 p-8 md:p-12 lg:p-14 rounded-[2.5rem] backdrop-blur-2xl relative overflow-hidden group">
               <div
                 class="absolute -top-24 -right-24 w-64 h-64 bg-primary opacity-20 blur-[100px] rounded-full group-hover:opacity-40 transition-opacity duration-1000">
               </div>
 
-              <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-6">The
-                Operations</span>
-              <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-[1.05] tracking-tight">
+              <span class="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[10px] mb-4 md:mb-6">The Operations</span>
+              <h2 class="text-2xl md:text-4xl font-bold mb-6 md:mb-8 leading-[1.05] tracking-tight">
                 Systems <br> of <span class="italic font-serif opacity-40">Absolute</span> <br> Compassion.
               </h2>
-              <p class="text-white/60 text-base leading-relaxed mb-10 font-light">
+              <p class="text-white/60 text-sm md:text-base leading-relaxed mb-8 md:mb-10 font-light">
                 We operate on a logic of zero-latency compassion. When a distress call enters our network, our pulse
                 accelerates, ensuring every resource is routed with medical precision and behavioral foresight.
               </p>
@@ -367,7 +365,7 @@
     </section>
 
     <!-- Section: The Journal (Editorial Edition) -->
-    <section class="pt-12 pb-0 bg-white">
+    <section class="pt-12 pb-12 lg:pb-0 bg-white">
       <div class="container mx-auto px-4">
         <div
           class="flex flex-col lg:flex-row items-baseline justify-between mb-4 pb-4 border-b border-neutral-100 gap-8 animate-on-scroll">
@@ -379,7 +377,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-16 xl:gap-24">
           <!-- Feature Article -->
           <article class="lg:col-span-7 animate-on-scroll">
             <div class="group">
@@ -413,8 +411,8 @@
 
           <!-- Sidebar Articles (Media Object List) -->
           <div
-            class="lg:col-span-5 flex flex-col pt-8 border-t lg:border-t-0 lg:border-l border-neutral-100 lg:pl-16 xl:pl-24">
-            <div class="space-y-12 mb-16">
+            class="lg:col-span-5 flex flex-col pt-4 md:pt-8 border-t lg:border-t-0 lg:border-l border-neutral-100 lg:pl-16 xl:pl-24">
+            <div class="space-y-8 md:space-y-12 mb-8 md:mb-16">
               <!-- Article 1 -->
               <article class="group animate-on-scroll flex gap-8 items-start" style="transition-delay: 0.1s;">
                 <div class="w-24 h-24 shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
@@ -477,8 +475,7 @@
             </div>
 
             <a href="stories.html"
-              class="inline-flex items-center justify-center w-full border border-neutral-100 bg-neutral-50 text-neutral-900 py-5 rounded-2xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-neutral-900 hover:text-white transition-all shadow-sm">View
-              Full Archives</a>
+              class="inline-flex items-center justify-center w-full border border-neutral-900 bg-transparent text-neutral-900 py-5 rounded-2xl font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-neutral-900 hover:text-white transition-all shadow-sm">View Full Archives</a>
           </div>
         </div>
       </div>
