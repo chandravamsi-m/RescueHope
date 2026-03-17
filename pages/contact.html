@@ -68,7 +68,7 @@
 
   <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
 
-  <header class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-24 text-white relative overflow-hidden">
+  <header class="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-16 md:py-24 text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('../assets/images/grid.svg')] opacity-10"></div>
     <div class="container mx-auto px-4 text-center relative z-10 animate-fade-up">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Get in <span class="text-primary italic">Touch</span></h1>
@@ -77,9 +77,55 @@
     </div>
   </header>
 
-  <main class="py-20">
+  <main class="py-12 md:py-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+        <div class="bg-white dark:bg-neutral-900 p-6 md:p-12 rounded-3xl md:rounded-[2.5rem] shadow-2xl border border-neutral-100 dark:border-white/5 animate-on-scroll">
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 dark:text-white italic">Send us a <span class="text-primary">Message</span></h3>
+          <form id="contact-form" class="space-y-4 md:space-y-6">
+            <div class="space-y-1.5 md:space-y-2">
+              <label for="name" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Full
+                Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-3 md:py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                placeholder="Enter your name" required>
+            </div>
+            <div class="space-y-1.5 md:space-y-2">
+              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Email
+                Address</label>
+              <input type="email" id="email" name="email"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-3 md:py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                placeholder="Enter your email" required>
+            </div>
+            <div class="space-y-1.5 md:space-y-2">
+              <label for="subject"
+                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Subject</label>
+              <div class="relative">
+                <select id="subject" name="subject"
+                  class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-3 md:py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer">
+                  <option value="general">General Inquiry</option>
+                  <option value="adoption">Adoption Question</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="donation">Donation Support</option>
+                </select>
+                <span class="iconify absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400"
+                  data-icon="ph:caret-down-bold"></span>
+              </div>
+            </div>
+            <div class="space-y-1.5 md:space-y-2">
+              <label for="message"
+                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Message</label>
+              <textarea id="message" name="message"
+                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-3 md:py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                rows="4" md:rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-white py-3.5 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary-hover transition-all hover:-translate-y-0.5 mt-2 md:mt-4">Send
+              Message</button>
+          </form>
+          <p id="form-status" class="mt-8 text-center text-sm font-bold animate-pulse hidden"></p>
+        </div>
+
         <!-- Contact Info -->
         <div class="animate-on-scroll flex flex-col">
           <h2 class="text-3xl font-bold mb-12 uppercase tracking-widest text-xs text-neutral-400">Contact <span
@@ -130,52 +176,6 @@
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-        </div>
-
-        <div class="bg-white dark:bg-neutral-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-neutral-100 dark:border-white/5 animate-on-scroll">
-          <h3 class="text-3xl font-bold mb-8 dark:text-white italic">Send us a <span class="text-primary">Message</span></h3>
-          <form id="contact-form" class="space-y-6">
-            <div class="space-y-2">
-              <label for="name" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Full
-                Name</label>
-              <input type="text" id="name" name="name"
-                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                placeholder="Enter your name" required>
-            </div>
-            <div class="space-y-2">
-              <label for="email" class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Email
-                Address</label>
-              <input type="email" id="email" name="email"
-                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                placeholder="Enter your email" required>
-            </div>
-            <div class="space-y-2">
-              <label for="subject"
-                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Subject</label>
-              <div class="relative">
-                <select id="subject" name="subject"
-                  class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer">
-                  <option value="general">General Inquiry</option>
-                  <option value="adoption">Adoption Question</option>
-                  <option value="volunteer">Volunteering</option>
-                  <option value="donation">Donation Support</option>
-                </select>
-                <span class="iconify absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-neutral-400"
-                  data-icon="ph:caret-down-bold"></span>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <label for="message"
-                class="block text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 ml-1">Message</label>
-              <textarea id="message" name="message"
-                class="w-full bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/20 rounded-2xl px-6 py-4 text-base dark:text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                rows="5" placeholder="How can we help?" required></textarea>
-            </div>
-            <button type="submit"
-              class="w-full bg-primary text-white py-5 rounded-2xl font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary-hover transition-all hover:-translate-y-0.5 mt-4">Send
-              Message</button>
-          </form>
-          <p id="form-status" class="mt-8 text-center text-sm font-bold animate-pulse hidden"></p>
         </div>
       </div>
     </div>

@@ -91,7 +91,6 @@
             data-icon="ph:paw-print-fill"></span>
           <div class="flex flex-col md:hidden lg:flex">
             <span class="text-white font-bold text-xl tracking-tight leading-none whitespace-nowrap">RescueHope</span>
-            <span class="text-[9px] text-neutral-500 font-bold uppercase tracking-widest mt-1 opacity-70 whitespace-nowrap">Volunteer Portal</span>
           </div>
         </a>
         <button class="md:hidden text-white/50 hover:text-white sidebar-toggle" aria-label="Close sidebar">
@@ -102,8 +101,8 @@
       <nav class="flex-grow px-4 md:px-2 lg:px-6 overflow-y-auto overflow-x-hidden">
         <ul class="flex flex-col gap-1.5">
           <li>
-            <a href="user-dashboard.html"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl bg-primary text-white font-bold text-xs uppercase tracking-widest italic shadow-lg shadow-primary/20 transition-all">
+            <a href="#" data-section="overview"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl bg-primary text-white font-bold text-xs uppercase tracking-widest italic shadow-lg shadow-primary/20 transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:squares-four-fill"></span>
               </div>
@@ -111,8 +110,8 @@
             </a>
           </li>
           <li>
-            <a href="#"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+            <a href="#" data-section="shifts"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:calendar-blank-fill"></span>
               </div>
@@ -120,8 +119,8 @@
             </a>
           </li>
           <li>
-            <a href="#"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+            <a href="#" data-section="foster"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:dog-fill"></span>
               </div>
@@ -129,8 +128,8 @@
             </a>
           </li>
           <li>
-            <a href="#"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+            <a href="#" data-section="donations"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:hand-heart-fill"></span>
               </div>
@@ -140,8 +139,8 @@
           <li class="my-4 border-b border-white/5"></li>
           <p class="px-6 md:hidden lg:block mb-3 text-[9px] font-bold text-neutral-600 uppercase tracking-widest leading-none">Settings</p>
           <li>
-            <a href="#"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+            <a href="#" data-section="profile"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:user-circle-fill"></span>
               </div>
@@ -149,8 +148,8 @@
             </a>
           </li>
           <li>
-            <a href="#"
-              class="flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
+            <a href="#" data-section="alerts"
+              class="nav-link flex items-center gap-4 px-6 md:px-0 md:justify-center lg:px-6 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-xs uppercase tracking-widest transition-all">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:bell-fill"></span>
               </div>
@@ -182,7 +181,7 @@
             class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 sidebar-toggle">
             <span class="iconify" data-icon="ph:list-bold"></span>
           </button>
-          <h2 class="text-lg md:text-xl font-bold italic tracking-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] sm:max-w-none" id="dashboard-title">Dashboard Overview</h2>
+          <h2 class="text-lg md:text-xl font-bold italic tracking-tight whitespace-nowrap pr-2" id="dashboard-title">Volunteer Portal</h2>
         </div>
 
         <div class="flex items-center gap-2 md:gap-6">
@@ -213,133 +212,572 @@
       </header>
 
       <main class="flex-grow overflow-y-auto p-6 md:p-8">
-        <!-- Page Title -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <h2 class="text-3xl font-bold mb-2 italic">Dashboard <span
-                class="text-primary italic opacity-80 not-italic">Overview</span></h2>
-            <p class="text-neutral-400 text-sm font-normal">Track your volunteer progress and foster animal status.</p>
+        <!-- Overview Section -->
+        <div id="overview-section" class="dashboard-section fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">Dashboard <span class="text-primary italic opacity-80 not-italic">Overview</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Track your volunteer progress and foster animal status.</p>
+            </div>
+            <div class="flex flex-wrap gap-3 md:gap-4">
+              <button class="bg-primary text-white px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1 flex-grow sm:flex-grow-0">Sign Up for Shift</button>
+              <button class="bg-white dark:bg-neutral-800 border-2 border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-white px-5 md:px-6 py-2.5 md:py-3 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-all flex-grow sm:flex-grow-0">Donate Now</button>
+            </div>
           </div>
-          <div class="flex flex-wrap gap-4">
-            <button
-              class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1">Sign
-              Up for Shift</button>
-            <button
-              class="bg-white border-2 border-neutral-200 text-neutral-900 px-6 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all">Donate
-              Now</button>
+
+          <!-- KPI Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm animate-fade-up transition-colors hover:border-primary/50">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Next Shift In</p>
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-2 font-heading dark:text-white text-secondary">2 Days</h3>
+                  <p class="text-neutral-400 text-[10px] font-bold uppercase italic">March 15 • 10:00 AM</p>
+                </div>
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                  <span class="iconify text-xl sm:text-2xl" data-icon="ph:calendar-check-fill"></span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm animate-fade-up transition-colors hover:border-secondary/50" style="transition-delay: 0.1s;">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Total Hours</p>
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-2 font-heading dark:text-white">142.5</h3>
+                  <p class="text-primary text-[10px] font-bold uppercase italic font-bold">↑ 12h this month</p>
+                </div>
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary">
+                  <span class="iconify text-xl sm:text-2xl" data-icon="ph:clock-countdown-fill"></span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm animate-fade-up transition-colors hover:border-accent/50" style="transition-delay: 0.2s;">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Active Fosters</p>
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-2 font-heading dark:text-white">1</h3>
+                  <p class="text-neutral-400 text-[10px] font-bold uppercase italic font-bold">Luna • Since Jan 12</p>
+                </div>
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
+                  <span class="iconify text-xl sm:text-2xl" data-icon="ph:dog-fill"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-12">
+            <!-- Shift Schedule Preview -->
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <div class="flex items-center gap-4 mb-6 sm:mb-10">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                  <span class="iconify" data-icon="ph:calendar-bold"></span>
+                </div>
+                <h4 class="text-xl font-bold italic dark:text-white">Upcoming <span class="text-primary">Shifts</span></h4>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5 group hover:border-primary/30 transition-all">
+                  <div>
+                    <p class="font-bold text-neutral-900 dark:text-white mb-1">Cat Room Socialization</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 15 • 10:00 AM - 1:00 PM</span>
+                  </div>
+                  <span class="bg-primary/20 text-primary text-[10px] font-bold px-4 py-2 rounded-full italic">CONFIRMED</span>
+                </div>
+                <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5 group hover:border-primary/30 transition-all">
+                  <div>
+                    <p class="font-bold text-neutral-900 dark:text-white mb-1">Community Adoption Day</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 22 • 9:00 AM - 3:00 PM</span>
+                  </div>
+                  <span class="bg-primary/20 text-primary text-[10px] font-bold px-4 py-2 rounded-full italic">CONFIRMED</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity Feed -->
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <div class="flex items-center gap-4 mb-6 sm:mb-10">
+                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary">
+                  <span class="iconify" data-icon="ph:lightning-bold"></span>
+                </div>
+                <h4 class="text-xl font-bold italic dark:text-white">Activity <span class="text-secondary">Stream</span></h4>
+              </div>
+              <div class="flex flex-col gap-8">
+                <div class="flex gap-6">
+                  <div class="w-10 h-10 shrink-0 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                    <span class="iconify" data-icon="ph:check-circle-fill"></span>
+                  </div>
+                  <div class="flex-grow pb-8 border-b border-neutral-50 dark:border-white/5">
+                    <p class="text-neutral-600 dark:text-neutral-400 font-normal leading-relaxed mb-1">Medical log updated for <strong class="text-neutral-900 dark:text-white italic">Luna</strong>.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">2 hours ago</span>
+                  </div>
+                </div>
+                <div class="flex gap-6">
+                  <div class="w-10 h-10 shrink-0 bg-accent/10 rounded-full flex items-center justify-center text-accent">
+                    <span class="iconify" data-icon="ph:info-fill"></span>
+                  </div>
+                  <div class="flex-grow">
+                    <p class="text-neutral-600 dark:text-neutral-400 font-normal leading-relaxed mb-1">New shift sign-up available for <strong class="text-neutral-900 dark:text-white italic text-accent">Adoption Event</strong>.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">5 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saved Animals Cards -->
+          <div class="mb-12">
+            <h4 class="text-xl font-bold italic mb-8 dark:text-white">Animals You <span class="text-accent">Liked</span></h4>
+            <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6">
+              <div class="group bg-white dark:bg-neutral-900 p-4 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm hover:border-accent/40 transition-all">
+                <div class="relative aspect-square rounded-[1.5rem] overflow-hidden mb-4">
+                  <img src="../assets/images/img_011.jpg" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <button class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-accent transition-all">
+                    <span class="iconify" data-icon="ph:heart-fill"></span>
+                  </button>
+                </div>
+                <h5 class="text-md font-bold dark:text-white leading-none mb-1">Copper</h5>
+                <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-widest italic">Maine Coon • Cat</p>
+              </div>
+              <div class="group bg-white dark:bg-neutral-900 p-4 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm hover:border-accent/40 transition-all">
+                <div class="relative aspect-square rounded-[1.5rem] overflow-hidden mb-4">
+                  <img src="../assets/images/img_023.jpg" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <button class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-accent transition-all">
+                    <span class="iconify" data-icon="ph:heart-fill"></span>
+                  </button>
+                </div>
+                <h5 class="text-md font-bold dark:text-white leading-none mb-1">Bella</h5>
+                <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-widest italic">Beagle • Dog</p>
+              </div>
+              <div class="group bg-white dark:bg-neutral-900 p-4 rounded-[2.5rem] border-2 border-dashed border-neutral-100 dark:border-white/5 flex flex-col items-center justify-center text-center py-12">
+                <div class="w-12 h-12 rounded-full bg-neutral-50 dark:bg-white/2 flex items-center justify-center text-neutral-400 mb-4">
+                  <span class="iconify text-2xl" data-icon="ph:plus-bold"></span>
+                </div>
+                <p class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest italic">Find More</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- KPI Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <div
-            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Next Shift In</p>
-                <h3 class="text-3xl font-bold mb-2 font-heading">2 Days</h3>
-                <p class="text-secondary text-[10px] font-bold uppercase italic">March 15, 10:00 AM</p>
+        <!-- My Shifts Section -->
+        <div id="shifts-section" class="dashboard-section hidden fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">Volunteer <span class="text-primary italic opacity-80 not-italic">Schedule</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Manage your upcoming assignments and log active hours.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Clock In Mockup -->
+            <div class="lg:col-span-1 bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <h4 class="text-lg font-bold mb-6 italic">Active <span class="text-primary">Session</span></h4>
+              <div class="bg-neutral-50 dark:bg-white/2 rounded-3xl p-8 text-center border border-neutral-100 dark:border-white/5 mb-6">
+                <p class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2">No active session</p>
+                <div class="text-4xl font-bold dark:text-white mb-6 font-mono">00:00:00</div>
+                <button class="w-full py-4 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-2xl hover:bg-primary-hover transition-all shadow-lg shadow-primary/20">Clock In Now</button>
               </div>
-              <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <span class="iconify text-2xl text-primary" data-icon="ph:calendar-check-fill"></span>
+              <p class="text-[10px] text-neutral-400 text-center font-bold uppercase tracking-widest italic">Station: Main Kennel Block</p>
+            </div>
+
+            <!-- Upcoming List -->
+            <div class="lg:col-span-2 bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <div class="flex items-center justify-between mb-8">
+                <h4 class="text-lg font-bold italic">Upcoming <span class="text-secondary">Assignments</span></h4>
+                <button class="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">View Calendar</button>
+              </div>
+              <div class="space-y-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl border border-neutral-100 dark:border-white/5 group hover:border-secondary/30 transition-all">
+                  <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+                      <span class="iconify text-2xl" data-icon="ph:cat-bold"></span>
+                    </div>
+                    <div>
+                      <h5 class="font-bold dark:text-white leading-none mb-1">Cat Socialization</h5>
+                      <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest">March 15 • 10:00 AM - 1:00 PM</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-[9px] font-bold uppercase rounded-full">Confirmed</span>
+                    <button class="text-neutral-400 hover:text-red-500 transition-colors"><span class="iconify text-xl" data-icon="ph:x-circle-bold"></span></button>
+                  </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl border border-neutral-100 dark:border-white/5 group hover:border-secondary/30 transition-all">
+                  <div class="flex items-center gap-4 mb-4 md:mb-0">
+                    <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+                      <span class="iconify text-2xl" data-icon="ph:megaphone-bold"></span>
+                    </div>
+                    <div>
+                      <h5 class="font-bold dark:text-white leading-none mb-1">Adoption Fair Prep</h5>
+                      <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest">March 22 • 9:00 AM - 3:00 PM</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-[9px] font-bold uppercase rounded-full">Confirmed</span>
+                    <button class="text-neutral-400 hover:text-red-500 transition-colors"><span class="iconify text-xl" data-icon="ph:x-circle-bold"></span></button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div
-            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up"
-            style="transition-delay: 0.1s;">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Total Hours</p>
-                <h3 class="text-3xl font-bold mb-2 font-heading">142.5</h3>
-                <p class="text-primary text-[10px] font-bold uppercase italic">↑ 12h this month</p>
-              </div>
-              <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center">
-                <span class="iconify text-2xl text-secondary" data-icon="ph:clock-countdown-fill"></span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white p-8 rounded-[2rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-fade-up"
-            style="transition-delay: 0.2s;">
-            <div class="flex justify-between items-start">
-              <div>
-                <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest mb-4">Active Fosters</p>
-                <h3 class="text-3xl font-bold mb-2 font-heading">1</h3>
-                <p class="text-neutral-400 text-[10px] font-bold uppercase italic">Luna (since Jan 12)</p>
-              </div>
-              <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center">
-                <span class="iconify text-2xl text-accent" data-icon="ph:dog-fill"></span>
-              </div>
+
+          <!-- Shift History -->
+          <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm overflow-hidden">
+            <h4 class="text-lg font-bold mb-8 italic">Shift <span class="text-accent">History</span></h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-neutral-50 dark:border-white/5">
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-bold">Date</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-bold">Activity</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-bold">Duration</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-bold">Status</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-bold text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-neutral-50 dark:divide-white/5 font-bold">
+                  <tr class="group hover:bg-neutral-50 dark:hover:bg-white/2 transition-colors">
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-neutral-300">Mar 08, 2026</span>
+                    </td>
+                    <td class="py-6 px-4 font-bold">
+                      <span class="text-xs dark:text-white italic">Dog Walking (Area B)</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs text-neutral-500">2.5 Hours</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="px-2 py-1 bg-secondary/10 text-secondary text-[8px] font-bold uppercase rounded">Approved</span>
+                    </td>
+                    <td class="py-6 px-4 text-right">
+                      <button class="text-[9px] text-primary uppercase font-bold tracking-widest hover:underline">View Notes</button>
+                    </td>
+                  </tr>
+                  <tr class="group hover:bg-neutral-50 dark:hover:bg-white/2 transition-colors">
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-neutral-300">Mar 01, 2026</span>
+                    </td>
+                    <td class="py-6 px-4 font-bold">
+                      <span class="text-xs dark:text-white italic">Kennel Cleaning</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs text-neutral-500">4.0 Hours</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="px-2 py-1 bg-secondary/10 text-secondary text-[8px] font-bold uppercase rounded">Approved</span>
+                    </td>
+                    <td class="py-6 px-4 text-right">
+                      <button class="text-[9px] text-primary uppercase font-bold tracking-widest hover:underline">View Notes</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
 
-        <!-- Main Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <!-- Shift Schedule Preview -->
-          <div
-            class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-on-scroll">
-            <div class="flex items-center gap-4 mb-10">
-              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                <span class="iconify text-primary" data-icon="ph:calendar-bold"></span>
-              </div>
-              <h4 class="text-xl font-bold italic">Upcoming Shifts</h4>
+        <!-- Foster Animals Section -->
+        <div id="foster-section" class="dashboard-section hidden fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">Foster <span class="text-accent italic opacity-80 not-italic">Care Hub</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Manage current foster pets and view health milestones.</p>
             </div>
-            <div class="flex flex-col gap-4">
-              <div
-                class="flex items-center justify-between p-6 bg-neutral-50 rounded-2xl border border-neutral-100 group hover:border-primary/30 transition-all">
-                <div>
-                  <p class="font-bold text-neutral-900 mb-1">Cat Room Socialization</p>
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 15, 2026 • 10:00
-                    AM - 1:00 PM</span>
-                </div>
-                <span
-                  class="bg-primary text-white text-[10px] font-bold px-4 py-2 rounded-full italic">CONFIRMED</span>
-              </div>
-              <div
-                class="flex items-center justify-between p-6 bg-neutral-50 rounded-2xl border border-neutral-100 group hover:border-primary/30 transition-all">
-                <div>
-                  <p class="font-bold text-neutral-900 mb-1">Community Adoption Day</p>
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">March 22, 2026 • 9:00
-                    AM - 3:00 PM</span>
-                </div>
-                <span
-                  class="bg-primary text-white text-[10px] font-bold px-4 py-2 rounded-full italic">CONFIRMED</span>
-              </div>
-            </div>
+            <button class="bg-accent text-white px-6 py-3 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-accent-hover transition-all w-full sm:w-auto">Submit Weekly Report</button>
           </div>
 
-          <!-- Activity Feed -->
-          <div
-            class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-neutral-100 shadow-xl shadow-neutral-200/50 animate-on-scroll">
-            <div class="flex items-center gap-4 mb-10">
-              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center">
-                <span class="iconify text-secondary" data-icon="ph:lightning-bold"></span>
-              </div>
-              <h4 class="text-xl font-bold italic">Recent Activity</h4>
-            </div>
-            <div class="flex flex-col gap-8">
-              <div class="flex gap-6">
-                <div class="w-10 h-10 shrink-0 bg-secondary/10 rounded-full flex items-center justify-center">
-                  <span class="iconify text-lg text-secondary" data-icon="ph:check-circle-fill"></span>
-                </div>
-                <div class="flex-grow pb-8 border-b border-neutral-50">
-                  <p class="text-neutral-600 font-normal leading-relaxed mb-2">Medical log updated for <strong
-                      class="text-neutral-900 italic">Luna</strong>.</p>
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">2 hours ago</span>
-                </div>
-              </div>
-              <div class="flex gap-6">
-                <div class="w-10 h-10 shrink-0 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span class="iconify text-lg text-accent" data-icon="ph:info-fill"></span>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Active Foster Card -->
+            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <div class="flex flex-col sm:flex-row gap-8">
+                <div class="w-full sm:w-48 aspect-square rounded-3xl overflow-hidden shrink-0">
+                  <img src="../assets/images/img_021.jpg" alt="Luna" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-grow">
-                  <p class="text-neutral-600 font-normal leading-relaxed mb-2">New shift sign-up available for <strong
-                      class="text-neutral-900 italic">Adoption Event</strong>.</p>
-                  <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">5 hours ago</span>
+                  <div class="flex items-start justify-between mb-4">
+                    <div>
+                      <h4 class="text-2xl font-bold dark:text-white leading-none mb-1">Luna</h4>
+                      <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest italic">Border Collie • 2 Years</p>
+                    </div>
+                    <span class="px-3 py-1 bg-accent/10 text-accent text-[9px] font-bold uppercase rounded-full">Active Foster</span>
+                  </div>
+                  <div class="space-y-4 mb-6">
+                    <div>
+                      <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-2">
+                        <span>Recovery Progress</span>
+                        <span class="text-accent">85%</span>
+                      </div>
+                      <div class="h-2 bg-neutral-100 dark:bg-white/5 rounded-full overflow-hidden">
+                        <div class="h-full bg-accent w-[85%] rounded-full"></div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="p-3 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                        <p class="text-[8px] text-neutral-400 font-bold uppercase mb-1">Next Vet Visit</p>
+                        <p class="text-[10px] font-bold dark:text-white">March 18</p>
+                      </div>
+                      <div class="p-3 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                        <p class="text-[8px] text-neutral-400 font-bold uppercase mb-1">Foster Day</p>
+                        <p class="text-[10px] font-bold dark:text-white">Day 64</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <button class="flex-grow py-3 bg-neutral-100 dark:bg-white/5 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all">Update Health</button>
+                    <button class="w-12 h-12 flex items-center justify-center bg-neutral-100 dark:bg-white/5 rounded-xl text-neutral-400 hover:text-accent transition-all"><span class="iconify text-xl" data-icon="ph:camera-bold"></span></button>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            <!-- Health Milestones -->
+            <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <h4 class="text-lg font-bold mb-8 italic">Health <span class="text-primary">Milestones</span></h4>
+              <div class="space-y-6 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-0.5 before:bg-neutral-100 dark:before:bg-white/5">
+                <div class="flex gap-6 relative">
+                  <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 z-10 border-4 border-white dark:border-neutral-900">
+                    <span class="iconify" data-icon="ph:check-bold"></span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-bold dark:text-white mb-1">Final Vaccination Shot</h5>
+                    <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest mb-2">Completed on March 01, 2026</p>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Luna has completed her primary vaccination series. Waiting for certificates.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 relative">
+                  <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 z-10 border-4 border-white dark:border-neutral-900">
+                    <span class="iconify" data-icon="ph:check-bold"></span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-bold dark:text-white mb-1">Weight Goal Reached</h5>
+                    <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest mb-2">Completed on Feb 24, 2026</p>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Stable at 18.5kg. Transitioning from recovery diet to standard adult mix.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 relative opacity-50">
+                  <div class="w-10 h-10 rounded-full bg-neutral-100 dark:bg-white/5 flex items-center justify-center text-neutral-400 shrink-0 z-10 border-4 border-white dark:border-neutral-900">
+                    <span class="iconify" data-icon="ph:hourglass-bold"></span>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-bold dark:text-white mb-1">Post-Op Final Review</h5>
+                    <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest">Scheduled for March 18, 2026</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Fosters (Empty State Mockup) -->
+          <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+            <h4 class="text-lg font-bold mb-8 italic">Foster <span class="text-neutral-400">Archive</span></h4>
+            <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl opacity-60">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-neutral-200 dark:bg-white/10 rounded-2xl"></div>
+                <div>
+                  <h5 class="font-bold dark:text-neutral-500">No past fosters logged yet</h5>
+                  <p class="text-[10px] text-neutral-400 font-bold uppercase italic tracking-widest text-accent">Join the foster program today</p>
+                </div>
+              </div>
+              <button class="px-6 py-2 border-2 border-neutral-200 dark:border-white/10 text-neutral-400 text-[10px] font-bold uppercase tracking-widest rounded-xl hover:bg-neutral-900 hover:text-white transition-all">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donations Section -->
+        <div id="donations-section" class="dashboard-section hidden fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">Contribution <span class="text-secondary italic opacity-80 not-italic">Ledger</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Track your life-saving donations and download receipts.</p>
+            </div>
+            <button class="bg-secondary text-white px-6 py-3 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-secondary-hover transition-all w-full sm:w-auto">Make New Donation</button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white dark:bg-neutral-900 p-6 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <p class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-2">Total Given</p>
+              <h4 class="text-2xl font-bold dark:text-white">$1,250.00</h4>
+            </div>
+            <div class="bg-white dark:bg-neutral-900 p-6 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <p class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-2">Lives Impacted</p>
+              <h4 class="text-2xl font-bold text-secondary">15 Animals</h4>
+            </div>
+            <div class="bg-white dark:bg-neutral-900 p-6 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <p class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-2">Current Tier</p>
+              <h4 class="text-2xl font-bold text-primary">Silver Patit</h4>
+            </div>
+            <div class="bg-white dark:bg-neutral-900 p-6 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <p class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-2">Tax Savings</p>
+              <h4 class="text-2xl font-bold dark:text-white">$312.50</h4>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm overflow-hidden">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="text-xl font-bold italic dark:text-white">Transaction <span class="text-secondary">History</span></h4>
+              <button class="text-[10px] font-bold text-primary uppercase tracking-widest flex items-center gap-2 hover:underline">
+                <span class="iconify" data-icon="ph:file-pdf-bold"></span>
+                Export Statement
+              </button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-neutral-50 dark:border-white/5">
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Date</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Campaign</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Amount</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Method</th>
+                    <th class="pb-4 px-4 text-[10px] font-bold text-neutral-400 uppercase tracking-widest text-right">Receipt</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-neutral-50 dark:divide-white/5 font-bold">
+                  <tr class="group hover:bg-neutral-50 dark:hover:bg-white/2 transition-colors">
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-neutral-300">Feb 14, 2026</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-white italic">Valentine's Day Special</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs text-secondary">$50.00</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-[10px] text-neutral-400 uppercase tracking-widest">Card • **** 4242</span>
+                    </td>
+                    <td class="py-6 px-4 text-right">
+                      <button class="w-8 h-8 rounded-lg bg-neutral-100 dark:bg-white/5 flex items-center justify-center text-neutral-400 hover:text-primary transition-all mx-auto lg:ml-auto lg:mr-0">
+                        <span class="iconify" data-icon="ph:download-simple-bold"></span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="group hover:bg-neutral-50 dark:hover:bg-white/2 transition-colors">
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-neutral-300">Jan 01, 2026</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs dark:text-white italic">Monthly Sustainer</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-xs text-secondary">$200.00</span>
+                    </td>
+                    <td class="py-6 px-4">
+                      <span class="text-[10px] text-neutral-400 uppercase tracking-widest">Card • **** 4242</span>
+                    </td>
+                    <td class="py-6 px-4 text-right">
+                      <button class="w-8 h-8 rounded-lg bg-neutral-100 dark:bg-white/5 flex items-center justify-center text-neutral-400 hover:text-primary transition-all mx-auto lg:ml-auto lg:mr-0">
+                        <span class="iconify" data-icon="ph:download-simple-bold"></span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile-section" class="dashboard-section hidden fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">User <span class="text-primary italic opacity-80 not-italic">Profile</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Manage your personal information and skill set.</p>
+            </div>
+            <button class="bg-primary text-white px-8 py-3 rounded-xl font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all w-full sm:w-auto">Save Profile</button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-1">
+              <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm text-center">
+                <div class="relative w-32 h-32 mx-auto mb-6">
+                  <div class="w-full h-full rounded-full bg-primary/10 border-4 border-primary/20 overflow-hidden">
+                    <img src="../assets/images/img_005.jpg" alt="Avatar" class="w-full h-full object-cover">
+                  </div>
+                  <button class="absolute bottom-0 right-0 w-10 h-10 bg-white dark:bg-neutral-800 rounded-full shadow-lg flex items-center justify-center text-primary border-2 border-primary/10">
+                    <span class="iconify" data-icon="ph:camera-bold"></span>
+                  </button>
+                </div>
+                <h4 class="text-xl font-bold dark:text-white leading-none mb-1">Alex Johnson</h4>
+                <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-widest mb-6">Silver Tier Volunteer</p>
+                <div class="flex items-center justify-center gap-2">
+                  <span class="px-3 py-1 bg-secondary/10 text-secondary text-[8px] font-bold uppercase rounded-full">Background Checked</span>
+                  <span class="px-3 py-1 bg-accent/10 text-accent text-[8px] font-bold uppercase rounded-full">Foster Certified</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8">
+              <div class="bg-white dark:bg-neutral-900 p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+                <h4 class="text-lg font-bold mb-8 italic">Personal <span class="text-primary">Information</span></h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div>
+                    <label class="block text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2 px-1">Full Name</label>
+                    <input type="text" value="Alex Johnson" class="w-full px-6 py-4 bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-transparent rounded-2xl text-xs font-bold focus:outline-none focus:border-primary/50 transition-all dark:text-white">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2 px-1">Email Address</label>
+                    <input type="email" value="alex.j@example.com" class="w-full px-6 py-4 bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-transparent rounded-2xl text-xs font-bold focus:outline-none focus:border-primary/50 transition-all dark:text-white">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2 px-1">Phone Number</label>
+                    <input type="text" value="+1 (555) 123-4567" class="w-full px-6 py-4 bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-transparent rounded-2xl text-xs font-bold focus:outline-none focus:border-primary/50 transition-all dark:text-white">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-2 px-1">Emergency Contact</label>
+                    <input type="text" value="Sarah J. (Wife) - 555-9876" class="w-full px-6 py-4 bg-neutral-50 dark:bg-white/5 border border-neutral-100 dark:border-transparent rounded-2xl text-xs font-bold focus:outline-none focus:border-primary/50 transition-all dark:text-white">
+                  </div>
+                </div>
+                <h4 class="text-lg font-bold mb-8 italic">Skills & <span class="text-accent">Expertise</span></h4>
+                <div class="flex flex-wrap gap-3 mb-8">
+                  <span class="px-4 py-2 bg-neutral-100 dark:bg-white/2 text-neutral-400 dark:text-neutral-300 text-[10px] font-bold uppercase rounded-xl border border-neutral-200 dark:border-white/5">Canine Training</span>
+                  <span class="px-4 py-2 bg-neutral-100 dark:bg-white/2 text-neutral-400 dark:text-neutral-300 text-[10px] font-bold uppercase rounded-xl border border-neutral-200 dark:border-white/5">Basic Med-Log</span>
+                  <span class="px-4 py-2 bg-neutral-100 dark:bg-white/2 text-neutral-400 dark:text-neutral-300 text-[10px] font-bold uppercase rounded-xl border border-neutral-200 dark:border-white/5">Photography</span>
+                  <button class="px-4 py-2 border-2 border-dashed border-neutral-200 dark:border-white/10 text-neutral-400 text-[10px] font-bold uppercase rounded-xl hover:bg-neutral-50 dark:hover:bg-white/5 transition-all">+ Add Skill</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerts Section -->
+        <div id="alerts-section" class="dashboard-section hidden fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-12">
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">System <span class="text-accent italic opacity-80 not-italic">Alerts</span></h2>
+              <p class="text-neutral-400 text-[10px] md:text-sm font-normal">Important notifications regarding your activities.</p>
+            </div>
+            <button class="text-[9px] md:text-[10px] font-bold text-neutral-400 uppercase tracking-widest hover:text-accent transition-colors">Mark All Read</button>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-6 p-6 bg-white dark:bg-neutral-900 rounded-[2rem] border-l-4 border-l-primary border border-neutral-100 dark:border-white/5 shadow-sm group">
+              <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                <span class="iconify text-2xl" data-icon="ph:warning-circle-bold"></span>
+              </div>
+              <div class="flex-grow">
+                <h5 class="text-sm font-bold dark:text-white mb-1 italic">Upcoming Shift Reminder</h5>
+                <p class="text-xs text-neutral-500 leading-relaxed font-bold">You have a shift for "Cat Socialization" starting in 24 hours.</p>
+              </div>
+              <span class="text-[9px] text-neutral-400 font-bold uppercase shrink-0">Today</span>
+            </div>
+            <div class="flex items-center gap-6 p-6 bg-white dark:bg-neutral-900 rounded-[2rem] border-l-4 border-l-secondary border border-neutral-100 dark:border-white/5 shadow-sm group opacity-70">
+              <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                <span class="iconify text-2xl" data-icon="ph:check-circle-bold"></span>
+              </div>
+              <div class="flex-grow">
+                <h5 class="text-sm font-bold dark:text-white mb-1 italic">Hours Approved</h5>
+                <p class="text-xs text-neutral-500 leading-relaxed font-bold">Your shift hours for March 08 have been approved by the admin.</p>
+              </div>
+              <span class="text-[9px] text-neutral-400 font-bold uppercase shrink-0">2 Days Ago</span>
+            </div>
+            <div class="flex items-center gap-6 p-6 bg-white dark:bg-neutral-900 rounded-[2rem] border-l-4 border-l-accent border border-neutral-100 dark:border-white/5 shadow-sm group opacity-70">
+              <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                <span class="iconify text-2xl" data-icon="ph:info-bold"></span>
+              </div>
+              <div class="flex-grow">
+                <h5 class="text-sm font-bold dark:text-white mb-1 italic">Foster Update Received</h5>
+                <p class="text-xs text-neutral-500 leading-relaxed font-bold">Thanks for submitting the health log for Luna. The vet team has reviewed it.</p>
+              </div>
+              <span class="text-[9px] text-neutral-400 font-bold uppercase shrink-0">1 Week Ago</span>
             </div>
           </div>
         </div>
@@ -348,6 +786,68 @@
   </div>
 
   <script src="../assets/js/main.js"></script>
+  <script>
+    // Navigation Logic for the Multi-Section User Dashboard
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.dashboard-section');
+      const sidebarOverlay = document.getElementById('sidebar-overlay');
+      const sidebarToggles = document.querySelectorAll('.sidebar-toggle');
+      const sidebar = document.querySelector('.dashboard-sidebar');
+      
+
+      // Navigation Logic
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetSectionId = this.getAttribute('data-section');
+          const targetSection = document.getElementById(targetSectionId + '-section');
+          
+          if (!targetSection) return;
+
+          // Update Nav UI
+          navLinks.forEach(l => {
+            l.classList.remove('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20', 'italic');
+            l.classList.add('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+          });
+          this.classList.add('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20', 'italic');
+          this.classList.remove('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+
+          // Update Sections
+          sections.forEach(s => s.classList.add('hidden'));
+          targetSection.classList.remove('hidden');
+
+
+          // Auto-close sidebar on mobile
+          if (window.innerWidth < 1024) {
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.add('opacity-0', 'invisible');
+          }
+        });
+      });
+
+      // Sidebar Mobile Toggle
+      sidebarToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          sidebar.classList.toggle('-translate-x-full');
+          sidebarOverlay.classList.toggle('opacity-0');
+          sidebarOverlay.classList.toggle('invisible');
+        });
+      });
+
+      sidebarOverlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('opacity-0', 'invisible');
+      });
+
+      // Smooth Animation Wrapper
+      sections.forEach(section => {
+        section.classList.add('transition-all', 'duration-500', 'ease-out');
+      });
+    });
+
+    // Theme Toggle logic is handled in assets/js/main.js
+  </script>
 </body>
 
 </html>

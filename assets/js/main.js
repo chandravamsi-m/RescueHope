@@ -234,13 +234,6 @@ function initDashboardUI() {
         });
     }
 
-    // Auto-set dashboard title based on page
-    const titleEl = document.getElementById('dashboard-title');
-    if (titleEl) {
-        const path = window.location.pathname;
-        if (path.includes('admin')) titleEl.innerText = 'System Administration';
-        if (path.includes('user')) titleEl.innerText = 'Volunteer Portal';
-    }
 }
 
 /**
