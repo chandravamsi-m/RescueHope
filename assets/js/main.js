@@ -206,11 +206,11 @@ function initDashboardUI() {
     if (sidebar && toggles.length > 0) {
         const toggleSidebar = (show) => {
             if (show) {
-                sidebar.classList.remove('-translate-x-full');
+                sidebar.classList.add('is-open');
                 overlay?.classList.remove('opacity-0', 'invisible');
                 document.body.style.overflow = 'hidden';
             } else {
-                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('is-open');
                 overlay?.classList.add('opacity-0', 'invisible');
                 document.body.style.overflow = '';
             }
@@ -219,8 +219,8 @@ function initDashboardUI() {
         toggles.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const isHidden = sidebar.classList.contains('-translate-x-full');
-                toggleSidebar(isHidden);
+                const isOpen = sidebar.classList.contains('is-open');
+                toggleSidebar(!isOpen);
             });
         });
 
@@ -228,7 +228,7 @@ function initDashboardUI() {
 
         // Close on escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !sidebar.classList.contains('-translate-x-full')) {
+            if (e.key === 'Escape' && sidebar.classList.contains('is-open')) {
                 toggleSidebar(false);
             }
         });
@@ -251,7 +251,7 @@ function initMobileMenu() {
 
     const toggleMenu = (show) => {
         if (show) {
-            drawer.classList.remove('translate-x-full');
+            drawer.classList.add('is-open');
             overlay.classList.remove('opacity-0', 'invisible');
             document.body.style.overflow = 'hidden';
             if (menuIcon && closeIcon) {
@@ -259,7 +259,7 @@ function initMobileMenu() {
                 closeIcon.classList.remove('hidden');
             }
         } else {
-            drawer.classList.add('translate-x-full');
+            drawer.classList.remove('is-open');
             overlay.classList.add('opacity-0', 'invisible');
             document.body.style.overflow = '';
             if (menuIcon && closeIcon) {
@@ -270,7 +270,7 @@ function initMobileMenu() {
     };
 
     toggle.addEventListener('click', () => {
-        const isOpen = !drawer.classList.contains('translate-x-full');
+        const isOpen = drawer.classList.contains('is-open');
         toggleMenu(!isOpen);
     });
 

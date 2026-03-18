@@ -62,10 +62,10 @@
       <!-- Desktop & Tablet RTL/Theme Toggles -->
       <div class="hidden md:flex items-center gap-4">
         <button
-          class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-1 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:border-white/10"
+          class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:border-white/10"
           aria-label="Toggle direction">
-          <span class="rtl-toggle__label ltr px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/70">LTR</span>
-          <span class="rtl-toggle__label rtl px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/70">RTL</span>
+          <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">LTR</span>
+          <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">RTL</span>
         </button>
         <button
           class="theme-toggle w-10 h-10 rounded-full flex items-center justify-center text-neutral-600 hover:bg-neutral-100 transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white [.navbar-transparent:not(.navbar--scrolled)_&]:hover:bg-white/10"
@@ -97,7 +97,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-neutral-900/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300 lg:hidden"></div>
 
 <!-- Mobile Drawer -->
-<div id="mobile-menu-drawer" class="fixed top-0 right-0 w-[85%] max-w-sm h-full bg-white dark:bg-neutral-900 z-[60] translate-x-full transition-transform duration-300 ease-in-out lg:hidden shadow-2xl flex flex-col">
+<div id="mobile-menu-drawer" class="fixed top-0 right-0 ltr:right-0 ltr:translate-x-full rtl:left-0 rtl:-translate-x-full w-[85%] max-w-sm h-full bg-white dark:bg-neutral-900 z-[60] transition-transform duration-300 ease-in-out lg:hidden shadow-2xl flex flex-col">
   <!-- Header -->
   <div class="p-6 border-b border-neutral-100 dark:border-white/5 flex items-center justify-between bg-white dark:bg-neutral-900">
     <a href="/index.html" class="flex items-center gap-2 text-xl font-bold text-primary">
@@ -151,9 +151,9 @@
       </div>
       <div class="flex items-center justify-between">
         <span class="font-bold text-neutral-800 dark:text-white">Direction</span>
-        <button class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-1 border border-neutral-200 dark:border-white/10">
-          <span class="rtl-toggle__label ltr px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600">LTR</span>
-          <span class="rtl-toggle__label rtl px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600">RTL</span>
+        <button class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10">
+          <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">LTR</span>
+          <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">RTL</span>
         </button>
       </div>
     </div>
