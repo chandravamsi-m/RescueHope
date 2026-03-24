@@ -90,8 +90,8 @@
   <div
     class="h-screen overflow-hidden flex flex-col md:grid md:grid-cols-[auto_1fr] bg-neutral-100 dark:bg-neutral-950 dashboard-main-wrapper transition-colors duration-300">
     <!-- Sidebar -->
-    <aside class="flex flex-col h-full bg-neutral-900 shrink-0 dashboard-sidebar fixed lg:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full z-[60] transition-all duration-300 shadow-2xl w-72 lg:w-64 overflow-hidden">
-      <div class="px-8 py-8 mb-6 border-b border-white/5 flex justify-between items-center">
+    <aside class="flex flex-col h-full bg-neutral-900 shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden">
+      <div class="px-8 h-16 md:h-[72px] mb-8 border-b border-white/5 flex justify-between items-center shrink-0">
         <a href="../index.html" class="flex items-center gap-2 group">
           <span class="iconify text-primary text-3xl group-hover:rotate-12 transition-transform"
             data-icon="ph:paw-print-fill"></span>
@@ -108,7 +108,7 @@
         <ul class="flex flex-col gap-1.5">
           <li>
             <a href="#" data-section="analytics"
-              class="nav-link flex items-center gap-4 px-8 md:px-0 md:justify-center lg:px-8 py-4 rounded-2xl bg-primary text-white font-bold text-sm uppercase tracking-widest italic shadow-lg shadow-primary/20 transition-all active-nav">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg bg-primary text-white font-bold text-[11px] uppercase tracking-widest italic transition-all active-nav shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:chart-pie-slice-fill"></span>
               </div>
@@ -117,7 +117,7 @@
           </li>
           <li>
             <a href="#" data-section="animals"
-              class="nav-link flex items-center gap-4 px-8 md:px-0 md:justify-center lg:px-8 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-sm uppercase tracking-widest transition-all">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:dog-fill"></span>
               </div>
@@ -126,18 +126,16 @@
           </li>
           <li>
             <a href="#" data-section="volunteers"
-              class="nav-link flex items-center gap-4 px-8 md:px-0 md:justify-center lg:px-8 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-sm uppercase tracking-widest transition-all">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:users-four-fill"></span>
               </div>
               <span class="flex-grow md:hidden lg:block whitespace-nowrap">Volunteers</span>
-              <span
-                class="bg-primary/20 text-primary text-sm px-2 py-0.5 rounded-md italic font-bold md:hidden lg:block">8</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="donations"
-              class="nav-link flex items-center gap-4 px-8 md:px-0 md:justify-center lg:px-8 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-sm uppercase tracking-widest transition-all">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:money-fill"></span>
               </div>
@@ -151,7 +149,7 @@
             Administration</p>
           <li>
             <a href="#" data-section="settings"
-              class="nav-link flex items-center gap-4 px-8 md:px-0 md:justify-center lg:px-8 py-4 rounded-2xl text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-sm uppercase tracking-widest transition-all">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:gear-six-fill"></span>
               </div>
@@ -186,7 +184,7 @@
     <div class="flex-grow flex flex-col min-w-0 overflow-hidden">
       <!-- Header -->
       <header
-        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-100 px-4 md:px-10 py-3 md:py-4 flex items-center justify-between">
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-100 px-4 md:px-10 h-16 md:h-[72px] flex items-center justify-between shrink-0">
         <div class="flex items-center gap-3 md:gap-6">
           <button
             class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 sidebar-toggle">
@@ -846,7 +844,7 @@
                 </div>
                 <div>
                   <h4 class="text-sm font-bold dark:text-white leading-none mb-1">Weekly Shift Coverage</h4>
-                  <p class="text-sm text-neutral-400 font-bold uppercase tracking-widest">Target: 95% Filled</p>
+                  <p class="text-[11px] text-neutral-400 font-bold uppercase tracking-widest">Target: 95% Filled</p>
                 </div>
               </div>
               <div class="flex-grow max-w-md">

@@ -183,7 +183,8 @@ body {
     height: 100vh;
     height: 100dvh;
     z-index: 50;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* RTL Flip for Dashboard Sidebar */
@@ -212,6 +213,19 @@ body {
 .dashboard-sidebar.is-open,
 #mobile-menu-drawer.is-open {
     transform: translateX(0) !important;
+}
+
+/* 
+ * Robust Desktop Visibility Fix 
+ * Forces sidebar into view on md: (768px) and up, 
+ * overriding any ltr: or rtl: translations from HTML.
+ */
+@media (min-width: 768px) {
+    .dashboard-sidebar {
+        transform: translateX(0) !important; /* Restored !important for visibility */
+        position: static !important;
+        display: flex !important;
+    }
 }
 
 /* Sidebar mini-mode for tablets */
