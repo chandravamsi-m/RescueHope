@@ -107,12 +107,12 @@
       <nav class="flex-grow px-0 overflow-y-auto overflow-x-hidden">
         <ul class="flex flex-col gap-1.5">
           <li>
-            <a href="#" data-section="analytics"
+            <a href="#" data-section="overview"
               class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-active active-nav shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:chart-pie-slice-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Analytics</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Overview</span>
             </a>
           </li>
           <li>
@@ -126,20 +126,20 @@
           </li>
           <li>
             <a href="#" data-section="volunteers"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white sidebar-link-hover font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-hover shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:users-four-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:users-four-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Volunteers</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Volunteers</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="donations"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white sidebar-link-hover font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-hover shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:money-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:money-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Donations</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Donations</span>
             </a>
           </li>
 
@@ -217,16 +217,16 @@
 
           <!-- Theme Toggle (Desktop Only) -->
           <button
-            class="theme-toggle hidden md:flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all shadow-sm"
+            class="theme-toggle hidden md:flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white/10 dark:hover:text-white transition-all shadow-sm"
             aria-label="Toggle theme">
             <span class="iconify ph-moon-stars-bold text-lg" data-icon="ph:moon-stars-bold"></span>
             <span class="iconify ph-sun-bold text-lg" data-icon="ph:sun-bold"></span>
           </button>
 
           <!-- User Section -->
-          <div class="flex items-center gap-3 md:gap-4 pl-3 md:pl-6 border-l border-neutral-100">
+          <div class="flex items-center gap-3 md:gap-4 pl-3 md:pl-6 border-l border-neutral-100 dark:border-white/5">
             <div class="hidden sm:block text-right">
-              <p class="text-sm md:text-xs font-bold text-neutral-900 leading-none mb-1">Super Admin</p>
+              <p class="text-sm md:text-xs font-bold text-neutral-900 dark:text-white leading-none mb-1">Super Admin</p>
               <span
                 class="text-xs md:text-sm font-bold text-neutral-400 uppercase tracking-widest italic opacity-80">Root</span>
             </div>
@@ -239,11 +239,11 @@
       </header>
 
       <main class="flex-grow overflow-y-auto p-4 sm:p-6 md:p-8">
-        <div id="analytics-section" class="dashboard-section active animate-fade-in">
+        <div id="overview-section" class="dashboard-section active animate-fade-in">
           <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
             <div>
               <h2 class="text-2xl md:text-3xl font-bold mb-2 italic">System <span
-                  class="text-primary italic opacity-80 not-italic">Analytics</span></h2>
+                  class="text-primary italic opacity-80 not-italic">Overview</span></h2>
               <p class="text-neutral-500 text-sm md:text-sm font-normal">Real-time overview of center performance
                 and animal status.</p>
             </div>
@@ -537,7 +537,7 @@
             <!-- Inventory Items -->
             <div class="grid grid-cols-1 gap-4 lg:divide-y lg:divide-neutral-50 lg:dark:divide-white/5 lg:space-y-0">
               <!-- Item 1: Luna -->
-              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-50/50 dark:hover:bg-white/2 transition-all">
+              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-100/10 dark:hover:bg-white/5 transition-all">
                 <div class="grid grid-cols-1 lg:grid-cols-6 items-center gap-4 lg:py-6 lg:px-4">
                   <!-- Mobile Header/Avatar -->
                   <div class="flex items-center gap-5 lg:col-span-1">
@@ -596,7 +596,7 @@
               </div>
 
               <!-- Item 2: Bella -->
-              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-50/50 dark:hover:bg-white/2 transition-all">
+              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-100/10 dark:hover:bg-white/5 transition-all">
                 <div class="grid grid-cols-1 lg:grid-cols-6 items-center gap-4 lg:py-6 lg:px-4">
                   <div class="flex items-center gap-5 lg:col-span-1">
                     <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-neutral-200/50 dark:shadow-none bg-neutral-100 shrink-0">
@@ -651,7 +651,7 @@
               </div>
 
               <!-- Item 3: Cooper -->
-              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-50/50 dark:hover:bg-white/2 transition-all">
+              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-100/10 dark:hover:bg-white/5 transition-all">
                 <div class="grid grid-cols-1 lg:grid-cols-6 items-center gap-4 lg:py-6 lg:px-4">
                   <div class="flex items-center gap-5 lg:col-span-1">
                     <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-neutral-200/50 dark:shadow-none bg-neutral-100 shrink-0">
@@ -706,7 +706,7 @@
               </div>
 
               <!-- Item 4: Max -->
-              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-50/50 dark:hover:bg-white/2 transition-all">
+              <div class="bg-white dark:bg-neutral-900 lg:bg-transparent lg:dark:bg-transparent p-5 lg:p-0 rounded-2xl border border-neutral-100 dark:border-white/5 lg:border-none shadow-sm lg:shadow-none group hover:bg-neutral-100/10 dark:hover:bg-white/5 transition-all">
                 <div class="grid grid-cols-1 lg:grid-cols-6 items-center gap-4 lg:py-6 lg:px-4">
                   <div class="flex items-center gap-5 lg:col-span-1">
                     <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-neutral-200/50 dark:shadow-none bg-neutral-100 shrink-0">
@@ -868,7 +868,7 @@
               </div>
               <div class="flex gap-2">
                 <button
-                  class="px-4 py-2 border border-neutral-200 dark:border-white/10 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-neutral-50 dark:hover:bg-white/5 transition-all">View
+                  class="px-4 py-2 border border-neutral-200 dark:border-white/10 rounded-lg text-sm font-bold uppercase tracking-widest hover:bg-neutral-100/50 dark:hover:bg-white/5 transition-all">View
                   Schedule</button>
               </div>
             </div>
