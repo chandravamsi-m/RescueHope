@@ -90,7 +90,7 @@
   <div
     class="h-screen overflow-hidden flex flex-col md:grid md:grid-cols-[auto_1fr] bg-neutral-100 dark:bg-neutral-950 dashboard-main-wrapper transition-colors duration-300">
     <!-- Sidebar -->
-    <aside class="flex flex-col h-full bg-neutral-900 shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden">
+    <aside class="flex flex-col h-full shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden border-none shadow-2xl">
       <div class="px-8 h-16 md:h-[72px] mb-8 border-b border-white/5 flex justify-between items-center shrink-0">
         <a href="../index.html" class="flex items-center gap-2 group">
           <span class="iconify text-primary text-3xl group-hover:rotate-12 transition-transform"
@@ -108,25 +108,25 @@
         <ul class="flex flex-col gap-1.5">
           <li>
             <a href="#" data-section="analytics"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg bg-primary text-white font-bold text-[11px] uppercase tracking-widest italic transition-all active-nav shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-active active-nav shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:chart-pie-slice-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:chart-pie-slice-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Analytics</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Analytics</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="animals"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:dog-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:dog-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Animals</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Animals</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="volunteers"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white sidebar-link-hover font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:users-four-fill"></span>
               </div>
@@ -135,7 +135,7 @@
           </li>
           <li>
             <a href="#" data-section="donations"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white sidebar-link-hover font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:money-fill"></span>
               </div>
@@ -149,7 +149,7 @@
             Administration</p>
           <li>
             <a href="#" data-section="settings"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white sidebar-link-hover font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg" data-icon="ph:gear-six-fill"></span>
               </div>
@@ -158,6 +158,16 @@
           </li>
         </ul>
       </nav>
+
+      <div class="px-8 flex items-center justify-between mb-4 md:hidden">
+        <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Theme</span>
+        <button
+          class="theme-toggle flex items-center bg-white/5 rounded-lg p-2 border border-white/10 transition-all hover:bg-white/10"
+          aria-label="Toggle theme">
+          <span class="iconify ph-moon-stars-bold text-lg text-white/50" data-icon="ph:moon-stars-bold"></span>
+          <span class="iconify ph-sun-bold text-lg text-white/50" data-icon="ph:sun-bold"></span>
+        </button>
+      </div>
 
       <div class="px-8 flex items-center justify-between mb-4 md:hidden">
         <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Direction</span>
@@ -205,9 +215,9 @@
               class="rtl-toggle__label rtl px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">RTL</span>
           </button>
 
-          <!-- Theme Toggle -->
+          <!-- Theme Toggle (Desktop Only) -->
           <button
-            class="theme-toggle w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all shadow-sm"
+            class="theme-toggle hidden md:flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-all shadow-sm"
             aria-label="Toggle theme">
             <span class="iconify ph-moon-stars-bold text-lg" data-icon="ph:moon-stars-bold"></span>
             <span class="iconify ph-sun-bold text-lg" data-icon="ph:sun-bold"></span>
@@ -1442,12 +1452,12 @@
 
           // Update Sidebar Active State
           navLinks.forEach(l => {
-            l.classList.remove('bg-primary', 'text-white', 'italic', 'shadow-lg', 'shadow-primary/20', 'active-nav');
-            l.classList.add('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+            l.classList.remove('sidebar-link-active', 'active-nav');
+            l.classList.add('sidebar-link-hover');
           });
 
-          this.classList.add('bg-primary', 'text-white', 'italic', 'shadow-lg', 'shadow-primary/20', 'active-nav');
-          this.classList.remove('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+          this.classList.add('sidebar-link-active', 'active-nav');
+          this.classList.remove('sidebar-link-hover');
 
           // Update Main Content
           sections.forEach(s => s.classList.add('hidden'));

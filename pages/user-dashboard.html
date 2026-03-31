@@ -87,7 +87,7 @@
 
   <div class="h-screen overflow-hidden flex flex-col md:grid md:grid-cols-[auto_1fr] bg-neutral-100 dashboard-main-wrapper">
     <!-- Sidebar -->
-    <aside class="flex flex-col h-full bg-neutral-900 shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden">
+    <aside class="flex flex-col h-full shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden border-none shadow-2xl">
       <div class="px-8 h-16 md:h-[72px] mb-8 border-b border-white/5 flex justify-between items-center overflow-hidden shrink-0">
         <a href="../index.html" class="flex items-center gap-3 group shrink-0">
           <span class="iconify text-primary text-3xl group-hover:rotate-12 transition-transform shrink-0"
@@ -105,54 +105,64 @@
         <ul class="flex flex-col gap-1.5">
           <li>
             <a href="#" data-section="overview"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg bg-primary text-white font-bold text-[11px] uppercase tracking-widest italic transition-all active-nav shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-active active-nav shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:squares-four-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:squares-four-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Overview</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Overview</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="shifts"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:calendar-blank-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:calendar-blank-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">My Shifts</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Shifts</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="foster"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 text-neutral-400 hover:text-white sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:dog-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:dog-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Foster Animals</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Foster Animals</span>
             </a>
           </li>
           <li>
             <a href="#" data-section="donations"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 text-neutral-400 hover:text-white sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:hand-heart-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:hand-heart-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Donations</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Donations</span>
             </a>
           </li>
           <li class="my-4 border-b border-white/5"></li>
           <p class="px-8 md:hidden lg:block mb-3 text-sm font-bold text-neutral-600 uppercase tracking-widest leading-none">Settings</p>
           <li>
             <a href="#" data-section="profile"
-              class="nav-link flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 font-bold text-[11px] uppercase tracking-widest transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
-                <span class="iconify text-lg" data-icon="ph:user-circle-fill"></span>
+                <span class="iconify text-lg lg:text-xl" data-icon="ph:user-circle-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap">Profile</span>
+              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Profile</span>
             </a>
           </li>
 
         </ul>
       </nav>
+
+      <div class="px-8 flex items-center justify-between mb-4 md:hidden">
+        <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Theme</span>
+        <button
+          class="theme-toggle flex items-center bg-white/5 rounded-lg p-2 border border-white/10 transition-all hover:bg-white/10"
+          aria-label="Toggle theme">
+          <span class="iconify ph-moon-stars-bold text-lg text-white/50" data-icon="ph:moon-stars-bold"></span>
+          <span class="iconify ph-sun-bold text-lg text-white/50" data-icon="ph:sun-bold"></span>
+        </button>
+      </div>
 
       <div class="px-8 flex items-center justify-between mb-4 md:hidden">
         <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Direction</span>
@@ -196,8 +206,9 @@
             <span class="rtl-toggle__label rtl px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">RTL</span>
           </button>
 
+          <!-- Theme Toggle (Desktop Only) -->
           <button
-            class="theme-toggle w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all shadow-sm"
+            class="theme-toggle hidden md:flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all shadow-sm"
             aria-label="Toggle theme">
             <span class="iconify ph-moon-stars-bold text-lg" data-icon="ph:moon-stars-bold"></span>
             <span class="iconify ph-sun-bold text-lg" data-icon="ph:sun-bold"></span>
@@ -522,7 +533,7 @@
               <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Foster <span class="text-accent italic opacity-80 not-italic">Care Hub</span></h2>
               <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage current foster pets and view health milestones.</p>
             </div>
-            <button class="bg-accent text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-accent-hover transition-all shrink-0">
+            <button class="bg-primary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">
               <span class="sm:hidden">Report</span>
               <span class="hidden sm:inline">Submit Weekly Report</span>
             </button>
@@ -565,8 +576,8 @@
                     </div>
                   </div>
                   <div class="flex gap-3">
-                    <button class="flex-grow py-3 bg-neutral-100 dark:bg-white/5 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all">Update Health</button>
-                    <button class="w-12 h-12 flex items-center justify-center bg-neutral-100 dark:bg-white/5 rounded-xl text-neutral-400 hover:text-accent transition-all shrink-0"><span class="iconify text-xl" data-icon="ph:camera-bold"></span></button>
+                    <button class="flex-grow py-3 bg-neutral-100 dark:bg-white/5 rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Update Health</button>
+                    <button class="w-12 h-12 flex items-center justify-center bg-neutral-100 dark:bg-white/5 rounded-xl text-neutral-400 hover:text-primary transition-all shrink-0"><span class="iconify text-xl" data-icon="ph:camera-bold"></span></button>
                   </div>
                 </div>
               </div>
@@ -632,7 +643,7 @@
               <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Contribution <span class="text-secondary italic opacity-80 not-italic">Ledger</span></h2>
               <p class="text-neutral-400 text-xs sm:text-sm font-normal">Track your life-saving donations and download receipts.</p>
             </div>
-            <button class="bg-secondary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-secondary-hover transition-all shrink-0">
+            <button class="bg-primary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">
               <span class="sm:hidden">Donate</span>
               <span class="hidden sm:inline">New Donation</span>
             </button>
@@ -764,7 +775,7 @@
               <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">User <span class="text-primary italic opacity-80 not-italic">Profile</span></h2>
               <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage your personal information and skill set.</p>
             </div>
-            <button class="bg-primary text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">Save</button>
+            <button class="bg-primary text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">Save</button>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
@@ -846,11 +857,11 @@
 
           // Update Nav UI
           navLinks.forEach(l => {
-            l.classList.remove('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20', 'italic');
-            l.classList.add('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+            l.classList.remove('sidebar-link-active', 'active-nav');
+            l.classList.add('sidebar-link-hover');
           });
-          this.classList.add('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20', 'italic');
-          this.classList.remove('text-neutral-400', 'hover:text-white', 'hover:bg-white/5');
+          this.classList.add('sidebar-link-active', 'active-nav');
+          this.classList.remove('sidebar-link-hover');
 
           // Update Sections
           sections.forEach(s => s.classList.add('hidden'));

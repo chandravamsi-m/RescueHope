@@ -184,7 +184,8 @@ body {
     height: 100dvh;
     z-index: 50;
     transition: all 0.3s ease-in-out;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #0d0d0f !important; /* Premium Onyx Black */
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* RTL Flip for Dashboard Sidebar */
@@ -263,11 +264,22 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Dashboard Sidebar Active/Hover States */
-.sidebar-link-active {
-    background-color: var(--primary);
-    color: white !important;
-    box-shadow: 0 10px 15px -3px rgba(245, 124, 0, 0.2);
+/* Dashboard Sidebar Nav Link Default/Active States */
+.dashboard-sidebar .nav-link {
+    color: rgba(163, 163, 163, 1) !important; /* text-neutral-400 default */
+    transition: all 0.2s ease-in-out;
+}
+
+.dashboard-sidebar .nav-link.sidebar-link-active {
+    color: var(--primary) !important;
+    font-style: italic !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.dashboard-sidebar .nav-link.sidebar-link-active .iconify,
+.dashboard-sidebar .nav-link.sidebar-link-active span {
+    color: var(--primary) !important;
 }
 
 .sidebar-link-hover:hover {
