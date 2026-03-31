@@ -69,10 +69,12 @@
 
   <div id="navbar-placeholder"></div>
 
-  <main class="h-screen flex items-center justify-center bg-neutral-900 overflow-hidden relative">
-    <!-- Background element -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+  <main class="min-h-screen flex items-center justify-center bg-neutral-900 pt-24 md:pt-32 relative overflow-x-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    </div>
 
     <div class="container mx-auto px-4 text-center animate-fade-up relative z-10">
       <div
@@ -86,12 +88,12 @@
           class="text-primary italic opacity-90">missing</span>!</h2>
       <p class="text-neutral-400 max-w-xl mx-auto mb-16 text-lg leading-relaxed font-normal">It looks like the link you
         followed has gone for a long walk or never existed. Don't worry, we can help you find your way back.</p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <div class="flex flex-row gap-3 sm:gap-6 justify-center">
         <a href="../index.html"
-          class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1">Return
+          class="bg-primary text-white px-5 py-4 sm:px-10 sm:py-5 rounded-2xl font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1">Return
           Home</a>
         <a href="adopt.html"
-          class="bg-white/5 border-2 border-white/10 text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-neutral-900 transition-all">Meet
+          class="bg-white/5 border-2 border-white/10 text-white px-5 py-4 sm:px-10 sm:py-5 rounded-2xl font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-white hover:text-neutral-900 transition-all">Meet
           Animals</a>
       </div>
     </div>

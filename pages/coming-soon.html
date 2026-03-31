@@ -67,41 +67,43 @@
 
 <body>
 
-  <main class="h-screen flex items-center justify-center p-8 bg-neutral-900 overflow-hidden relative">
-    <!-- Background element -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+  <main class="min-h-screen flex items-center justify-center p-8 bg-neutral-900 relative overflow-x-hidden">
+    <!-- Background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    </div>
 
     <div class="max-w-3xl w-full text-center relative z-10 animate-fade-up">
-      <a href="../index.html" class="inline-flex items-center gap-3 text-white font-black text-3xl mb-16 group tracking-tight">
+      <a href="../index.html" class="inline-flex items-center gap-3 text-white font-black text-2xl md:text-3xl mb-8 md:mb-12 group tracking-tight">
         <span class="iconify text-primary" data-icon="ph:paw-print-fill"></span>
         RescueHope
       </a>
 
-      <h1 class="text-5xl md:text-7xl font-black text-white mb-8 italic leading-tight tracking-tight">Something <span
+      <h1 class="text-3xl md:text-6xl font-black text-white mb-6 italic leading-tight tracking-tight">Something <span
           class="text-primary italic opacity-90">Incredible</span> is Coming</h1>
-      <p class="text-neutral-400 text-lg md:text-xl font-normal leading-relaxed mb-16 max-w-2xl mx-auto">Our new foster
+      <p class="text-sm md:text-lg text-neutral-400 font-normal leading-relaxed mb-10 max-w-2xl mx-auto">Our new foster
         management portal and community platform are currently under development. We're building a better way to save
         lives.</p>
 
       <div class="flex flex-col items-center">
-        <form class="w-full max-w-md flex flex-col sm:flex-row gap-4 mb-12">
+        <form class="w-full max-w-sm flex flex-col sm:flex-row gap-3 mb-10">
           <input type="email" placeholder="Get notified when we launch..."
-            class="flex-grow bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-normal">
+            class="flex-grow bg-white/5 border border-white/10 rounded-2xl px-6 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-normal text-sm">
           <button
-            class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1">Notify
+            class="bg-primary text-white px-8 py-3.5 rounded-2xl font-bold text-[10px] uppercase tracking-widest hover:bg-primary-hover transition-all hover:-translate-y-1">Notify
             Me</button>
         </form>
 
-        <div class="flex gap-10">
+        <div class="flex gap-6 sm:gap-10">
           <a href="#" class="text-neutral-500 hover:text-white transition-all hover:scale-125 duration-500">
-            <span class="iconify text-2xl" data-icon="ph:facebook-logo"></span>
+            <span class="iconify text-xl md:text-2xl" data-icon="ph:facebook-logo"></span>
           </a>
           <a href="#" class="text-neutral-500 hover:text-white transition-all hover:scale-125 duration-500">
-            <span class="iconify text-2xl" data-icon="ph:instagram-logo"></span>
+            <span class="iconify text-xl md:text-2xl" data-icon="ph:instagram-logo"></span>
           </a>
           <a href="#" class="text-neutral-500 hover:text-white transition-all hover:scale-125 duration-500">
-            <span class="iconify text-2xl" data-icon="ph:twitter-logo"></span>
+            <span class="iconify text-xl md:text-2xl" data-icon="ph:twitter-logo"></span>
           </a>
         </div>
       </div>
