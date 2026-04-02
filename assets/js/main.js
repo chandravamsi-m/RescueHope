@@ -1,6 +1,7 @@
 /**
  * RescueHope — Global Interactions
  * Version: 1.1.0 (Modular Components)
+ * TODO: Consider separating component loaders into a standalone utility script for better modularity.
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
