@@ -7,12 +7,10 @@
   <title>Login | RescueHope</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.webp">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Local Fonts -->
+  <link rel="stylesheet" href="../assets/fonts/fonts.css">
 
   <!-- Theme Initialization (Anti-Flicker) -->
   <script>
@@ -79,13 +77,34 @@
 
   <!-- Icons -->
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- SEO & Open Graph Tags -->
+  <link rel="canonical" href="https://rescuehope.org/auth/login.html">
+  <meta property="og:title" content="Login | RescueHope">
+  <meta property="og:description" content="Login to manage your RescueHope profile.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rescuehope.org/auth/login.html">
+  <meta property="og:image" content="https://rescuehope.org/assets/images/og-image.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Login | RescueHope">
+  <meta name="twitter:description" content="Login to manage your RescueHope profile.">
+  <meta name="twitter:image" content="https://rescuehope.org/assets/images/og-image.webp">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Login",
+    "url": "https://rescuehope.org/auth/login.html"
+  }
+  </script>
 </head>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 h-screen overflow-hidden">
     <!-- Left Side: Image -->
     <div class="hidden lg:flex relative items-center justify-center overflow-hidden">
       <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
-        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_006.jpg');"></div>
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/images/img_006.webp');"></div>
       <div class="relative z-10 p-12 text-white max-w-xl">
         <h1 class="text-5xl font-bold mb-6">Welcome Back!</h1>
         <p class="text-xl text-white/80 leading-relaxed">Log in to manage your shifts, update foster records, and track your impact in our rescue community.</p>
