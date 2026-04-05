@@ -110,8 +110,174 @@
 
 <body>
 
-  <!-- Navbar Placeholder -->
-  <div id="navbar-placeholder" class="navbar navbar-transparent"></div>
+  <!-- Navbar -->
+  <nav
+    class="navbar navbar-transparent fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100 transition-all duration-300 [.navbar-transparent:not(.navbar--scrolled)&]:bg-transparent [.navbar-transparent:not(.navbar--scrolled)&]:border-transparent [.navbar-transparent:not(.navbar--scrolled)&]:backdrop-blur-none">
+    <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+      <a href="/index.html"
+        class="flex items-center gap-2 text-2xl font-bold text-primary group transition-colors">
+        <span class="iconify text-primary group-hover:rotate-12 transition-transform"
+          data-icon="ph:paw-print-fill"></span>
+        RescueHope
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-6">
+        <li class="relative group">
+          <a href="/index.html"
+            class="flex items-center gap-1 text-base font-bold text-neutral-700 hover:text-primary transition-colors py-8 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">
+            Home <span
+              class="iconify text-neutral-500 group-hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/80 [.navbar-transparent:not(.navbar--scrolled)_&]:group-hover:text-white"
+              data-icon="ph:caret-down-bold"></span>
+          </a>
+          <ul
+            class="absolute top-[100%] left-0 w-28 bg-white border border-neutral-100 rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 text-left">
+            <li><a href="/index.html"
+                class="block px-6 py-2 text-base text-neutral-600 hover:bg-primary-light hover:text-primary transition-colors">Home-1</a></li>
+            <li><a href="/pages/home-2.html"
+                class="block px-6 py-2 text-base text-neutral-600 hover:bg-primary-light hover:text-primary transition-colors">Home-2</a></li>
+          </ul>
+        </li>
+        <li><a href="/pages/about.html"
+            class="text-base font-bold text-neutral-700 hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">About</a>
+        </li>
+        <li><a href="/pages/adopt.html"
+            class="text-base font-bold text-neutral-700 hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">Adopt</a>
+        </li>
+        <li><a href="/pages/stories.html"
+            class="text-base font-bold text-neutral-700 hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">Stories</a>
+        </li>
+        <li><a href="/pages/events.html"
+            class="text-base font-bold text-neutral-700 hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">Events</a>
+        </li>
+        <li><a href="/pages/contact.html"
+            class="text-base font-bold text-neutral-700 hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">Contact</a>
+        </li>
+        <li class="relative group">
+          <a href="#"
+            class="flex items-center gap-1 text-base font-bold text-neutral-700 hover:text-primary transition-colors py-8 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/90 [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-white">
+            Dashboard <span
+              class="iconify text-neutral-500 group-hover:text-primary transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white/80 [.navbar-transparent:not(.navbar--scrolled)_&]:group-hover:text-white"
+              data-icon="ph:caret-down-bold"></span>
+          </a>
+          <ul
+            class="absolute top-[100%] left-0 w-48 bg-white border border-neutral-100 rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 -translate-y-2 group-hover:translate-y-0 text-left">
+            <li><a href="/pages/admin-dashboard.html"
+                class="block px-6 py-2 text-base text-neutral-600 hover:bg-primary-light hover:text-primary transition-colors">Admin
+                Dashboard</a></li>
+            <li><a href="/pages/user-dashboard.html"
+                class="block px-6 py-2 text-base text-neutral-600 hover:bg-primary-light hover:text-primary transition-colors">User
+                Dashboard</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <!-- Desktop & Tablet RTL/Theme Toggles -->
+        <div class="hidden md:flex items-center gap-4">
+          <button
+            class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:bg-white/10 [.navbar-transparent:not(.navbar--scrolled)_&]:border-white/10"
+            aria-label="Toggle direction">
+            <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">LTR</span>
+            <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">RTL</span>
+          </button>
+          <button
+            class="theme-toggle w-10 h-10 rounded-full flex items-center justify-center text-neutral-600 hover:bg-neutral-100 transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:text-white [.navbar-transparent:not(.navbar--scrolled)_&]:hover:bg-white/10"
+            aria-label="Toggle theme">
+            <span class="iconify ph-moon-stars-bold" data-icon="ph:moon-stars-bold"></span>
+            <span class="iconify ph-sun-bold" data-icon="ph:sun-bold"></span>
+          </button>
+        </div>
+
+        <a href="/pages/donate.html"
+          class="hidden sm:flex px-5 py-2 border-2 border-neutral-500 text-neutral-700 text-[13px] font-bold uppercase tracking-widest rounded-lg hover:bg-neutral-900 hover:text-white transition-colors [.navbar-transparent:not(.navbar--scrolled)_&]:border-white/50 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white [.navbar-transparent:not(.navbar--scrolled)_&]:hover:bg-white [.navbar-transparent:not(.navbar--scrolled)_&]:hover:text-neutral-900">Donate</a>
+        <a href="/auth/login.html"
+          class="hidden md:flex px-5 py-2 bg-primary text-white text-[13px] font-bold uppercase tracking-widest rounded-lg hover:bg-primary-hover transition-colors">Login</a>
+
+        <!-- Hamburger Menu -->
+        <button
+          id="mobile-menu-toggle"
+          class="lg:hidden w-10 h-10 flex items-center justify-center text-neutral-900 [.navbar-transparent:not(.navbar--scrolled)_&]:text-white focus:outline-none"
+          aria-label="Toggle menu">
+          <span class="iconify text-2xl menu-icon" data-icon="ph:list-bold"></span>
+          <span class="iconify text-2xl close-icon hidden" data-icon="ph:x-bold"></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-neutral-900/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300 lg:hidden"></div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:left-0 rtl:right-auto translate-x-full rtl:-translate-x-full w-[85%] max-w-sm h-full bg-white dark:bg-neutral-900 z-[60] transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+    <!-- Header -->
+    <div class="p-6 border-b border-neutral-100 dark:border-white/5 flex items-center justify-between bg-white dark:bg-neutral-900">
+      <a href="/index.html" class="flex items-center gap-2 text-xl font-bold text-primary">
+        <span class="iconify" data-icon="ph:paw-print-fill"></span>
+        RescueHope
+      </a>
+      <button id="mobile-menu-close" class="text-neutral-500 hover:text-primary transition-colors">
+        <span class="iconify text-2xl" data-icon="ph:x-bold"></span>
+      </button>
+    </div>
+
+    <!-- Body -->
+    <div class="flex-1 overflow-y-auto p-6 bg-white dark:bg-neutral-900">
+      <ul class="space-y-4">
+        <li>
+          <div class="flex flex-col">
+            <button class="flex items-center justify-between w-full text-lg font-bold text-neutral-800 dark:text-white mb-2 group" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              Home <span class="iconify group-hover:text-primary transition-colors" data-icon="ph:caret-down-bold"></span>
+            </button>
+            <ul class="pl-4 space-y-2 hidden border-l border-neutral-100 dark:border-white/5 ml-2">
+              <li><a href="/index.html" class="block py-1 text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Home-1</a></li>
+              <li><a href="/pages/home-2.html" class="block py-1 text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Home-2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="/pages/about.html" class="block text-lg font-bold text-neutral-800 dark:text-white hover:text-primary transition-colors">About</a></li>
+        <li><a href="/pages/adopt.html" class="block text-lg font-bold text-neutral-800 dark:text-white hover:text-primary transition-colors">Adopt</a></li>
+        <li><a href="/pages/stories.html" class="block text-lg font-bold text-neutral-800 dark:text-white hover:text-primary transition-colors">Stories</a></li>
+        <li><a href="/pages/events.html" class="block text-lg font-bold text-neutral-800 dark:text-white hover:text-primary transition-colors">Events</a></li>
+        <li><a href="/pages/contact.html" class="block text-lg font-bold text-neutral-800 dark:text-white hover:text-primary transition-colors">Contact</a></li>
+        <li>
+          <div class="flex flex-col">
+            <button class="flex items-center justify-between w-full text-lg font-bold text-neutral-800 dark:text-white mb-2 group" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              Dashboard <span class="iconify group-hover:text-primary transition-colors" data-icon="ph:caret-down-bold"></span>
+            </button>
+            <ul class="pl-4 space-y-2 hidden border-l border-neutral-100 dark:border-white/5 ml-2">
+              <li><a href="/pages/admin-dashboard.html" class="block py-1 text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Admin Dashboard</a></li>
+              <li><a href="/pages/user-dashboard.html" class="block py-1 text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">User Dashboard</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mt-8 pt-8 border-t border-neutral-100 dark:border-white/5 space-y-6">
+        <div class="flex items-center justify-between">
+          <span class="font-bold text-neutral-800 dark:text-white">Appearance</span>
+          <button class="theme-toggle flex items-center gap-2 bg-neutral-100 dark:bg-white/5 p-2 rounded-lg border border-neutral-200 dark:border-white/10">
+            <span class="iconify ph-moon-stars-bold text-xl" data-icon="ph:moon-stars-bold"></span>
+            <span class="iconify ph-sun-bold text-xl" data-icon="ph:sun-bold"></span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold text-neutral-800 dark:text-white">Direction</span>
+          <button class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10">
+            <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">LTR</span>
+            <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer buttons -->
+    <div class="p-6 border-t border-neutral-100 dark:border-white/5 grid grid-cols-2 gap-4 bg-white dark:bg-neutral-900">
+      <a href="/pages/donate.html" class="flex items-center justify-center py-3 border border-neutral-200 dark:border-white/10 rounded-xl font-bold text-sm text-neutral-800 dark:text-white hover:bg-neutral-50 dark:hover:bg-white/5 transition-colors">Donate</a>
+      <a href="/auth/login.html" class="flex items-center justify-center py-3 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20">Login</a>
+    </div>
+  </div>
 
   <main id="main-content">
     <!-- SECTION: HERO -->
@@ -566,8 +732,85 @@
 
   </main>
 
-  <!-- Footer Placeholder -->
-  <div id="footer-placeholder"></div>
+  <!-- Footer -->
+  <footer class="bg-neutral-950 pt-10 pb-6 lg:pt-16 lg:pb-8 text-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-12 mb-10 lg:mb-16">
+      <div class="col-span-2 lg:col-span-1 space-y-6 animate-on-scroll">
+        <a href="/index.html" class="flex items-center gap-2 text-2xl font-bold text-primary group">
+          <span class="iconify text-primary group-hover:rotate-12 transition-transform"
+            data-icon="ph:paw-print-fill"></span>
+          RescueHope
+        </a>
+        <p class="text-sm leading-relaxed">Providing compassionate care and second chances for every animal in need since
+          2012. Our mission is built on transparency, dedication, and local impact.</p>
+        <div class="flex gap-4">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all border border-white/10"
+            aria-label="Facebook">
+            <span class="iconify text-xl" data-icon="ph:facebook-logo-fill"></span>
+          </a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all border border-white/10"
+            aria-label="Instagram">
+            <span class="iconify text-xl" data-icon="ph:instagram-logo-fill"></span>
+          </a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all border border-white/10"
+            aria-label="Twitter">
+            <span class="iconify text-xl" data-icon="ph:twitter-logo-fill"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll" style="transition-delay: 0.1s;">
+        <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
+        <ul class="space-y-4">
+          <li><a href="/index.html" class="text-sm hover:text-primary transition-colors">Home</a></li>
+          <li><a href="/pages/about.html" class="text-sm hover:text-primary transition-colors">About Us</a></li>
+          <li><a href="/pages/adopt.html" class="text-sm hover:text-primary transition-colors">Adoptable Animals</a></li>
+          <li><a href="/pages/stories.html" class="text-sm hover:text-primary transition-colors">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+        <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest text-xs">Get Involved</h4>
+        <ul class="space-y-4">
+          <li><a href="/pages/donate.html" class="text-sm hover:text-primary transition-colors">Donate Now</a></li>
+          <li><a href="/auth/register.html" class="text-sm hover:text-primary transition-colors">Become a Volunteer</a></li>
+          <li><a href="/pages/events.html" class="text-sm hover:text-primary transition-colors">Upcoming Events</a></li>
+          <li><a href="/pages/contact.html" class="text-sm hover:text-primary transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-2 lg:col-span-1 animate-on-scroll" style="transition-delay: 0.3s;">
+        <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Newsletter</h4>
+        <p class="text-sm mb-6 leading-relaxed text-white/50">Keep up with our latest rescue stories and community achievements.</p>
+        <form class="relative group max-w-sm">
+          <input type="email" placeholder="Email Address"
+            class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-all focus:ring-4 focus:ring-primary/10"
+            required>
+          <button type="submit"
+            class="absolute right-1 top-1 bottom-1 w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-hover transition-all hover:scale-105 active:scale-95"
+            aria-label="Subscribe">
+            <span class="iconify text-lg" data-icon="ph:arrow-right-bold"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs font-bold uppercase tracking-widest text-white/30">&copy; 2026 RescueHope. All rights reserved.
+        </p>
+        <div class="flex gap-8">
+          <a href="#" class="text-[10px] font-bold uppercase tracking-widest hover:text-white transition-colors">Privacy
+            Policy</a>
+          <a href="#" class="text-[10px] font-bold uppercase tracking-widest hover:text-white transition-colors">Terms of
+            Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- JS -->
   <script src="assets/js/main.js"></script>

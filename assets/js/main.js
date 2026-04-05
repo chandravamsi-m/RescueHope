@@ -1,26 +1,9 @@
 /**
  * RescueHope — Global Interactions
- * Version: 1.1.0 (Modular Components)
- * TODO: Consider separating component loaders into a standalone utility script for better modularity.
+ * Version: 2.0.0 (Hardcoded Components)
  */
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Determine path depth for components
-    const path = window.location.pathname;
-    const isRoot = path.endsWith('index.html') || path.endsWith('/');
-    const isInsidePages = path.includes('/pages/') || path.includes('/auth/');
-
-    let componentPath = 'assets/components/';
-    if (isInsidePages) componentPath = '../assets/components/';
-
-    // Load common components
-    const loaders = [
-        loadComponent('#navbar-placeholder', componentPath + 'navbar.html'),
-        loadComponent('#footer-placeholder', componentPath + 'footer.html')
-    ];
-
-    await Promise.all(loaders);
-
+document.addEventListener('DOMContentLoaded', () => {
     // Initializations
     initNavbar();
     initTheme();
@@ -68,41 +51,6 @@ function initRTL() {
             setDir(isRTL ? 'ltr' : 'rtl');
         });
     });
-}
-
-/**
- * Component Loader
- * Loads external HTML fragments into placeholders
- */
-async function loadComponent(selector, url) {
-    const placeholder = document.querySelector(selector);
-    if (!placeholder) return;
-
-    // Capture classes from placeholder to pass to component
-    const placeholderClasses = Array.from(placeholder.classList);
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Failed to load ${url}`);
-        const html = await response.text();
-        
-        // Create a temporary element to hold the html
-        const temp = document.createElement('div');
-        temp.innerHTML = html;
-        
-        // The primary component is the first significant child (e.g., the <nav> tag)
-        const component = temp.firstElementChild;
-        
-        // Transfer classes from the placeholder to the primary component
-        if (component) {
-            placeholderClasses.forEach(cls => component.classList.add(cls));
-        }
-
-        // Replace placeholder with all the content from the fetched file
-        placeholder.replaceWith(...temp.childNodes);
-    } catch (error) {
-        console.error('Error loading component:', error);
-    }
 }
 
 /**
