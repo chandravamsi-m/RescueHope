@@ -50,13 +50,14 @@
     <div class="col-span-2 lg:col-span-1 animate-on-scroll" style="transition-delay: 0.3s;">
       <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Newsletter</h4>
       <p class="text-sm mb-6 leading-relaxed text-white/50">Keep up with our latest rescue stories and community achievements.</p>
-      <form class="space-y-4">
+      <form class="relative group max-w-sm">
         <input type="email" placeholder="Email Address"
-          class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-primary transition-all"
+          class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-primary/50 transition-all focus:ring-4 focus:ring-primary/10"
           required>
         <button type="submit"
-          class="w-full bg-primary text-white py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shadow-lg shadow-primary/10">
-          Subscribe
+          class="absolute right-1 top-1 bottom-1 w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 hover:scale-105 active:scale-95"
+          aria-label="Subscribe">
+          <span class="iconify text-lg" data-icon="ph:arrow-right-bold"></span>
         </button>
       </form>
     </div>

@@ -126,7 +126,7 @@ function initNavbar() {
 
     // Active Link Detection
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('.navbar a, #mobile-menu-drawer a');
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
@@ -137,20 +137,30 @@ function initNavbar() {
         const normalizedPath = currentPath === '/' || currentPath === '' ? '/index.html' : currentPath;
 
         const isExactMatch = normalizedPath === normalizedHref;
-        const isIndexMatch = (normalizedPath === '/index.html' && normalizedHref === '/');
-        const isParentMatch = normalizedPath.startsWith(normalizedHref.replace('.html', ''));
+        const isIndexMatch = (normalizedPath === '/index.html' && (normalizedHref === '/' || normalizedHref === '/index.html'));
+        const isParentMatch = normalizedPath.startsWith(normalizedHref.replace('.html', '')) && normalizedHref !== '/';
         
         if (isExactMatch || isIndexMatch || isParentMatch) {
             link.classList.add('!text-primary');
-            link.classList.remove('text-neutral-700', 'text-neutral-600', 'text-white/90');
+            link.classList.remove('text-neutral-700', 'text-neutral-600', 'text-neutral-800', 'text-white', 'text-white/90');
             
-            // If it's in a dropdown, also highlight the parent
+            // If it's in a dropdown (Desktop), also highlight the parent
             const parentDropdown = link.closest('.group');
             if (parentDropdown) {
                 const parentLink = parentDropdown.querySelector('a');
                 if (parentLink && parentLink !== link) {
                     parentLink.classList.add('!text-primary');
                     parentLink.classList.remove('text-neutral-700', 'text-white/90');
+                }
+            }
+
+            // If it's in a mobile toggle section, also highlight the parent button
+            const mobileToggleParent = link.closest('.flex-col');
+            if (mobileToggleParent) {
+                const toggleBtn = mobileToggleParent.querySelector('button');
+                if (toggleBtn) {
+                    toggleBtn.classList.add('!text-primary');
+                    toggleBtn.classList.remove('text-neutral-800', 'text-white');
                 }
             }
         }
