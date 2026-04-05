@@ -36,3 +36,35 @@
 .scroll-mt-header {
     scroll-margin-top: 5rem;
 }
+
+/* 
+ * Dashboard & Navigation RTL Logic 
+ * (Migrated from style.css)
+ */
+
+/* RTL Flip for Dashboard Sidebar */
+[dir="rtl"] .dashboard-sidebar.fixed {
+    left: auto !important;
+    right: 0 !important;
+    transform: translateX(100%);
+}
+
+[dir="rtl"] .dashboard-sidebar.fixed.is-open {
+    transform: translateX(0) !important;
+}
+
+/* RTL Flip for Mobile Menu Drawer */
+[dir="rtl"] #mobile-menu-drawer {
+    right: auto !important;
+    left: 0 !important;
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] #mobile-menu-drawer.is-open {
+    transform: translateX(0) !important;
+}
+
+/* Helper for RTL active labels */
+.rtl-toggle .rtl-toggle__label.bg-primary {
+    color: #ffffff !important;
+}
