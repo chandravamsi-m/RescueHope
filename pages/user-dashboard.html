@@ -104,15 +104,15 @@
 
   <div id="sidebar-overlay" class="fixed inset-0 bg-neutral-900/50 backdrop-blur-sm z-40 opacity-0 invisible transition-all duration-300 lg:hidden"></div>
 
-  <div class="h-screen overflow-hidden flex flex-col md:grid md:grid-cols-[auto_1fr] bg-neutral-100 dashboard-main-wrapper">
+  <div class="h-screen overflow-hidden flex flex-col lg:grid lg:grid-cols-[auto_1fr] bg-neutral-100 dashboard-main-wrapper">
     <!-- Sidebar -->
-    <aside class="flex flex-col h-full shrink-0 dashboard-sidebar fixed md:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full md:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden border-none shadow-2xl">
-      <div class="px-8 h-16 md:h-[72px] mb-8 border-b border-white/5 flex justify-between items-center overflow-hidden shrink-0">
+    <aside class="flex flex-col h-full shrink-0 dashboard-sidebar fixed lg:static inset-y-0 ltr:left-0 ltr:-translate-x-full rtl:right-0 rtl:translate-x-full lg:translate-x-0 z-[60] transition-all duration-300 w-72 lg:w-64 overflow-hidden border-none">
+      <div class="px-8 h-[72px] mb-6 border-b border-white/5 flex justify-between items-center shrink-0">
         <a href="../index.html" class="flex items-center gap-3 group shrink-0">
           <span class="iconify text-primary text-3xl group-hover:rotate-12 transition-transform shrink-0"
             data-icon="ph:paw-print-fill"></span>
           <div class="flex flex-col md:hidden lg:flex">
-            <span class="text-white font-bold text-xl tracking-tight leading-none whitespace-nowrap">RescueHope</span>
+            <span class="text-white font-bold text-2xl tracking-tight leading-none whitespace-nowrap">RescueHope</span>
           </div>
         </a>
         <button class="lg:hidden text-white/50 hover:text-white sidebar-toggle p-2" aria-label="Close sidebar">
@@ -120,15 +120,15 @@
         </button>
       </div>
 
-      <nav class="flex-grow px-0 overflow-y-auto overflow-x-hidden">
-        <ul class="flex flex-col gap-1.5">
+      <nav class="flex-grow px-0 overflow-y-auto no-scrollbar">
+        <ul class="flex flex-col gap-1">
           <li>
             <a href="#" data-section="overview"
-              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 transition-all sidebar-link-active active-nav shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 justify-start py-2.5 transition-all sidebar-link-active active-nav shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:squares-four-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Overview</span>
+              <span class="flex-grow block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Overview</span>
             </a>
           </li>
           <li>
@@ -137,7 +137,7 @@
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:calendar-blank-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Shifts</span>
+              <span class="flex-grow block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Shifts</span>
             </a>
           </li>
           <li>
@@ -146,7 +146,7 @@
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:dog-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Foster Animals</span>
+              <span class="flex-grow block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Foster Animals</span>
             </a>
           </li>
           <li>
@@ -155,86 +155,87 @@
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:hand-heart-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Donations</span>
+              <span class="flex-grow block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Donations</span>
             </a>
           </li>
-          <li class="my-4 border-b border-white/5"></li>
-          <p class="px-8 md:hidden lg:block mb-3 text-sm font-bold text-neutral-600 uppercase tracking-widest leading-none">Settings</p>
           <li>
             <a href="#" data-section="profile"
-              class="nav-link flex items-center gap-4 mx-4 md:justify-center lg:justify-start py-2.5 sidebar-link-hover transition-all shadow-none">
+              class="nav-link flex items-center gap-4 mx-4 justify-start py-2.5 sidebar-link-hover transition-all shadow-none">
               <div class="w-6 flex items-center justify-center shrink-0">
                 <span class="iconify text-lg lg:text-xl" data-icon="ph:user-circle-fill"></span>
               </div>
-              <span class="flex-grow md:hidden lg:block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Profile</span>
+              <span class="flex-grow block whitespace-nowrap text-[11px] font-bold uppercase tracking-widest">Profile</span>
             </a>
           </li>
 
+          <!-- Mobile Only Toggles -->
+          <li class="lg:hidden mt-4 pt-4 border-t border-white/5">
+            <div class="px-4 py-2 flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-white/40">Appearance</span>
+              <button class="theme-toggle flex items-center gap-2 bg-white/5 p-2 rounded-lg border border-white/10" aria-label="Toggle theme">
+                <span class="iconify ph-moon-stars-bold text-lg text-white/50" data-icon="ph:moon-stars-bold"></span>
+                <span class="iconify ph-sun-bold text-lg text-white/50" data-icon="ph:sun-bold"></span>
+              </button>
+            </div>
+          </li>
+          <li class="lg:hidden">
+            <div class="px-4 py-2 flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-widest text-white/40">Direction</span>
+              <button class="rtl-toggle flex items-center bg-white/5 rounded-full p-0.5 border border-white/10" aria-label="Toggle direction">
+                <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-white/50">LTR</span>
+                <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-white/50">RTL</span>
+              </button>
+            </div>
+          </li>
+
+          <!-- Sign Out -->
+          <li class="mt-4">
+            <a href="../auth/login.html"
+              class="flex items-center gap-4 mx-4 justify-start py-3 rounded-xl text-red-500/60 hover:text-red-500 hover:bg-red-500/5 font-bold text-[11px] uppercase tracking-widest transition-all">
+              <div class="w-6 flex items-center justify-center shrink-0">
+                <span class="iconify text-lg" data-icon="ph:power-bold"></span>
+              </div>
+              <span class="flex-grow block whitespace-nowrap">Sign Out</span>
+            </a>
+          </li>
         </ul>
       </nav>
-
-      <div class="px-8 flex items-center justify-between mb-4 md:hidden">
-        <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Theme</span>
-        <button
-          class="theme-toggle flex items-center bg-white/5 rounded-lg p-2 border border-white/10 transition-all hover:bg-white/10"
-          aria-label="Toggle theme">
-          <span class="iconify ph-moon-stars-bold text-lg text-white/50" data-icon="ph:moon-stars-bold"></span>
-          <span class="iconify ph-sun-bold text-lg text-white/50" data-icon="ph:sun-bold"></span>
-        </button>
-      </div>
-
-      <div class="px-8 flex items-center justify-between mb-4 md:hidden">
-        <span class="text-xs font-bold text-white/40 uppercase tracking-widest">Direction</span>
-        <button
-          class="rtl-toggle flex items-center bg-white/5 rounded-full p-0.5 border border-white/10 transition-all hover:bg-white/10"
-          aria-label="Toggle direction">
-          <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-white/50">LTR</span>
-          <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-white/50">RTL</span>
-        </button>
-      </div>
-
-      <div class="px-0 py-8 mt-auto border-t border-white/5">
-        <a href="../auth/login.html"
-          class="flex items-center gap-4 mx-3 md:mx-0 lg:mx-4 px-4 md:px-0 md:justify-center lg:px-4 py-2 rounded-lg text-red-500/60 hover:text-red-500 hover:bg-red-500/5 font-bold text-[11px] uppercase tracking-widest transition-all">
-          <div class="w-6 flex items-center justify-center shrink-0">
-            <span class="iconify text-lg" data-icon="ph:power-bold"></span>
-          </div>
-          <span class="flex-grow md:hidden lg:block whitespace-nowrap">Sign Out</span>
-        </a>
-      </div>
     </aside>
 
     <!-- Main Content Wrapper -->
     <div class="flex-grow flex flex-col min-w-0 overflow-hidden">
       <!-- Header -->
       <header
-        class="sticky top-0 z-40 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-white/5 px-4 md:px-10 h-16 md:h-[72px] flex items-center justify-between shrink-0">
-        <div class="flex items-center gap-3 md:gap-6">
+        class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-100 px-4 md:px-6 lg:px-10 h-[72px] flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3 md:gap-4 lg:gap-6">
           <button
             class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white sidebar-toggle">
             <span class="iconify" data-icon="ph:list-bold"></span>
           </button>
-          <h2 class="text-base sm:text-lg md:text-xl font-bold italic tracking-tight whitespace-nowrap pr-2" id="dashboard-title">Volunteer Portal</h2>
+          <h2 class="text-sm sm:text-lg md:text-xl font-bold italic tracking-tight whitespace-nowrap pr-2 block" id="dashboard-title">Volunteer Portal</h2>
         </div>
 
-        <div class="flex items-center gap-2 md:gap-6">
-          <button
-            class="rtl-toggle hidden sm:flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10"
-            aria-label="Toggle direction">
-            <span class="rtl-toggle__label ltr px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">LTR</span>
-            <span class="rtl-toggle__label rtl px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all text-neutral-600 dark:text-white/70">RTL</span>
-          </button>
+        <div class="flex items-center gap-3 md:gap-4 lg:gap-8">
+          <!-- RTL & Theme Toggles Group -->
+          <div class="hidden lg:flex items-center gap-3 lg:gap-6 pr-6 border-r border-neutral-100 dark:border-white/5">
+            <button
+              class="rtl-toggle flex items-center bg-neutral-100 dark:bg-white/5 rounded-full p-0.5 border border-neutral-200 dark:border-white/10 transition-all hover:bg-neutral-200 dark:hover:bg-white/10"
+              aria-label="Toggle direction">
+              <span class="rtl-toggle__label ltr px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">LTR</span>
+              <span class="rtl-toggle__label rtl px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded-full transition-all text-neutral-500 dark:text-white/50">RTL</span>
+            </button>
 
-          <!-- Theme Toggle (Desktop Only) -->
-          <button
-            class="theme-toggle hidden md:flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white/10 dark:hover:text-white transition-all shadow-sm"
-            aria-label="Toggle theme">
-            <span class="iconify ph-moon-stars-bold text-lg" data-icon="ph:moon-stars-bold"></span>
-            <span class="iconify ph-sun-bold text-lg" data-icon="ph:sun-bold"></span>
-          </button>
+            <!-- Theme Toggle -->
+            <button
+              class="theme-toggle flex w-10 h-10 items-center justify-center rounded-xl bg-neutral-100 dark:bg-white/5 text-neutral-900 dark:text-white hover:bg-neutral-900 hover:text-white dark:hover:bg-white/10 dark:hover:text-white transition-all shadow-sm"
+              aria-label="Toggle theme">
+              <span class="iconify ph-moon-stars-bold text-lg" data-icon="ph:moon-stars-bold"></span>
+              <span class="iconify ph-sun-bold text-lg" data-icon="ph:sun-bold"></span>
+            </button>
+          </div>
 
-          <div class="flex items-center gap-3 md:gap-4 pl-3 md:pl-6 border-l border-neutral-100 dark:border-white/5">
-            <div class="hidden sm:block text-right">
+          <div class="flex items-center gap-3 md:gap-4">
+            <div class="hidden lg:block text-right">
               <p class="text-sm font-bold text-neutral-900 dark:text-white leading-none mb-1">Alex Johnson</p>
               <span class="text-[11px] font-bold text-neutral-400 uppercase tracking-widest italic opacity-80">Volunteer</span>
             </div>
@@ -245,7 +246,7 @@
         </div>
       </header>
 
-      <main class="flex-grow overflow-y-auto p-6 md:p-8">
+      <main class="flex-grow overflow-y-auto p-4 sm:p-6 md:p-6 lg:p-8">
         <!-- Overview Section -->
         <div id="overview-section" class="dashboard-section fade-in">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 md:mb-12">
@@ -398,10 +399,24 @@
 
         <!-- My Shifts Section -->
         <div id="shifts-section" class="dashboard-section hidden fade-in">
-          <div class="flex items-center justify-between gap-4 mb-8 md:mb-12">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 md:mb-12">
             <div>
-              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Volunteer <span class="text-primary italic opacity-80 not-italic">Schedule</span></h2>
-              <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage your upcoming assignments and log active hours.</p>
+              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Volunteer <span
+                  class="text-primary italic opacity-80 not-italic">Schedule</span></h2>
+              <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage your upcoming assignments and log active
+                hours.</p>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0 mt-4 sm:mt-0">
+              <button
+                class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-white px-3 sm:px-5 py-2.5 rounded-xl font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-neutral-50 dark:hover:bg-white/5 transition-all shadow-sm">
+                <span class="iconify text-sm sm:text-base" data-icon="ph:warning-circle-bold"></span>
+                <span>Report Issue</span>
+              </button>
+              <button
+                class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-primary text-white px-4 sm:px-6 py-2.5 rounded-xl font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shadow-lg shadow-primary/20">
+                <span class="iconify text-sm sm:text-base" data-icon="ph:plus-bold"></span>
+                <span>Request Shift</span>
+              </button>
             </div>
           </div>
 
@@ -549,7 +564,7 @@
         <div id="foster-section" class="dashboard-section hidden fade-in">
           <div class="flex items-center justify-between gap-4 mb-8 md:mb-12">
             <div>
-              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Foster <span class="text-accent italic opacity-80 not-italic">Care Hub</span></h2>
+              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Foster <span class="text-primary italic opacity-80 not-italic">Care Hub</span></h2>
               <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage current foster pets and view health milestones.</p>
             </div>
             <button class="bg-primary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">
@@ -560,37 +575,38 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <!-- Active Foster Card -->
-            <div class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+            <div
+              class="bg-white dark:bg-neutral-900 p-5 sm:p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
               <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
                 <div class="w-full sm:w-48 aspect-square sm:aspect-auto sm:h-auto rounded-3xl overflow-hidden shrink-0">
-                  <img src="../assets/images/img_021.webp" alt="Luna" class="w-full h-full object-cover">
+                  <img src="../assets/images/img_011.webp" alt="Luna" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-grow">
                   <div class="flex items-start justify-between mb-4">
                     <div>
-                      <h4 class="text-xl sm:text-2xl font-bold dark:text-white leading-none mb-1">Luna</h4>
-                      <p class="text-[11px] text-neutral-400 font-bold uppercase tracking-widest italic">Border Collie • 2 Years</p>
+                      <h4 class="text-xl sm:text-2xl font-bold dark:text-white leading-none mb-1 font-heading">Luna</h4>
+                      <p class="text-xs sm:text-sm text-neutral-400 font-bold uppercase tracking-widest italic">Border Collie • 2 Years</p>
                     </div>
-                    <span class="px-3 py-1 bg-accent/10 text-accent text-[11px] font-bold uppercase rounded-full shrink-0">Active</span>
+                    <span class="px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase rounded-full shrink-0">Active</span>
                   </div>
                   <div class="space-y-4 mb-6">
                     <div>
-                      <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">
+                      <div class="flex justify-between text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-400 mb-2">
                         <span>Recovery Progress</span>
-                        <span class="text-accent">85%</span>
+                        <span class="text-accent underline decoration-2 underline-offset-4">85%</span>
                       </div>
                       <div class="h-2 bg-neutral-100 dark:bg-white/5 rounded-full overflow-hidden">
                         <div class="h-full bg-accent w-[85%] rounded-full"></div>
                       </div>
                     </div>
                     <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                      <div class="p-3 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
-                        <p class="text-[10px] text-neutral-400 font-bold uppercase mb-1">Next Vet Visit</p>
-                        <p class="text-xs sm:text-sm font-bold dark:text-white">March 18</p>
+                      <div class="p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                        <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest mb-1">Next Vet Visit</p>
+                        <p class="text-sm sm:text-base font-bold dark:text-white">March 18</p>
                       </div>
-                      <div class="p-3 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
-                        <p class="text-[10px] text-neutral-400 font-bold uppercase mb-1">Foster Day</p>
-                        <p class="text-xs sm:text-sm font-bold dark:text-white">Day 64</p>
+                      <div class="p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                        <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest mb-1">Foster Day</p>
+                        <p class="text-sm sm:text-base font-bold dark:text-white italic">Day 64</p>
                       </div>
                     </div>
                   </div>
@@ -603,54 +619,115 @@
             </div>
 
             <!-- Health Milestones -->
-            <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+            <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
               <h4 class="text-lg font-bold mb-8 italic">Health <span class="text-primary">Milestones</span></h4>
               <div class="space-y-6 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-0.5 before:bg-neutral-100 dark:before:bg-white/5">
                 <div class="flex gap-6 relative">
                   <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 z-10 border-4 border-white dark:border-neutral-900">
-                    <span class="iconify" data-icon="ph:check-bold"></span>
+                    <span class="iconify text-lg" data-icon="ph:check-bold"></span>
                   </div>
                   <div>
-                    <h5 class="text-sm font-bold dark:text-white mb-1">Final Vaccination Shot</h5>
-                    <p class="text-sm text-neutral-400 font-bold uppercase italic tracking-widest mb-2">Completed on March 01, 2026</p>
-                    <p class="text-xs text-neutral-500 leading-relaxed">Luna has completed her primary vaccination series. Waiting for certificates.</p>
+                    <h5 class="text-sm sm:text-base font-bold dark:text-white mb-1">Final Vaccination Shot</h5>
+                    <p class="text-xs sm:text-sm text-neutral-400 font-bold uppercase italic tracking-widest mb-1">March 01, 2026</p>
+                    <p class="text-xs sm:text-xs text-neutral-500 font-medium leading-relaxed">Luna has completed her primary vaccination series.</p>
                   </div>
                 </div>
                 <div class="flex gap-6 relative">
                   <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 z-10 border-4 border-white dark:border-neutral-900">
-                    <span class="iconify" data-icon="ph:check-bold"></span>
+                    <span class="iconify text-lg" data-icon="ph:check-bold"></span>
                   </div>
                   <div>
-                    <h5 class="text-sm font-bold dark:text-white mb-1">Weight Goal Reached</h5>
-                    <p class="text-sm text-neutral-400 font-bold uppercase italic tracking-widest mb-2">Completed on Feb 24, 2026</p>
-                    <p class="text-xs text-neutral-500 leading-relaxed">Stable at 18.5kg. Transitioning from recovery diet to standard adult mix.</p>
-                  </div>
-                </div>
-                <div class="flex gap-6 relative opacity-50">
-                  <div class="w-10 h-10 rounded-full bg-neutral-100 dark:bg-white/5 flex items-center justify-center text-neutral-400 shrink-0 z-10 border-4 border-white dark:border-neutral-900">
-                    <span class="iconify" data-icon="ph:hourglass-bold"></span>
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-bold dark:text-white mb-1">Post-Op Final Review</h5>
-                    <p class="text-sm text-neutral-400 font-bold uppercase italic tracking-widest">Scheduled for March 18, 2026</p>
+                    <h5 class="text-sm sm:text-base font-bold dark:text-white mb-1">Weight Goal Reached</h5>
+                    <p class="text-xs sm:text-sm text-neutral-400 font-bold uppercase italic tracking-widest mb-1">Feb 24, 2026</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Past Fosters (Empty State Mockup) -->
-          <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm">
-            <h4 class="text-lg font-bold mb-8 italic">Foster <span class="text-neutral-400">Archive</span></h4>
-            <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl opacity-60">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-neutral-200 dark:bg-white/10 rounded-2xl"></div>
-                <div>
-                  <h5 class="font-bold dark:text-neutral-500">No past fosters logged yet</h5>
-                  <p class="text-sm text-neutral-400 font-bold uppercase italic tracking-widest text-accent">Join the foster program today</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Supplies Checklist -->
+            <div class="md:col-span-2 lg:col-span-2 bg-white dark:bg-neutral-900 p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <div class="flex items-center justify-between mb-8">
+                <h4 class="text-lg font-bold italic">Foster <span class="text-primary">Supplies</span></h4>
+                <button class="text-[10px] font-black text-primary uppercase tracking-widest hover:underline">+ Request Items</button>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                  <div class="w-5 h-5 rounded-md border-2 border-primary bg-primary flex items-center justify-center text-white">
+                    <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+                  </div>
+                  <span class="text-sm font-bold dark:text-white">Recovery Diet Food</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5">
+                  <div class="w-5 h-5 rounded-md border-2 border-primary bg-primary flex items-center justify-center text-white">
+                    <span class="iconify text-xs" data-icon="ph:check-bold"></span>
+                  </div>
+                  <span class="text-sm font-bold dark:text-white">Orthopedic Bed</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5 group">
+                  <div class="w-5 h-5 rounded-md border-2 border-neutral-300 dark:border-white/10 group-hover:border-primary transition-colors"></div>
+                  <span class="text-sm font-bold text-neutral-400 group-hover:text-neutral-600 transition-colors">Month 3 Vaccinations</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-neutral-50 dark:bg-white/2 rounded-2xl border border-neutral-100 dark:border-white/5 group">
+                  <div class="w-5 h-5 rounded-md border-2 border-neutral-300 dark:border-white/10 group-hover:border-primary transition-colors"></div>
+                  <span class="text-sm font-bold text-neutral-400 group-hover:text-neutral-600 transition-colors">Post-Op Collar</span>
                 </div>
               </div>
-              <button class="px-6 py-2 border-2 border-neutral-200 dark:border-white/10 text-neutral-400 text-sm font-bold uppercase tracking-widest rounded-lg hover:border-primary hover:text-primary transition-all">Learn More</button>
+            </div>
+
+            <!-- Emergency Alerts -->
+            <div class="md:col-span-2 lg:col-span-1 bg-white dark:bg-neutral-900 p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm">
+              <h4 class="text-lg font-bold mb-8 italic">Priority <span class="text-primary text-red-500">Alerts</span></h4>
+              <div class="space-y-4">
+                <a href="tel:555123456" class="flex items-center gap-4 p-4 bg-red-500/5 hover:bg-red-500/10 rounded-2xl border border-red-500/10 transition-all group">
+                  <div class="w-10 h-10 bg-red-500 text-white rounded-xl flex items-center justify-center shadow-lg shadow-red-500/20 group-hover:rotate-6 transition-all">
+                    <span class="iconify text-xl" data-icon="ph:first-aid-bold"></span>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-red-600 uppercase tracking-widest opacity-70">ER Vet Hotline</p>
+                    <p class="text-sm font-black dark:text-white">(555) 911-PETS</p>
+                  </div>
+                </a>
+                <a href="#" class="flex items-center gap-4 p-4 bg-neutral-50 dark:bg-white/2 hover:bg-neutral-100 dark:hover:bg-white/5 rounded-2xl border border-neutral-100 dark:border-white/5 transition-all">
+                  <div class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <span class="iconify text-xl" data-icon="ph:car-bold"></span>
+                  </div>
+                  <div>
+                    <p class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">Transport Lead</p>
+                    <p class="text-sm font-bold dark:text-white">Dave - Shelter Van</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pet Memory Gallery (Fills Whitespace) -->
+          <div class="mb-12">
+            <h4 class="text-xl font-bold italic mb-6 dark:text-white px-2">Growth <span class="text-primary">Moments</span></h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div class="aspect-square rounded-[1.5rem] overflow-hidden border border-neutral-100 dark:border-white/5 group relative">
+                <img src="../assets/images/img_011.webp" alt="Progress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-[10px] text-white font-bold">Week 1</span>
+                </div>
+              </div>
+              <div class="aspect-square rounded-[1.5rem] overflow-hidden border border-neutral-100 dark:border-white/5 group relative">
+                <img src="../assets/images/img_010.webp" alt="Progress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-[10px] text-white font-bold">Week 3</span>
+                </div>
+              </div>
+              <div class="aspect-square rounded-[1.5rem] overflow-hidden border border-neutral-100 dark:border-white/5 group relative">
+                <img src="../assets/images/img_015.webp" alt="Progress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hover:rotate-2">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                  <span class="text-[10px] text-white font-bold">Today</span>
+                </div>
+              </div>
+              <div class="aspect-square bg-neutral-100 dark:bg-white/5 rounded-[1.5rem] flex flex-col items-center justify-center text-neutral-400 group border-2 border-dashed border-neutral-200 dark:border-white/10 hover:border-accent transition-all">
+                <span class="iconify text-xl mb-1" data-icon="ph:plus-bold"></span>
+                <span class="text-[9px] font-bold uppercase tracking-widest italic">Add Moment</span>
+              </div>
             </div>
           </div>
         </div>
@@ -659,7 +736,7 @@
         <div id="donations-section" class="dashboard-section hidden fade-in">
           <div class="flex items-center justify-between gap-4 mb-8 md:mb-12">
             <div>
-              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Contribution <span class="text-secondary italic opacity-80 not-italic">Ledger</span></h2>
+              <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">Contribution <span class="text-primary italic opacity-80 not-italic">Ledger</span></h2>
               <p class="text-neutral-400 text-xs sm:text-sm font-normal">Track your life-saving donations and download receipts.</p>
             </div>
             <button class="bg-primary text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">
@@ -684,6 +761,115 @@
             <div class="bg-white dark:bg-neutral-900 p-5 sm:p-6 rounded-3xl border border-neutral-100 dark:border-white/5 shadow-sm">
               <p class="text-[10px] sm:text-xs font-bold text-neutral-400 uppercase tracking-widest mb-2">Tax Savings</p>
               <h4 class="text-xl sm:text-2xl font-bold dark:text-white">$312.50</h4>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Recurring Donations -->
+            <div class="md:col-span-2 lg:col-span-2 bg-white dark:bg-neutral-900 p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm flex flex-col">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                <h4 class="text-lg font-bold italic">Recurring <span class="text-secondary">Subscriptions</span></h4>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Active System</span>
+                </div>
+              </div>
+              <div class="space-y-4 flex-grow">
+                <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl border border-neutral-100 dark:border-white/5 group hover:border-secondary/30 transition-all">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary">
+                      <span class="iconify text-2xl" data-icon="ph:calendar-heart-bold"></span>
+                    </div>
+                    <div>
+                      <h5 class="font-bold dark:text-white leading-none mb-1 font-heading">Monthly Sustainer</h5>
+                      <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest italic">Next Charge: April 01</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-lg font-black dark:text-white leading-none mb-1">$50.00</p>
+                    <button class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] hover:underline">Manage</button>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between p-6 bg-neutral-50 dark:bg-white/2 rounded-3xl border border-neutral-100 dark:border-white/5 group hover:border-secondary/30 transition-all opacity-80">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                      <span class="iconify text-2xl" data-icon="ph:dog-bold"></span>
+                    </div>
+                    <div>
+                      <h5 class="font-bold dark:text-white leading-none mb-1 font-heading">Sponsorship: Bruno</h5>
+                      <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest italic">Food & Med Program</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-lg font-black dark:text-white leading-none mb-1">$25.00</p>
+                    <button class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] hover:underline">Details</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8 pt-6 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="iconify text-neutral-400 text-xl" data-icon="ph:credit-card-fill"></span>
+                  <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest">Visa ending in 4242</span>
+                </div>
+                <button class="text-xs font-bold text-neutral-400 uppercase tracking-widest hover:text-primary transition-colors">Change Method</button>
+              </div>
+            </div>
+
+            <!-- Impact Milestone -->
+            <div class="md:col-span-2 lg:col-span-1 bg-white dark:bg-neutral-900 p-8 rounded-[2rem] border border-neutral-100 dark:border-white/5 shadow-sm flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold mb-6 italic">Impact <span class="text-primary">Progress</span></h4>
+                <div class="text-center py-6">
+                  <div class="relative inline-block mb-4">
+                    <div class="w-24 h-24 rounded-full border-8 border-neutral-100 dark:border-white/5 flex items-center justify-center">
+                      <span class="text-2xl font-black text-primary font-heading">75%</span>
+                    </div>
+                    <svg class="absolute top-0 left-0 w-24 h-24 -rotate-90">
+                      <circle cx="48" cy="48" r="40" fill="transparent" stroke="currentColor" stroke-width="8" class="text-primary" stroke-dasharray="251" stroke-dashoffset="62" />
+                    </svg>
+                  </div>
+                  <p class="text-sm sm:text-base font-bold dark:text-white mb-1 font-heading">Road to Gold Patron</p>
+                  <p class="text-xs text-neutral-400 font-bold uppercase tracking-widest italic">$250 away from next tier</p>
+                </div>
+              </div>
+              <button class="w-full py-4 bg-neutral-100 dark:bg-white/5 rounded-xl text-xs font-bold uppercase tracking-[0.1em] hover:bg-neutral-900 hover:text-white transition-all">View All Rewards</button>
+            </div>
+          </div>
+
+          <!-- Urgent Shelter Needs (Fills Whitespace) -->
+          <div class="bg-white dark:bg-neutral-900 p-8 rounded-[2.5rem] border border-neutral-100 dark:border-white/5 shadow-sm mb-12">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="text-lg font-bold italic">Urgent Shelter <span class="text-secondary">Needs</span></h4>
+              <span class="text-[10px] font-bold text-accent uppercase tracking-widest px-3 py-1 bg-accent/10 rounded-full italic animate-pulse">Critical Wishlist</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div class="flex items-center gap-4 p-5 bg-neutral-50 dark:bg-white/2 rounded-[2rem] border border-neutral-100 dark:border-white/5 hover:border-secondary/30 transition-all">
+                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center">
+                  <span class="iconify text-2xl" data-icon="ph:package-bold"></span>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold dark:text-white">Senior Dog Kibble</h5>
+                  <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-widest italic">Target: 25 KG</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-5 bg-neutral-50 dark:bg-white/2 rounded-[2rem] border border-neutral-100 dark:border-white/5 hover:border-secondary/30 transition-all">
+                <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center">
+                  <span class="iconify text-2xl" data-icon="ph:thermometer-hot-bold"></span>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold dark:text-white">Thermal Blankets</h5>
+                  <p class="text-[10px] text-neutral-400 font-bold uppercase tracking-widest italic">Target: 15 Units</p>
+                </div>
+              </div>
+              <button class="flex items-center gap-4 p-5 bg-primary text-white rounded-[2rem] shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">
+                  <span class="iconify text-2xl" data-icon="ph:hand-heart-bold"></span>
+                </div>
+                <div>
+                  <h5 class="text-sm font-bold uppercase tracking-widest">Full Wishlist</h5>
+                  <p class="text-[10px] font-bold italic opacity-80 leading-none">External Link</p>
+                </div>
+              </button>
             </div>
           </div>
 
@@ -789,12 +975,15 @@
 
         <!-- Profile Section -->
         <div id="profile-section" class="dashboard-section hidden fade-in">
-          <div class="flex items-center justify-between gap-4 mb-8 md:mb-12">
+          <div class="flex items-center justify-between gap-4 mb-8 md:mb-10 lg:mb-12">
             <div>
               <h2 class="text-lg sm:text-2xl md:text-3xl font-bold mb-1 italic leading-tight">User <span class="text-primary italic opacity-80 not-italic">Profile</span></h2>
-              <p class="text-neutral-400 text-xs sm:text-sm font-normal">Manage your personal information and skill set.</p>
+              <p class="text-neutral-400 text-[10px] sm:text-sm font-normal">Manage your personal information and skill set.</p>
             </div>
-            <button class="bg-primary text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0">Save</button>
+            <button class="flex items-center justify-center gap-2 bg-primary text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-xl font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-primary-hover transition-all shrink-0 shadow-lg shadow-primary/20 hover:-translate-y-0.5">
+              <span class="iconify text-sm sm:text-base" data-icon="ph:floppy-disk-back-fill"></span>
+              <span>Save</span>
+            </button>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
@@ -885,6 +1074,9 @@
           // Update Sections
           sections.forEach(s => s.classList.add('hidden'));
           targetSection.classList.remove('hidden');
+
+          // Reset Scroll Position
+          document.querySelector('main').scrollTop = 0;
 
 
           // Auto-close sidebar on mobile/tablet

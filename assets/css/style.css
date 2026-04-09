@@ -121,10 +121,10 @@ body {
 
 /* 
  * Robust Desktop Visibility Fix 
- * Forces sidebar into view on md: (768px) and up, 
+ * Forces sidebar into view on lg: (1024px) and up, 
  * overriding any ltr: or rtl: translations from HTML.
  */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .dashboard-sidebar {
         transform: translateX(0) !important; /* Restored !important for visibility */
         position: static !important;
@@ -132,15 +132,8 @@ body {
     }
 }
 
-/* Sidebar mini-mode for tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .dashboard-sidebar {
-        width: 5rem !important; /* md:w-20 equivalent */
-    }
-    .dashboard-sidebar .md\:hidden {
-        display: none !important;
-    }
-}
+/* Sidebar mini-mode for tablets - DEPRECATED in favor of drawer for better UX */
+/* @media (min-width: 768px) and (max-width: 1023px) { ... } */
 
 /* Ensure main content takes full height and scrolls internally */
 .dashboard-main-wrapper {
