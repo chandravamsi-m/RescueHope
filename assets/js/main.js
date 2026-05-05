@@ -73,22 +73,42 @@ function initNavbar() {
     }
 
     // Active Link Detection
-    const currentPath = window.location.pathname;
+    const currentUrl = new URL(window.location.href);
     const navLinks = document.querySelectorAll('.navbar a, #mobile-menu-drawer a');
     
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (!href || href === '#' || href === 'javascript:void(0)') return;
 
-        // Normalize paths for comparison
-        const normalizedHref = href.startsWith('/') ? href : '/' + href;
-        const normalizedPath = currentPath === '/' || currentPath === '' ? '/index.html' : currentPath;
+        // Get fully qualified URL for the link
+        const linkUrl = new URL(href, window.location.href);
 
-        const isExactMatch = normalizedPath === normalizedHref;
-        const isIndexMatch = (normalizedPath === '/index.html' && (normalizedHref === '/' || normalizedHref === '/index.html'));
-        const isParentMatch = normalizedPath.startsWith(normalizedHref.replace('.html', '')) && normalizedHref !== '/';
+        const normalize = (url) => {
+            let path = url.pathname;
+            // Remove trailing index.html and slashes for comparison
+            path = path.replace(/\/index\.html$/, '/');
+            if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
+            return path;
+        };
+
+        const normCurrent = normalize(currentUrl);
+        const normLink = normalize(linkUrl);
+
+        // Exact match
+        let isActive = normCurrent === normLink;
+
+        // Special case for root redirecting to pages/index.html
+        if (!isActive) {
+            if ((normCurrent === '/pages' && normLink === '/') || 
+                (normCurrent === '/' && normLink === '/pages')) {
+                isActive = true;
+            }
+        }
         
-        if (isExactMatch || isIndexMatch || isParentMatch) {
+        // Parent path match (for highlighting sections)
+        const isParentMatch = !isActive && normLink !== '/' && normCurrent.startsWith(normLink + '/');
+
+        if (isActive || isParentMatch) {
             link.classList.add('!text-primary');
             link.classList.remove('text-neutral-700', 'text-neutral-600', 'text-neutral-800', 'text-white', 'text-white/90');
             
